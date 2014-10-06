@@ -1,0 +1,47 @@
+@import 'vars'
+
+footer
+  background-color $blue
+  font-family 'Open Sans', sans-serif
+  display inline-block
+  width 100%
+  line-height 1.4em
+  padding 20px
+  float left
+
+  .copyright
+    float left
+    margin-left 20px
+
+    p
+      display inline-block
+      color white
+      clear left
+      margin 1px
+      float left
+
+      img.icon
+        height 30px
+        margin-bottom -9px
+
+  .links
+    float right
+
+    ul
+      float left
+      list-style-type none
+      padding 0
+      margin 0 20px
+
+    li
+      color white
+      font-size
+
+      &.footerLink
+        font-size .8em
+        font-weight 100
+        color darken($secondary-blue, 30%)
+        cursor pointer
+
+        &:hover
+          color $hover

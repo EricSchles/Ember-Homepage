@@ -1,0 +1,9 @@
+.about .logo img {
+  width: 70%;
+  margin: auto;
+  display: block;
+}
+.about p.caption {
+  color: #b7bcbf;
+  text-align: center;
+}

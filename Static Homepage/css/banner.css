@@ -1,0 +1,23 @@
+.banner {
+  font-family: 'Open Sans', sans-serif;
+  float: left;
+  display: inline-block;
+  width: 100%;
+}
+.banner img {
+  width: 100%;
+  float: left;
+}
+.banner h1 {
+  position: absolute;
+  top: 56px;
+  z-index: 10;
+  width: 100%;
+  color: #fff;
+  margin: 240px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4em;
+  text-shadow: 0 0 80px rgba(0,0,0,0.5);
+}
