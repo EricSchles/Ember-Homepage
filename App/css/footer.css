@@ -41,6 +41,10 @@ footer .links li.footerLink {
   color: #7c858a;
   cursor: pointer;
 }
+footer .links li font-size a,
+footer .links li.footerLink a {
+  color: inherit;
+}
 footer .links li font-size:hover,
 footer .links li.footerLink:hover {
   color: #ffc328;
