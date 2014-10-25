@@ -1,5 +1,5 @@
 App.Router.map(function() {
-  this.route("index");
+  // this.route("index", {path: "/"});
   this.route("about");
   this.route("team");
   this.route("expeditions");
