@@ -99,7 +99,7 @@
 
 
         <script type="text/x-handlebars" data-template-name="index">
-          {{banner}}
+          {{banner-component statement=statement image=image}}
           <section class="page">
             <div class="information">
                 <h1>Explore the world through language</h1>
@@ -116,11 +116,10 @@
           </section>
         </script>
 
-        <script type="text/x-handlebars" data-template-name="components/banner">
+        <script type="text/x-handlebars" data-template-name="components/banner-component">
           <section class="banner">
-            <img {{bind-attr src="banner"}} alt="Wikitongues" class="fallback">
-
-            <h1>{{statement}}</h1>
+            <img {{bind-attr src="banner.image"}} alt="Wikitongues" class="fallback">
+            <h1>{{banner.statement}}</h1>
           </section>
         </script>
 
@@ -129,7 +128,7 @@
         </script>
 
         <script type="text/x-handlebars" data-template-name="team">
-          <h1>team</h1>
+            <h1>team</h1>
         </script>
 
         <script type="text/x-handlebars" data-template-name="expeditions">

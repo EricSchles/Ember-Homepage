@@ -1,4 +1,4 @@
 App.BannerComponent = Ember.Component.extend({
-  banner: "img/videoFallback2.png",
+  image: "img/videoFallback2.png",
   statement: "Every language in the world"
 });
