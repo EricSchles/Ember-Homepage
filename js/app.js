@@ -23,7 +23,7 @@ App.IndexRoute = Ember.Route.extend({
     return [
       {
         id: 0,
-        image: "img/videoFallback2.png",
+        image: "img/banner.png",
         text: "Every Language In The World"
       }
     ];
@@ -35,7 +35,7 @@ App.AboutRoute = Ember.Route.extend({
     return [
       {
         id: 0,
-        image: "img/earth-02.jpg",
+        image: "img/earth.jpg",
         text: "Our World"
       }
     ];
