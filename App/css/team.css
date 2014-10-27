@@ -1,6 +1,9 @@
 .team {
   display: inline-block;
 }
+.team h1:first-letter {
+  font-size: 2.6em !important;
+}
 .team ul {
   padding: 0;
   margin: 0;
