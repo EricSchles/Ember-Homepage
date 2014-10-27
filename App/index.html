@@ -7,15 +7,6 @@
         <meta name="description" content="Every language in the world">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Ember -->
-        <script src="js/libs/jquery-1.10.2.min.js"></script>
-        <script src="js/libs/handlebars-1.0.0.js"></script>
-        <script src="js/libs/ember.js"></script>
-        <script src="js/libs/ember-data.js"></script>
-
-        <!-- App -->
-        <script src="js/app.js"></script>
-
         <!-- Style -->
         <link rel="stylesheet" href="css/nav.css">
         <link rel="stylesheet" href="css/footer.css">
@@ -43,7 +34,8 @@
 
                 <ul class="top-nav">
                   {{#link-to "about" tagName="li"}}About{{/link-to}}
-                  {{#link-to "team" tagName="li"}}Team{{/link-to}}
+                  {{#link-to "team" className="team" tagName="li"}}Team{{/link-to}}
+                  {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
                   {{#link-to "expeditions" tagName="li"}}Expeditions{{/link-to}}
                   {{#link-to "projects" tagName="li"}}Projects{{/link-to}}
                   {{#link-to "get_involved" tagName="li"}}Get Involved{{/link-to}}
@@ -69,9 +61,7 @@
                             {{#link-to "expeditions" classNames="footerLink" tagName="li"}}Expeditions{{/link-to}}
                             {{#link-to "projects" classNames="footerLink" tagName="li"}}Projects{{/link-to}}
                             {{#link-to "press" classNames="footerLink" tagName="li"}}Press{{/link-to}}
-                        </ul>
-                        <ul>
-                            <li class="header">Legal</li>
+
                             {{#link-to "privacy" classNames="footerLink" tagName="li"}}Privacy Policy{{/link-to}}
                             {{#link-to "terms" classNames="footerLink" tagName="li"}}Terms of Service{{/link-to}}
                         </ul>
@@ -80,7 +70,7 @@
                             {{#link-to "submit" classNames="footerLink" tagName="li"}}Submit{{/link-to}}
                             {{#link-to "volunteer" classNames="footerLink" tagName="li"}}Volunteer{{/link-to}}
                             {{#link-to "contact" classNames="footerLink" tagName="li"}}Contact{{/link-to}}
-                            <li class="footerLink"><a target="_blank" href="https://docs.google.com/forms/d/1hVjiergDRQouyebGRn7gpGguKfKITTqJ9ar82DweRmo/viewform">Translate this page</a></li>
+                            {{!-- <li class="footerLink"><a target="_blank" href="https://docs.google.com/forms/d/1hVjiergDRQouyebGRn7gpGguKfKITTqJ9ar82DweRmo/viewform">Translate this page</a></li> --}}
                         </ul>
                         <ul>
                             <li class="header">Follow us</li>
@@ -104,15 +94,18 @@
             {{/each}}
             <section class="page">
                 <div class="information">
-                    <h1>Explore the world through language</h1>
+                    <h1>New videos every week</h1>
                     <!-- or "Discover the cultures of the world" -->
                     <a href="https://www.youtube.com/user/WikiTongues" target="_blank">
                         <img src="img/scotsVideo.png" alt="">
-                        <p>Watch our videos on YouTube</p>
+                        <p>Join us on YouTube</p>
                     </a>
                     <br>
-                    <p class="drop">Wikitongues is a global movement to reach every community on the planet. We firmly believe in the value of culture and the importance of language. </p>
-                    <p>Join us in discovering every single language in the world!</p>
+                    <p>We are a group of motely motherfuckers who go out of our way to listen (and party with) to those around us. Our mission is to record every language in the world.</p>
+                    {{#link-to "about" classNames="footerLink"}}Learn more here...{{/link-to}}
+                    {{!-- <p>Join us in discovering every single language in the world!</p> --}}
+
+
                 </div>
                 &nbsp;
               </section>
@@ -131,23 +124,20 @@
                 </section>
             {{/each}}
             <section class="page">
-                <p class="drop">We are an international organizationof volunteers who fight to defend the value of identity, regardless of language or any other characteristic.</p>
-                <p class="quote">Our mission is to provide access to every language on earth, either spoken or signed.</p>
-                <p>The time has come for us, the people of Earth to become familiar with one another, to dispel the fear and doubt from others who, by simple distance, speak differently or hold other beliefs.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sit doloremque repellendus laudantium vero nobis, deserunt delectus, non illum quos eaque reiciendis cupiditate, neque consequuntur temporibus ullam at excepturi, eius accusantium nostrum tempora veritatis dolor voluptate?</p>
-                <p>Quo, autem. Maxime error reprehenderit quam commodi itaque distinctio beatae consequatur odio laborum voluptate! Mollitia, cum, ex! Accusantium reiciendis ad praesentium esse alias est quidem doloribus, ipsum itaque quos fugiat sint rem consequuntur aliquid facilis voluptatem dolorum? Officia aliquam necessitatibus ratione quam neque, dolorem at delectus totam molestiae eos deleniti recusandae ea dignissimos id doloremque quasi ad expedita quo doloribus.</p>
-                <p>Ducimus magnam possimus dolor exercitationem vero quia, quaerat fuga eos, distinctio iste iure voluptatum aliquid sapiente maxime nihil eum labore, dicta beatae ut! Laudantium earum dolor tempore deserunt delectus suscipit rem unde quod, ex eveniet corrupti mollitia ut illo ad quos, nemo dolore esse sapiente. Eum, repellat.</p>
-                <img src="img/worldMap.jpg">
-                <p class="caption">Our oldschool map</p>
-                <p>Necessitatibus molestias eum, facilis mollitia obcaecati eos recusandae ipsum, numquam pariatur ratione deserunt labore harum officiis sunt minus cupiditate atque possimus nisi voluptas porro, tenetur beatae odio. Quae amet, commodi excepturi impedit! Aut maxime eos ducimus, officia pariatur repellat incidunt impedit ipsam officiis sint ea qui iusto, alias illo, reprehenderit tenetur ipsa esse quibusdam facere!</p>
-                <p>Saepe voluptate corporis ea molestiae totam sapiente libero expedita beatae! Animi nihil, ducimus ipsum tempora ullam quibusdam debitis, dignissimos, expedita necessitatibus dicta neque! Assumenda unde voluptates maiores explicabo repudiandae culpa quaerat, fugit quidem. Eligendi deserunt cum dignissimos, voluptatum a quasi iure odit dolorum culpa quia blanditiis sequi eum voluptatem! Reprehenderit dolorum modi aspernatur veniam, perspiciatis, iste quas perferendis quidem saepe distinctio corporis dolorem beatae, error mollitia eveniet dolore iusto aut labore quos veritatis eos minima recusandae animi? Voluptatem hic, assumenda et. Eius magni iusto explicabo ipsa omnis, cumque consequuntur.</p>
-                <p>Praesentium, libero impedit officia facilis consequatur sit ipsa adipisci vel velit consectetur, quod dolore obcaecati ea recusandae alias ab sapiente. Delectus doloremque, laboriosam? Adipisci quibusdam iure sunt commodi fugiat, cupiditate aperiam illum voluptas at optio eaque dolorem numquam, dignissimos nobis tempore dicta debitis. Temporibus aspernatur ab, cupiditate molestiae, ducimus, facilis tempora ullam fugiat obcaecati voluptas amet eligendi magni, possimus odit. Nulla, aliquam explicabo officia blanditiis praesentium magni quos reprehenderit, rem placeat molestias laudantium adipisci? Neque odit, optio aliquam libero repellat vel numquam ipsum atque accusamus obcaecati quam magnam quaerat vitae voluptate facilis sunt delectus sed vero eius nesciunt.</p>
-                <p>Excepturi obcaecati, quam quae quis vitae repellat ut, ipsam inventore error facilis in, atque id.</p>
+                <p class="drop"> We stand for the values of diversity and respect between the all the peoples of Earth.</p>
+                <p>We stand for the rights of individuals and their communities to live where they live and to be who they are, thinking, speaking and acting freely.</p>
+                <p>We pledge to forge connections across vast geographies, building bridges of understanding within and between cultures, and ensuring that every person has access to the breadth and the beauty of human experience.</p>
+                <p>We are Wikitongues.</p>
             </section>
+        </script>
+        <script type="text/x-handlebars" data-template-name="components/google-maps">
+            <div class="map-canvas"></div>
         </script>
         <script type="text/x-handlebars" data-template-name="team">
                 <section class="banner team">
-                    <img src="img/worldMap2.png" alt="Wikitongues" class="fallback">
+                    {{google-maps latitude="20" longitude="0" markers=markers}}
+                    {{!-- <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zJwV6XUktfg0.kEV6pWd8WZbM&key=AIzaSyDKZeAjJRXIyUIwn0L062uINzGdBu9fFsU" width="1280" height="600" frameborder="0" style="border:0"></iframe> --}}
+                    {{!-- <img src="img/worldMap2.png" alt="Wikitongues" class="fallback"> --}}
                 </section>
                 <section class="page">
                     <div class="team">
@@ -155,15 +145,20 @@
                         <ul>
                             {{#each}}
                                 <li>
-                                    <img {{bind-attr src="photo" title="name"}}>
+                                    <img {{bind-attr src="photo" title="languages"}}>
                                     <p>{{name}}</p>
                                     <p class="country">{{location}}</p>
                                 </li>
                             {{/each}}
+                            {{#link-to "volunteer" tagName="li"}}Become a volunteer today{{/link-to}}
                         </ul>
                     </div>
                 </section>
-
+        </script>
+        <script type="text/x-handlebars" data-template-name="mission">
+              <section class="page">
+                  <h1>mission</h1>
+              </section>
         </script>
         <script type="text/x-handlebars" data-template-name="expeditions">
               <section class="page">
@@ -213,6 +208,28 @@
               </section>
         </script>
 
+        <!-- Google Maps API -->
+        <script src="http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDKZeAjJRXIyUIwn0L062uINzGdBu9fFsU"></script>
+        <!--script>
+            function mapResize() {
+                var width = $(window).innerWidth()
+                $(".banner.team iframe").attr("width",width)
+            }
+            $("ul.top-nav li.team").on("click", mapResize)
+            $(document).ready(mapResize)
+            $(window).resize(mapResize)
+        </script-->
+
+         <!-- Ember -->
+        <script src="js/libs/jquery-1.10.2.min.js"></script>
+        <script src="js/libs/handlebars-1.0.0.js"></script>
+        <script src="js/libs/ember.js"></script>
+        <script src="js/libs/ember-data.js"></script>
+
+        <!-- App -->
+        <script src="js/app.js"></script>
+
+        <!-- Google Analytics -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
