@@ -2,10 +2,14 @@
   box-sizing: border-box;
   font-weight: 100;
   color: #11242f;
+  transition: all ease-in-out 0.15s;
 }
 a {
   text-decoration: none;
   color: #11242f;
+}
+a:hover {
+  color: #ffc328;
 }
 .hidden {
   display: none !important;
@@ -36,6 +40,7 @@ body {
   width: 100%;
 }
 .page p {
+  display: inline-block;
   max-width: 800px;
   margin: 20px auto;
   line-height: 1.8em;
@@ -50,6 +55,12 @@ body {
 .page p.caption {
   color: #b7bcbf;
   text-align: center;
+}
+.page p.link {
+  cursor: pointer;
+}
+.page p.link:hover {
+  color: #ffc328;
 }
 .page .drop:first-letter {
   float: left;

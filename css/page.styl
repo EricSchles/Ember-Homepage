@@ -4,10 +4,14 @@
   box-sizing border-box
   font-weight 100
   color $blue
+  transition all ease-in-out .15s
 
 a
   text-decoration none
   color $blue
+
+  &:hover
+    color $hover
 
 .hidden
   display none !important
@@ -37,6 +41,7 @@ body
     width 100%
 
   p
+    display inline-block
     max-width 800px
     margin 20px auto
     line-height 1.8em
@@ -51,6 +56,12 @@ body
     &.caption
       color #b7bcbf
       text-align center
+
+    &.link
+      cursor pointer
+
+      &:hover
+        color $hover
 
   .drop
     &:first-letter

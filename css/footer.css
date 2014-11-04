@@ -11,12 +11,24 @@ footer .copyright {
   float: left;
   margin-left: 20px;
 }
+footer .copyright:hover .footerLink {
+  color: #ffc328;
+}
 footer .copyright p {
   display: inline-block;
   color: #fff;
   clear: left;
   margin: 1px;
   float: left;
+}
+footer .copyright p.footerLink {
+  font-size: 0.8em;
+  font-weight: 100;
+  color: #7c858a;
+  cursor: pointer;
+}
+footer .copyright p.footerLink a {
+  color: inherit;
 }
 footer .copyright p img.icon {
   height: 30px;

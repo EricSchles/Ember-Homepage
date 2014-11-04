@@ -13,12 +13,25 @@ footer
     float left
     margin-left 20px
 
+    &:hover
+      .footerLink
+        color $hover
+
     p
       display inline-block
       color white
       clear left
       margin 1px
       float left
+
+      &.footerLink
+        font-size .8em
+        font-weight 100
+        color darken($secondary-blue, 30%)
+        cursor pointer
+
+        a
+          color inherit
 
       img.icon
         height 30px
