@@ -50,21 +50,43 @@
         font-size 1.8em
 
 .information
-    // margin 60px 0
     h1
-        margin 0 0 50px 0
+        margin 0 auto 50px auto
         text-align center
 
     a
+        display inline-block
+
+        &:hover
+            .triangle
+                border-color transparent transparent transparent $hover
+
+        .triangle
+            position relative
+            z-index 2
+            top -260px
+            width 0
+            // width 0
+            margin auto
+            right -50%
+            margin -27px
+            height 0
+            border-style solid
+            border-width: 32.5px 0 32.5px 56.3px;
+            border-color transparent transparent transparent #fff//#f00044
+
         p
             // font-size 1em
             color $secondary-blue
             width 100%
             text-align center
+            display block
 
         &:hover
             p
                 color $hover
 
     p
+        display block
         // font-size 1.2em
+
