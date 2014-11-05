@@ -41,3 +41,27 @@ nav ul.top-nav li {
 nav ul.top-nav li:hover {
   color: #ffc328;
 }
+.subheader {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  width: 100%;
+}
+.subheader ul {
+  width: 100%;
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+.subheader ul li {
+  display: inline-block;
+  padding: 2em 16px;
+}
+.subheader ul li.active {
+  color: #b7bcbf;
+}
+.subheader ul li:hover {
+  color: #ffc328;
+  cursor: pointer;
+}

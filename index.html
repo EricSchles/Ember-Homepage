@@ -173,6 +173,9 @@
         <script type="text/x-handlebars" data-template-name="get_involved">
               <section class="page">
                   <h1>get involved</h1>
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="press">
@@ -181,11 +184,23 @@
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="submit">
+              <section class="subheader">
+                <ul>
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                </ul>
+              </section>
               <section class="page form">
                   <h1>Submit a video</h1>
+                  <p>Support the Wikitongues community by submiting a video of your own.</p>
+                  {{#link-to "submitGuidelines" classNames="secondaryLink"}}Video Guidelines{{/link-to}}
                   <ul>
-                    <li><input type="text" id="name" name="name" placeholder="Name"></li>
-                    <li><input type="text" id="email" name="email" placeholder="Email"></li>
+                    <li>
+                      <p>About you</p>
+                    </li>
+                    <li><input type="text" id="name" name="name" placeholder="Your Name"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Your Email"></li>
                     <li><input type="text" id="link" name="link" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>
                     <li>
                       <p>About the speaker</p>
@@ -193,23 +208,36 @@
                     <li><input type="text" id="speaker" name="speaker" placeholder="What is the speaker's name?"></li>
                     <li><input type="text" id="language" name="language" placeholder="What languages are used in this video?"></li>
                   </ul>
-                  <textarea name="transcription" id="transcription" class="optional" placeholder="Transcription (optional)"></textarea>
-                  <textarea name="translation" id="translation" class="optional" placeholder="Translation (optional)"></textarea>
+                  <p>About the video</p>
+                  <textarea name="transcription" id="transcription" class="optional" placeholder="Transcribe the video (optional)"></textarea>
+                  <textarea name="translation" id="translation" class="optional" placeholder="Translate the video (optional)"></textarea>
+                  <p>Leave us a message</p>
                   <textarea name="message" id="message" class="optional" placeholder="Message (optional)"></textarea>
-                  <input type="submit" id="submit" value="Send">
+                  <input type="submit" id="submit" class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="volunteer">
+              <section class="subheader">
+                <ul>
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                </ul>
+              </section>
               <section class="page form">
                   <h1>Become a volunteer</h1>
-                  <input type="text" id="name" name="name" placeholder="Name">
-                  <input type="text" id="email" name="email" placeholder="Email">
+                  <p>Apply to join our community as a volunteer or ambassador</p>
+                  {{#link-to "volunteerGuidelines" classNames="secondaryLink"}}Volunteering Guidelines{{/link-to}}
+                  <ul>
+                    <li><input type="text" id="name" name="name" placeholder="Name"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Email"></li>
+                  </ul>
                   <p>How would you like to contribute?</p>
                   <label for=""><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label>
                   <label for=""><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label>
                   <label for=""><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label>
                   <textarea name="message" id="message" placeholder="Tell us about yourself"></textarea>
-                  <input type="submit" id="submit" value="Send">
+                  <input type="submit" id="submit"  class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="contact">
@@ -218,7 +246,7 @@
                   <input type="text" id="name" name="name" placeholder="Name">
                   <input type="text" id="email" name="email" placeholder="Email">
                   <textarea name="message" id="message" placeholder="Message"></textarea>
-                  <input type="text" id="submit" value="send">
+                  <input type="text" id="submit"  class="submit" value="send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="privacy">
@@ -247,6 +275,9 @@
             $(document).ready(mapResize)
             $(window).resize(mapResize)
         </script-->
+
+        <!-- Livereload -->
+        <script src="http://localhost:35729/livereload.js"></script>
 
          <!-- Ember -->
         <script src="js/libs/jquery-1.10.2.min.js"></script>
