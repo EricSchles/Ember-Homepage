@@ -182,17 +182,43 @@
         </script>
         <script type="text/x-handlebars" data-template-name="submit">
               <section class="page">
-                  <h1>submit</h1>
+                  <h1>Submit a video</h1>
+                  <ul>
+                    <li><input type="text" id="name" name="name" placeholder="Name"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Email"></li>
+                    <li><input type="text" id="link" name="link" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>
+                    <li>
+                      <p>About the speaker</p>
+                    </li>
+                    <li><input type="text" id="speaker" name="speaker" placeholder="What is the speaker's name?"></li>
+                    <li><input type="text" id="language" name="language" placeholder="What languages are used in this video?"></li>
+                  </ul>
+                  <textarea name="transcription" id="transcription" class="optional" placeholder="Transcription (optional)"></textarea>
+                  <textarea name="translation" id="translation" class="optional" placeholder="Translation (optional)"></textarea>
+                  <textarea name="message" id="message" class="optional" placeholder="Message (optional)"></textarea>
+                  <input type="submit" id="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="volunteer">
               <section class="page">
-                  <h1>volunteer</h1>
+                  <h1>Become a volunteer</h1>
+                  <input type="text" id="name" name="name" placeholder="Name">
+                  <input type="text" id="email" name="email" placeholder="Email">
+                  <p>How would you like to contribute?</p>
+                  <label for=""><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label>
+                  <label for=""><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label>
+                  <label for=""><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label>
+                  <textarea name="message" id="message" placeholder="Tell us about yourself"></textarea>
+                  <input type="submit" id="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="contact">
               <section class="page">
-                  <h1>contact</h1>
+                  <h1>Contact</h1>
+                  <input type="text" id="name" name="name" placeholder="Name">
+                  <input type="text" id="email" name="email" placeholder="Email">
+                  <textarea name="message" id="message" placeholder="Message"></textarea>
+                  <input type="text" id="submit" value="send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="privacy">
