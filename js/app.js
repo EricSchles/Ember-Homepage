@@ -31,6 +31,17 @@ App.IndexRoute = Ember.Route.extend({
   }
 });
 
+App.MissionRoute = Ember.Route.extend({
+  model: function() {
+    return [
+      {
+        id: 0,
+        image: "img/mission.jpg",
+      }
+    ];
+  }
+});
+
 App.AboutRoute = Ember.Route.extend({
   model: function() {
     return [
