@@ -8,12 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Style -->
-        <link rel="stylesheet" href="css/nav.css">
-        <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/banner.css">
-        <link rel="stylesheet" href="css/page.css">
-        <link rel="stylesheet" href="css/landingPage.css">
-        <link rel="stylesheet" href="css/team.css">
+        <link rel="stylesheet" href="css/style.css">
 
         <!-- Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800' rel='stylesheet' type='text/css'>
@@ -34,7 +29,6 @@
                     <img src="img/horizontalLockup.svg" alt="Wikitongues">
                   {{/link-to}}
                 </div>
-
                 <ul class="top-nav">
                   {{#link-to "about" tagName="li"}}About{{/link-to}}
                   {{#link-to "team" className="team" tagName="li"}}Team{{/link-to}}
@@ -105,7 +99,6 @@
                     <br>
                     <p>We are a group of motely motherfuckers who go out of our way to listen (and party with) to those around us. Our mission is to record every language in the world.</p>
                     {{#link-to "about" classNames="link" tagName="p"}}Learn more here...{{/link-to}}
-
                     {{!-- <p>Join us in discovering every single language in the world!</p> --}}
                 </div>
                 &nbsp;
@@ -173,6 +166,9 @@
         <script type="text/x-handlebars" data-template-name="get_involved">
               <section class="page">
                   <h1>get involved</h1>
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="press">
@@ -181,18 +177,69 @@
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="submit">
-              <section class="page">
-                  <h1>submit</h1>
+              <section class="subheader">
+                <ul>
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                </ul>
+              </section>
+              <section class="page form">
+                  <h1>Submit a video</h1>
+                  <p>Support the Wikitongues community by submiting a video of your own.</p>
+                  {{#link-to "submitGuidelines" classNames="secondaryLink"}}Video Guidelines{{/link-to}}
+                  <ul>
+                    <li>
+                      <p>About you</p>
+                    </li>
+                    <li><input type="text" id="name" name="name" placeholder="Your Name"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Your Email"></li>
+                    <li><input type="text" id="link" name="link" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>
+                    <li>
+                      <p>About the speaker</p>
+                    </li>
+                    <li><input type="text" id="speaker" name="speaker" placeholder="What is the speaker's name?"></li>
+                    <li><input type="text" id="language" name="language" placeholder="What languages are used in this video?"></li>
+                  </ul>
+                  <p>About the video</p>
+                  <textarea name="transcription" id="transcription" class="optional" placeholder="Transcribe the video (optional)"></textarea>
+                  <textarea name="translation" id="translation" class="optional" placeholder="Translate the video (optional)"></textarea>
+                  <p>Leave us a message</p>
+                  <textarea name="message" id="message" class="optional" placeholder="Message (optional)"></textarea>
+                  <input type="submit" id="submit" class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="volunteer">
-              <section class="page">
-                  <h1>volunteer</h1>
+              <section class="subheader">
+                <ul>
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                </ul>
+              </section>
+              <section class="page form">
+                  <h1>Become a volunteer</h1>
+                  <p>Apply to join our community as a volunteer or ambassador</p>
+                  {{#link-to "volunteerGuidelines" classNames="secondaryLink"}}Volunteering Guidelines{{/link-to}}
+                  <ul>
+                    <li><input type="text" id="name" name="name" placeholder="Name"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Email"></li>
+                  </ul>
+                  <p>How would you like to contribute?</p>
+                  <label for=""><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label>
+                  <label for=""><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label>
+                  <label for=""><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label>
+                  <textarea name="message" id="message" placeholder="Tell us about yourself"></textarea>
+                  <input type="submit" id="submit"  class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="contact">
-              <section class="page">
-                  <h1>contact</h1>
+              <section class="page form">
+                  <h1>Contact</h1>
+                  <input type="text" id="name" name="name" placeholder="Name">
+                  <input type="text" id="email" name="email" placeholder="Email">
+                  <textarea name="message" id="message" placeholder="Message"></textarea>
+                  <input type="text" id="submit"  class="submit" value="send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="privacy">
@@ -207,6 +254,19 @@
                   <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>
               </section>
         </script>
+        <script type="text/x-handlebars" data-template-name="submitGuidelines">
+              <section class="page">
+                  <h1>Video Guidelines</h1>
+                  <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>
+              </section>
+        </script>
+        <script type="text/x-handlebars" data-template-name="volunteerGuidelines">
+              <section class="page">
+                  <h1>Volunteering Guidelines</h1>
+                  <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>
+              </section>
+        </script>
+
 
         <!-- Google Maps API -->
         <script src="http://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDKZeAjJRXIyUIwn0L062uINzGdBu9fFsU"></script>
@@ -222,6 +282,8 @@
             $(window).resize(mapResize)
         </script-->
 
+
+
          <!-- Ember -->
         <script src="js/libs/jquery-1.10.2.min.js"></script>
         <script src="js/libs/handlebars-1.0.0.js"></script>
@@ -230,6 +292,9 @@
 
         <!-- App -->
         <script src="js/app.js"></script>
+
+        <!-- Livereload -->
+        <script src="http://localhost:35729/livereload.js"></script>
 
         <!-- Google Analytics -->
         <script>
