@@ -30,11 +30,12 @@
                   {{/link-to}}
                 </div>
                 <ul class="top-nav">
+                  {{#link-to "index" tagName="li"}}Home{{/link-to}}
                   {{#link-to "about" tagName="li"}}About{{/link-to}}
-                  {{#link-to "team" className="team" tagName="li"}}Team{{/link-to}}
+                  {{!-- {{#link-to "team" className="team" tagName="li"}}Team{{/link-to}} --}}
                   {{!-- {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}} --}}
                   {{!-- {{#link-to "expeditions" tagName="li"}}Expeditions{{/link-to}} --}}{{!-- Expeditions should live inside of Projects --}}
-                  {{#link-to "projects" tagName="li"}}Projects{{/link-to}}
+                  {{!-- {{#link-to "projects" tagName="li"}}Projects{{/link-to}} --}}
                   {{#link-to "get_involved" tagName="li"}}Get Involved{{/link-to}}
                 </ul>
               </nav>
@@ -63,7 +64,7 @@
                         </ul>
                         <ul>
                             <li class="header">Get involved</li>
-                            {{#link-to "submit" classNames="footerLink" tagName="li"}}Submit{{/link-to}}
+                            {{#link-to "submit" classNames="footerLink" tagName="li"}}Submit a video{{/link-to}}
                             {{#link-to "volunteer" classNames="footerLink" tagName="li"}}Volunteer{{/link-to}}
                             {{#link-to "contact" classNames="footerLink" tagName="li"}}Contact{{/link-to}}
                             {{!-- <li class="footerLink"><a target="_blank" href="https://docs.google.com/forms/d/1hVjiergDRQouyebGRn7gpGguKfKITTqJ9ar82DweRmo/viewform">Translate this page</a></li> --}}
@@ -111,6 +112,13 @@
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="about">
+            <section class="subheader">
+              <ul>
+                {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+                {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+                {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+              </ul>
+            </section>
             {{#each}}
                 <section class="banner">
                     <img {{bind-attr src="image"}} alt="Wikitongues" class="fallback">
@@ -128,6 +136,13 @@
             <div class="map-canvas"></div>
         </script>
         <script type="text/x-handlebars" data-template-name="team">
+                <section class="subheader">
+                  <ul>
+                    {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+                    {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+                    {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+                  </ul>
+                </section>
                 <section class="banner team">
                     {{google-maps latitude="20" longitude="0" markers=markers}}
                     {{!-- <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zJwV6XUktfg0.kEV6pWd8WZbM&key=AIzaSyDKZeAjJRXIyUIwn0L062uINzGdBu9fFsU" width="1280" height="600" frameborder="0" style="border:0"></iframe> --}}
@@ -149,6 +164,13 @@
                 </section>
         </script>
         <script type="text/x-handlebars" data-template-name="mission">
+              <section class="subheader">
+                <ul>
+                  {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+                  {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+                  {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+                </ul>
+              </section>
               <section class="page">
                   <h1>mission</h1>
               </section>
@@ -164,11 +186,22 @@
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="get_involved">
-              <section class="page">
-                  <h1>get involved</h1>
-                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+              <section class="subheader">
+                <ul>
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
                   {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                </ul>
+              </section>
+              <section class="page form">
+                  <h1>Get involved</h1>
+                  <p>Wikitongues wouldn't be anywhere without our community. There are so many ways you can help out, or send us a message if you'd just like to reach out!</p>
+                  <ul>
+                    {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
+                    {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                    {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                  </ul>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="press">
@@ -179,7 +212,8 @@
         <script type="text/x-handlebars" data-template-name="submit">
               <section class="subheader">
                 <ul>
-                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
                   {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
                 </ul>
@@ -192,8 +226,8 @@
                     <li>
                       <p>About you</p>
                     </li>
-                    <li><input type="text" id="name" name="name" placeholder="Your Name"></li>
-                    <li><input type="text" id="email" name="email" placeholder="Your Email"></li>
+                    <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
                     <li><input type="text" id="link" name="link" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>
                     <li>
                       <p>About the speaker</p>
@@ -204,6 +238,7 @@
                   <p>About the video</p>
                   <textarea name="transcription" id="transcription" class="optional" placeholder="Transcribe the video (optional)"></textarea>
                   <textarea name="translation" id="translation" class="optional" placeholder="Translate the video (optional)"></textarea>
+                  <br>
                   <p>Leave us a message</p>
                   <textarea name="message" id="message" class="optional" placeholder="Message (optional)"></textarea>
                   <input type="submit" id="submit" class="submit" value="Send">
@@ -212,7 +247,8 @@
         <script type="text/x-handlebars" data-template-name="volunteer">
               <section class="subheader">
                 <ul>
-                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit{{/link-to}}
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
                   {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
                 </ul>
@@ -222,24 +258,41 @@
                   <p>Apply to join our community as a volunteer or ambassador</p>
                   {{#link-to "volunteerGuidelines" classNames="secondaryLink"}}Volunteering Guidelines{{/link-to}}
                   <ul>
-                    <li><input type="text" id="name" name="name" placeholder="Name"></li>
-                    <li><input type="text" id="email" name="email" placeholder="Email"></li>
+                    <li><p>About you</p></li>
+                    <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
+                    <li><input type="text" id="location" name="location" placeholder="Location (Required)"></li>
                   </ul>
                   <p>How would you like to contribute?</p>
-                  <label for=""><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label>
-                  <label for=""><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label>
-                  <label for=""><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label>
-                  <textarea name="message" id="message" placeholder="Tell us about yourself"></textarea>
+                  <ul>
+                    <li><label for="ambassador"><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label></li>
+                    <li><label for="socialMedia"><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label></li>
+                    <li><label for="webDev"><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label></li>
+                    <li><input type="text" id="otherVolunteer" name="" placeholder="Other (Please specify)"></li>
+                  </ul>
+                  <p>Please tell us a bit about yourself</p>
+                  <textarea name="message" id="message" placeholder="What do you do, "></textarea>
                   <input type="submit" id="submit"  class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="contact">
+              <section class="subheader">
+                <ul>
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                </ul>
+              </section>
               <section class="page form">
                   <h1>Contact</h1>
-                  <input type="text" id="name" name="name" placeholder="Name">
-                  <input type="text" id="email" name="email" placeholder="Email">
+                  <p>We're always eager to hear from you</p>
+                  <ul>
+                    <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li>
+                    <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
+                  </ul>
                   <textarea name="message" id="message" placeholder="Message"></textarea>
-                  <input type="text" id="submit"  class="submit" value="send">
+                  <input type="text" id="submit"  class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="privacy">
@@ -281,8 +334,6 @@
             $(document).ready(mapResize)
             $(window).resize(mapResize)
         </script-->
-
-
 
          <!-- Ember -->
         <script src="js/libs/jquery-1.10.2.min.js"></script>
