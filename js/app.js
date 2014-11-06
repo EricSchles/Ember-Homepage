@@ -16,6 +16,8 @@ App.Router.map(function() {
   this.route("contact");
   this.route("privacy");
   this.route("terms");
+  this.route("submitGuidelines");
+  this.route("volunteerGuidelines");
 });
 
 App.IndexRoute = Ember.Route.extend({
