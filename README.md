@@ -3,7 +3,7 @@ ember-homepage
 
 ##Requires Grunt CLI
 
-Start project with
+Start project with:
 
     $ grunt
 
