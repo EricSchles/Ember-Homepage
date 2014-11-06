@@ -29,7 +29,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-open');
 
     grunt.initConfig({
         stylus: {
@@ -39,7 +38,7 @@ module.exports = function (grunt) {
                     import: ['../variables']
                 },
                 files: {
-                    'css/style.css' : 'stylus/*.styl',
+                    'css/style.css' : 'css/stylus/*.styl',
                 }
             }
         },
@@ -48,7 +47,7 @@ module.exports = function (grunt) {
                 'index.html'
             ],
             stylus: {
-                files: ['stylus/*.styl'],
+                files: ['css/stylus/*.styl'],
                 tasks: ['stylus']
             },
             livereload: {
@@ -71,11 +70,6 @@ module.exports = function (grunt) {
                     }
                 }
             }
-        },
-        open: {
-          server: {
-            url: 'http://localhost:<%= connect.options.port %>'
-          }
         }
         // yeoman: yeomanConfig,
         // watch: {
@@ -389,7 +383,6 @@ module.exports = function (grunt) {
     grunt.registerTask('server', function() {
         grunt.task.run([
            'connect:livereload',
-           'open',
            'watch'
         ]);
     });
