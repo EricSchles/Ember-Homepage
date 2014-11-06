@@ -31,7 +31,7 @@
                 </div>
                 <ul class="top-nav">
                   {{#link-to "about" tagName="li"}}About{{/link-to}}
-                  {{#link-to "team" className="team" tagName="li"}}Team{{/link-to}}
+                  {{!-- {{#link-to "team" className="team" tagName="li"}}Team{{/link-to}} --}}
                   {{!-- {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}} --}}
                   {{!-- {{#link-to "expeditions" tagName="li"}}Expeditions{{/link-to}} --}}{{!-- Expeditions should live inside of Projects --}}
                   {{#link-to "projects" tagName="li"}}Projects{{/link-to}}
@@ -111,6 +111,13 @@
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="about">
+            <section class="subheader">
+              <ul>
+                {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+                {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+                {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+              </ul>
+            </section>
             {{#each}}
                 <section class="banner">
                     <img {{bind-attr src="image"}} alt="Wikitongues" class="fallback">
@@ -128,6 +135,13 @@
             <div class="map-canvas"></div>
         </script>
         <script type="text/x-handlebars" data-template-name="team">
+                <section class="subheader">
+                  <ul>
+                    {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+                    {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+                    {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+                  </ul>
+                </section>
                 <section class="banner team">
                     {{google-maps latitude="20" longitude="0" markers=markers}}
                     {{!-- <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zJwV6XUktfg0.kEV6pWd8WZbM&key=AIzaSyDKZeAjJRXIyUIwn0L062uINzGdBu9fFsU" width="1280" height="600" frameborder="0" style="border:0"></iframe> --}}
@@ -149,6 +163,13 @@
                 </section>
         </script>
         <script type="text/x-handlebars" data-template-name="mission">
+              <section class="subheader">
+                <ul>
+                  {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+                  {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+                  {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+                </ul>
+              </section>
               <section class="page">
                   <h1>mission</h1>
               </section>
