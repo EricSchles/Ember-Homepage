@@ -3,7 +3,6 @@ var App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-  // this.route("index");
   this.route("about");
   this.route("team");
   this.route("mission");
@@ -20,12 +19,19 @@ App.Router.map(function() {
   this.route("releaseForm");
 });
 
-App.IndexRoute = Ember.Route.extend({
+// Resets scroll
+App.ResetScroll = Ember.Mixin.create({
+  activate: function() {
+    this._super();
+    window.scrollTo(0,0);
+  }
+});
+
+App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
   model: function() {
     return [
       {
-        id: 0,
-        image: "img/banner-03.jpg",
+        image: "img/banner.jpg",
       }
     ];
   }
@@ -35,7 +41,6 @@ App.MissionRoute = Ember.Route.extend({
   model: function() {
     return [
       {
-        id: 0,
         image: "img/mission.jpg",
       }
     ];
@@ -53,6 +58,13 @@ App.AboutRoute = Ember.Route.extend({
     ];
   }
 });
+
+// Resets scroll
+App.SubmitRoute = Ember.Route.extend(App.ResetScroll)
+App.VolunteerRoute = Ember.Route.extend(App.ResetScroll)
+App.ContactRoute = Ember.Route.extend(App.ResetScroll)
+
+
 
 App.GoogleMapsComponent = Ember.Component.extend({
   insertMap: function() {
