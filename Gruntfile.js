@@ -39,7 +39,7 @@ module.exports = function (grunt) {
                     import: ['../variables']
                 },
                 files: {
-                    'css/style.css' : 'stylus/*.styl',
+                    'css/style.css' : 'css/stylus/*.styl',
                 }
             }
         },
@@ -48,7 +48,7 @@ module.exports = function (grunt) {
                 'index.html'
             ],
             stylus: {
-                files: ['stylus/*.styl'],
+                files: ['css/stylus/*.styl'],
                 tasks: ['stylus']
             },
             livereload: {
