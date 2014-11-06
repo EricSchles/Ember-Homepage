@@ -1,4 +1,4 @@
 ember-homepage
 ==============
 
-Wikitongues.org homepage
+#Requires Grunt CLI
