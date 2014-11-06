@@ -58,7 +58,7 @@
                             {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
                             {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
                             {{#link-to "mission" classNames="footerLink" tagName="li"}}Mission{{/link-to}}
-                            {{!-- {{#link-to "expeditions" classNames="footerLink" tagName="li"}}Expeditions{{/link-to}} --}}
+                            {{#link-to "expeditions" classNames="footerLink" tagName="li"}}Expeditions{{/link-to}}
                             {{#link-to "projects" classNames="footerLink" tagName="li"}}Projects{{/link-to}}
                             {{#link-to "press" classNames="footerLink" tagName="li"}}Press{{/link-to}}
                             {{#link-to "legal" classNames="footerLink" tagName="li"}}Legal{{/link-to}}
@@ -125,18 +125,13 @@
                 &nbsp;
               </section>
         </script>
-        <script type="text/x-handlebars" data-template-name="components/banner-component">
-              <section class="banner">
-                <img {{bind-attr src="banner.image"}} alt="Wikitongues" class="fallback">
-                <h1>{{banner.statement}}</h1>
-              </section>
-        </script>
         <script  type="text/x-handlebars" data-template-name="components/about-subheader">
           <section class="subheader">
             <ul>
               {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
               {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
-              {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+              {{#link-to "mission" className="footerLink" tagName="li"}}Mission{{/link-to}}
+              {{#link-to "projects" className="footerLink" tagName="li"}}Projects{{/link-to}}
             </ul>
           </section>
         </script>
