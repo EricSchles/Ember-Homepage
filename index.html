@@ -193,11 +193,13 @@
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
                 </ul>
               </section>
-              <section class="page">
+              <section class="page form">
                   <h1>get involved</h1>
-                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
-                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
-                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                  <ul>
+                    {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
+                    {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                    {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                  </ul>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="press">
@@ -257,9 +259,9 @@
                     <li><input type="text" id="email" name="email" placeholder="Email"></li>
                   </ul>
                   <p>How would you like to contribute?</p>
-                  <label for=""><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label>
-                  <label for=""><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label>
-                  <label for=""><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label>
+                  <label for="ambassador"><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label>
+                  <label for="socialMedia"><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label>
+                  <label for="webDev"><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label>
                   <textarea name="message" id="message" placeholder="Tell us about yourself"></textarea>
                   <input type="submit" id="submit"  class="submit" value="Send">
               </section>
