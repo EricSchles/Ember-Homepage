@@ -4,6 +4,9 @@
   color $blue
   transition all ease-in-out $transition-time
 
+b
+  color red
+
 a
   text-decoration none
   color $blue
@@ -42,9 +45,17 @@ body
     border-radius $radius
     width 100%
 
+  ul
+    margin 0
+    padding 0
+
+  ul
+    list-style-type none
+
   p
     // display inline-block
     max-width 800px
+    width 100%
     margin 20px auto
     line-height 1.8em
     letter-spacing 0.4px
@@ -76,9 +87,11 @@ body
       line-height 0.9em
 
   .secondaryLink
-    display table-row
+    float left
     font-size .8em
     color $secondary-blue
+    margin-bottom 2em
 
     &:hover
       color $hover
+

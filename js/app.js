@@ -14,10 +14,10 @@ App.Router.map(function() {
   this.route("submit");
   this.route("volunteer");
   this.route("contact");
-  this.route("privacy");
-  this.route("terms");
+  this.route("legal");
   this.route("submitGuidelines");
   this.route("volunteerGuidelines");
+  this.route("releaseForm");
 });
 
 App.IndexRoute = Ember.Route.extend({
