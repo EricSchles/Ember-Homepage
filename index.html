@@ -185,6 +185,14 @@
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="get_involved">
+              <section class="subheader">
+                <ul>
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
+                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
+                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
+                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
+                </ul>
+              </section>
               <section class="page">
                   <h1>get involved</h1>
                   {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
@@ -200,6 +208,7 @@
         <script type="text/x-handlebars" data-template-name="submit">
               <section class="subheader">
                 <ul>
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
                   {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
                   {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
@@ -233,6 +242,7 @@
         <script type="text/x-handlebars" data-template-name="volunteer">
               <section class="subheader">
                 <ul>
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
                   {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
                   {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
@@ -257,6 +267,7 @@
         <script type="text/x-handlebars" data-template-name="contact">
               <section class="subheader">
                 <ul>
+                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
                   {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
                   {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
