@@ -71,11 +71,6 @@ module.exports = function (grunt) {
                     }
                 }
             }
-        },
-        open: {
-          server: {
-            url: 'http://localhost:<%= connect.options.port %>'
-          }
         }
         // yeoman: yeomanConfig,
         // watch: {
@@ -389,7 +384,6 @@ module.exports = function (grunt) {
     grunt.registerTask('server', function() {
         grunt.task.run([
            'connect:livereload',
-           'open',
            'watch'
         ]);
     });
