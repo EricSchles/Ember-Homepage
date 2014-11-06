@@ -56,12 +56,12 @@
                         <ul>
                             <li class="header">Organization</li>
                             {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
-                            {{!-- {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}} --}}
+                            {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+                            {{#link-to "mission" classNames="footerLink" tagName="li"}}Mission{{/link-to}}
                             {{!-- {{#link-to "expeditions" classNames="footerLink" tagName="li"}}Expeditions{{/link-to}} --}}
                             {{#link-to "projects" classNames="footerLink" tagName="li"}}Projects{{/link-to}}
                             {{#link-to "press" classNames="footerLink" tagName="li"}}Press{{/link-to}}
-                            {{#link-to "privacy" classNames="footerLink" tagName="li"}}Privacy Policy{{/link-to}}
-                            {{#link-to "terms" classNames="footerLink" tagName="li"}}Terms of Service{{/link-to}}
+                            {{#link-to "legal" classNames="footerLink" tagName="li"}}Legal{{/link-to}}
                         </ul>
                         <ul>
                             <li class="header">Get involved</li>
@@ -89,11 +89,10 @@
                     <img {{bind-attr src="image"}} alt="Wikitongues" class="fallback">
                 </section>
             {{/each}}
-            <section class="page">
+            <section class="page index">
                 <div class="information">
                     <h1>Every language in the world</h1>
-                    <!-- or "Discover the cultures of the world" -->
-                    <a href="https://www.youtube.com/user/WikiTongues" target="_blank">
+                    <a class="youTubeLink" href="https://www.youtube.com/user/WikiTongues" target="_blank">
                         <img src="img/youTubeLink.png" alt="">
                         <div class="triangle"></div>
                         <p>Join us on YouTube</p>
@@ -101,13 +100,26 @@
                     <br>
                     <p>We are a group of motely motherfuckers who go out of our way to listen (and party with) to those around us. Our mission is to record every language in the world.</p>
                     {{#link-to "about" classNames="link" tagName="p"}}Learn more here...{{/link-to}}
-                    <div class="activities">
-                      <ul>
-                        <li><img src="#" alt="ambassador"></li>
-                        <li><img src="#" alt="expedition"></li>
-                        <li><img src="#" alt="volunteer"></li>
-                      </ul>
-                    </div>
+                    <ul class="activities">
+                      <li>
+                        {{#link-to "submit" classNames="subheaderLink"}}
+                          <img src="#" alt="User submissions">
+                          <p>User submissions</p>
+                        {{/link-to}}
+                      </li>
+                      <li>
+                        {{#link-to "volunteer" classNames="subheaderLink"}}
+                          <img src="#" alt="Ambassadors">
+                          <p>Ambassadors</p>
+                        {{/link-to}}
+                      </li>
+                      <li>
+                        {{#link-to "team" classNames="subheaderLink"}}
+                          <img src="#" alt="Community">
+                          <p>Community</p>
+                        {{/link-to}}
+                      </li>
+                    </ul>
                     {{!-- <p>Join us in discovering every single language in the world!</p> --}}
                 </div>
                 &nbsp;
@@ -119,20 +131,23 @@
                 <h1>{{banner.statement}}</h1>
               </section>
         </script>
+        <script  type="text/x-handlebars" data-template-name="components/about-subheader">
+          <section class="subheader">
+            <ul>
+              {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+              {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
+              {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+            </ul>
+          </section>
+        </script>
         <script type="text/x-handlebars" data-template-name="about">
-            <section class="subheader">
-              <ul>
-                {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
-                {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
-                {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
-              </ul>
-            </section>
             {{#each}}
                 <section class="banner">
                     <img {{bind-attr src="image"}} alt="Wikitongues" class="fallback">
                     <h1>{{text}}</h1>
                 </section>
             {{/each}}
+            {{about-subheader}}
             <section class="page">
                 <p class="drop"> We stand for the values of diversity and respect between the all the peoples of Earth.</p>
                 <p>We stand for the rights of individuals and their communities to live where they live and to be who they are, thinking, speaking and acting freely.</p>
@@ -144,17 +159,11 @@
             <div class="map-canvas"></div>
         </script>
         <script type="text/x-handlebars" data-template-name="team">
-                <section class="subheader">
-                  <ul>
-                    {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
-                    {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
-                    {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
-                  </ul>
-                </section>
                 <section class="banner team">
                     {{google-maps latitude="20" longitude="0" markers=markers}}
                     {{!-- <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zJwV6XUktfg0.kEV6pWd8WZbM&key=AIzaSyDKZeAjJRXIyUIwn0L062uINzGdBu9fFsU" width="1280" height="600" frameborder="0" style="border:0"></iframe> --}}
                 </section>
+                {{about-subheader}}
                 <section class="page">
                     <div class="team">
                         <h1 class="drop">Our team is composed of volunteers from all over the world</h1>
@@ -166,7 +175,7 @@
                                     <p class="country">{{location}}</p>
                                 </li>
                             {{/each}}
-                            <li>
+                            <li class="volunteer">
                               {{#link-to "volunteer"}}
                                 <img src="#" alt="Become a volunteer today">
                                 <p>Become a volunteer today</p>
@@ -177,15 +186,17 @@
                 </section>
         </script>
         <script type="text/x-handlebars" data-template-name="mission">
-              <section class="subheader">
-                <ul>
-                  {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
-                  {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
-                  {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
-                </ul>
-              </section>
+              {{#each}}
+                <section class="banner">
+                    <img {{bind-attr src="image"}} alt="Wikitongues" class="fallback">
+                    <h1>{{text}}</h1>
+                </section>
+              {{/each}}
+              {{about-subheader}}
               <section class="page">
-                  <h1>mission</h1>
+                <p class="drop"> We stand for the values of diversity and respect between the all the peoples of Earth.</p>
+                <p>We stand for the rights of individuals and their communities to live where they live and to be who they are, thinking, speaking and acting freely.</p>
+                <p>We pledge to forge connections across vast geographies, building bridges of understanding within and between cultures, and ensuring that every person has access to the breadth and the beauty of human experience.</p>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="expeditions">
@@ -198,74 +209,83 @@
                   <h1>projects</h1>
               </section>
         </script>
-        <script type="text/x-handlebars" data-template-name="get_involved">
-              <section class="subheader">
-                <ul>
-                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
-                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
-                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
-                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
-                </ul>
-              </section>
-              <section class="page form">
-                  <h1>Get involved</h1>
-                  <p>Wikitongues wouldn't be anywhere without our community. There are so many ways you can help out, or send us a message if you'd just like to reach out!</p>
-                  <ul>
-                    {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
-                    {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
-                    {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
-                  </ul>
-              </section>
-        </script>
         <script type="text/x-handlebars" data-template-name="press">
               <section class="page">
                   <h1>press</h1>
               </section>
         </script>
-        <script type="text/x-handlebars" data-template-name="submit">
+        <script type="text/x-handlebars" data-template-name="get_involved">
+              <section class="page form">
+                  <h1>Get involved</h1>
+                  <p>Wikitongues wouldn't be anywhere without our community. There are so many ways you can help out, or send us a message if you'd just like to reach out!</p>
+                  <ul class="activities">
+                    <li>
+                      {{#link-to "submit" classNames="subheaderLink"}}
+                        <img src="#" alt="Submit a video">
+                        <p>Submit a video</p>
+                      {{/link-to}}
+                    </li>
+                    <li>
+                      {{#link-to "volunteer" classNames="subheaderLink"}}
+                        <img src="#" alt="Volunteer">
+                        <p>Volunteer</p>
+                      {{/link-to}}
+                    </li>
+                    <li>
+                      {{#link-to "contact" classNames="subheaderLink"}}
+                        <img src="#" alt="Contact">
+                        <p>Contact</p>
+                      {{/link-to}}
+                    </li>
+                  </ul>
+              </section>
+        </script>
+        <script type="text/x-handlebars" data-template-name="components/get-involved-subheader">
               <section class="subheader">
                 <ul>
-                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
                   {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
                   {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
                   {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
                 </ul>
               </section>
+        </script>
+        <script type="text/x-handlebars" data-template-name="submit">
+              {{get-involved-subheader}}
               <section class="page form">
                   <h1>Submit a video</h1>
                   <p>Support the Wikitongues community by submiting a video of your own.</p>
                   {{#link-to "submitGuidelines" classNames="secondaryLink"}}Video Guidelines{{/link-to}}
                   <ul>
-                    <li>
-                      <p>About you</p>
-                    </li>
+                    <li><p>About you</p></li>
                     <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li>
                     <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
-                    <li><input type="text" id="link" name="link" placeholder="Video File Link (Dropbox, Google Drive, Mediafire)"></li>
-                    <li>
-                      <p>About the speaker</p>
-                    </li>
-                    <li><input type="text" id="speaker" name="speaker" placeholder="What is the speaker's name?"></li>
-                    <li><input type="text" id="language" name="language" placeholder="What languages are used in this video?"></li>
+                    <li><input type="text" id="link" name="link" placeholder="Link to Video File (Dropbox, Google Drive, Mediafire) (Required)"></li>
                   </ul>
-                  <p>About the video</p>
-                  <textarea name="transcription" id="transcription" class="optional" placeholder="Transcribe the video (optional)"></textarea>
-                  <textarea name="translation" id="translation" class="optional" placeholder="Translate the video (optional)"></textarea>
-                  <br>
+                  <ul>
+                    <li><p>About the speaker</p></li>
+                    <li><input type="text" id="speaker" name="speaker" placeholder="What is the speaker's name? (Required)"></li>
+                    <li><input type="text" id="language" name="language" placeholder="What languages are used in this video? (Required)"></li>
+                  </ul>
+                  <ul>
+                    <li><p>About the video</p></li>
+                    <li><input type="text" id="videoLocation" name="videoLocation" placeholder="Where was this video made? (Required)"></li>
+                    <li><textarea name="transcription" id="transcription" class="optional" placeholder="Transcribe the video (optional)"></textarea></li>
+                    <li><textarea name="translation" id="translation" class="optional" placeholder="Translate the video (optional)"></textarea></li>
+                  </ul>
                   <p>Leave us a message</p>
                   <textarea name="message" id="message" class="optional" placeholder="Message (optional)"></textarea>
+                  <ul>
+                    <li><p>Release form</p></li>
+                    <li>
+                      {{#link-to "legal" classNames="secondaryLink"}}Read Release Form{{/link-to}}
+                    </li>
+                    <li><label for="releaseForm"><input type="checkbox" id="releaseForm" name="check_list[]" value="releaseForm">I have read and accept the release form (Required)</label></li>
+                  </ul>
                   <input type="submit" id="submit" class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="volunteer">
-              <section class="subheader">
-                <ul>
-                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
-                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit a video{{/link-to}}
-                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
-                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
-                </ul>
-              </section>
+              {{get-involved-subheader}}
               <section class="page form">
                   <h1>Become a volunteer</h1>
                   <p>Apply to join our community as a volunteer or ambassador</p>
@@ -276,27 +296,20 @@
                     <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
                     <li><input type="text" id="location" name="location" placeholder="Location (Required)"></li>
                   </ul>
-                  <p>How would you like to contribute?</p>
                   <ul>
+                    <li><p>How would you like to contribute?</p></li>
                     <li><label for="ambassador"><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label></li>
                     <li><label for="socialMedia"><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label></li>
                     <li><label for="webDev"><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label></li>
                     <li><input type="text" id="otherVolunteer" name="" placeholder="Other (Please specify)"></li>
                   </ul>
                   <p>Please tell us a bit about yourself</p>
-                  <textarea name="message" id="message" placeholder="What do you do, "></textarea>
+                  <textarea name="message" id="message" placeholder="What do you do?"></textarea>
                   <input type="submit" id="submit"  class="submit" value="Send">
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="contact">
-              <section class="subheader">
-                <ul>
-                  {{#link-to "get_involved" classNames="subheaderLink" tagName="li"}}Get Involved{{/link-to}}
-                  {{#link-to "submit" classNames="subheaderLink" tagName="li"}}Submit  a video{{/link-to}}
-                  {{#link-to "volunteer" classNames="subheaderLink" tagName="li"}}Volunteer{{/link-to}}
-                  {{#link-to "contact" classNames="subheaderLink" tagName="li"}}Contact{{/link-to}}
-                </ul>
-              </section>
+              {{get-involved-subheader}}
               <section class="page form">
                   <h1>Contact</h1>
                   <p>We're always eager to hear from you</p>
@@ -308,16 +321,24 @@
                   <input type="text" id="submit"  class="submit" value="Send">
               </section>
         </script>
-        <script type="text/x-handlebars" data-template-name="privacy">
+        <script type="text/x-handlebars" data-template-name="legal">
               <section class="page">
-                  <h1>Privacy Policy</h1>
-                  <p>Wikitongues will never give or sell your personal information to any third-party organization or individual without your explicit consent.</p>
-              </section>
-        </script>
-        <script type="text/x-handlebars" data-template-name="terms">
-              <section class="page">
-                  <h1>Terms of Service</h1>
-                  <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>
+                <h1>Legal</h1>
+                <div class="legal">
+                  <h2>Terms of Service</h2>
+                  <p>By submitting a video to Wikitongues, you hereby agree:</p>
+                  <ol>
+                    <li><p>to have secured the consent of the individual or individuals who appear in that video to record them,<b>very poorly phrased</b> </p></li>
+                    <li><p>that you either possess or have obtained the legal rights to share this video online, and </p></li>
+                    <li><p>that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you <b>what if the video is not of the person submitting?</b>, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity.</p></li>
+                  </ol>
+                  <p>If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it.</p>
+                  <p><b>By submitting a video to Wikitongues</b>You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>
+                  </div>
+                  <div class="legal">
+                    <h2>Privacy Policy</h2>
+                    <p>Wikitongues will never give or sell your personal information to any third-party organization or individual without your explicit consent.</p>
+                  </div>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="submitGuidelines">
@@ -331,6 +352,12 @@
                   <h1>Volunteering Guidelines</h1>
                   <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>
               </section>
+        </script>
+        <script type="text/x-handlebars" data-template-name="releaseForm">
+          <section class="page">
+              <h1>Volunteering Guidelines</h1>
+              <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>
+          </section>
         </script>
 
 

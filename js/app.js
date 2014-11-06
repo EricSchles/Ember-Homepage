@@ -14,10 +14,10 @@ App.Router.map(function() {
   this.route("submit");
   this.route("volunteer");
   this.route("contact");
-  this.route("privacy");
-  this.route("terms");
+  this.route("legal");
   this.route("submitGuidelines");
   this.route("volunteerGuidelines");
+  this.route("releaseForm");
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -26,6 +26,17 @@ App.IndexRoute = Ember.Route.extend({
       {
         id: 0,
         image: "img/banner-03.jpg",
+      }
+    ];
+  }
+});
+
+App.MissionRoute = Ember.Route.extend({
+  model: function() {
+    return [
+      {
+        id: 0,
+        image: "img/mission.jpg",
       }
     ];
   }
