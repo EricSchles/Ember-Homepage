@@ -61,7 +61,7 @@ App.GoogleMapsComponent = Ember.Component.extend({
     var options = {
       center: new google.maps.LatLng(this.get("latitude"),this.get("longitude")),
       zoom:2,
-      disableDefaultUI:true,
+      disableDefaultUI:false,
       mapTypeControl: false,
       minZoom:2,
       mapTypeId: google.maps.MapTypeId.ROADMAP

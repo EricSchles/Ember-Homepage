@@ -44,7 +44,8 @@ module.exports = function (grunt) {
         },
         watch: {
             files: [
-                'index.html'
+                'index.html',
+                'js/app.js'
             ],
             stylus: {
                 files: ['css/stylus/*.styl'],
@@ -52,7 +53,7 @@ module.exports = function (grunt) {
             },
             livereload: {
                 options: { livereload: LIVERELOAD_PORT },
-                files: ['css/style.css', 'index.html']
+                files: ['css/style.css', 'index.html', 'js/app.js']
             }
         },
         connect: {

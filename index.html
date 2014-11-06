@@ -32,7 +32,7 @@
                 </div>
                 <ul class="top-nav">
                   {{#link-to "index" tagName="li"}}Home{{/link-to}}
-                  {{#link-to "about" tagName="li"}}About{{/link-to}}
+                  {{#link-to "mission" tagName="li"}}About{{/link-to}}
                   {{!-- {{#link-to "team" className="team" tagName="li"}}Team{{/link-to}} --}}
                   {{!-- {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}} --}}
                   {{!-- {{#link-to "expeditions" tagName="li"}}Expeditions{{/link-to}} --}}{{!-- Expeditions should live inside of Projects --}}
@@ -55,9 +55,9 @@
                     <div class="links">
                         <ul>
                             <li class="header">Organization</li>
-                            {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+                            {{#link-to "mission" classNames="footerLink" tagName="li"}}About{{/link-to}}
                             {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
-                            {{#link-to "mission" classNames="footerLink" tagName="li"}}Mission{{/link-to}}
+                            {{!-- {{#link-to "mission" classNames="footerLink" tagName="li"}}Mission{{/link-to}} --}}
                             {{!-- {{#link-to "expeditions" classNames="footerLink" tagName="li"}}Expeditions{{/link-to}} --}}
                             {{#link-to "projects" classNames="footerLink" tagName="li"}}Projects{{/link-to}}
                             {{#link-to "press" classNames="footerLink" tagName="li"}}Press{{/link-to}}
@@ -125,21 +125,17 @@
                 &nbsp;
               </section>
         </script>
-        <script type="text/x-handlebars" data-template-name="components/banner-component">
-              <section class="banner">
-                <img {{bind-attr src="banner.image"}} alt="Wikitongues" class="fallback">
-                <h1>{{banner.statement}}</h1>
-              </section>
-        </script>
+
         <script  type="text/x-handlebars" data-template-name="components/about-subheader">
           <section class="subheader">
             <ul>
-              {{#link-to "about" classNames="footerLink" tagName="li"}}About{{/link-to}}
+              {{#link-to "mission" className="footerLink" tagName="li"}}Mission{{/link-to}}
               {{#link-to "team" classNames="footerLink" tagName="li"}}Team{{/link-to}}
-              {{#link-to "mission" className="mission" tagName="li"}}Mission{{/link-to}}
+              {{#link-to "projects" className="footerLink" tagName="li"}}Projects{{/link-to}}
             </ul>
           </section>
         </script>
+
         <script type="text/x-handlebars" data-template-name="about">
             {{#each}}
                 <section class="banner">
@@ -155,9 +151,11 @@
                 {{#link-to "team" classNames="link" tagName="p"}}We are Wikitongues.{{/link-to}}
             </section>
         </script>
+
         <script type="text/x-handlebars" data-template-name="components/google-maps">
             <div class="map-canvas"></div>
         </script>
+
         <script type="text/x-handlebars" data-template-name="team">
                 <section class="banner team">
                     {{google-maps latitude="20" longitude="0" markers=markers}}
@@ -185,6 +183,7 @@
                     </div>
                 </section>
         </script>
+
         <script type="text/x-handlebars" data-template-name="mission">
               {{#each}}
                 <section class="banner">
@@ -205,8 +204,10 @@
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="projects">
+              {{about-subheader}}
               <section class="page">
-                  <h1>projects</h1>
+                  <h1>Projects</h1>
+                  {{#link-to "expeditions" classNames="subheaderLink" tagName="p"}}Expeditions{{/link-to}}
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="press">
@@ -252,6 +253,7 @@
         <script type="text/x-handlebars" data-template-name="submit">
               {{get-involved-subheader}}
               <section class="page form">
+                <form action="">
                   <h1>Submit a video</h1>
                   <p>Support the Wikitongues community by submiting a video of your own.</p>
                   {{#link-to "submitGuidelines" classNames="secondaryLink"}}Video Guidelines{{/link-to}}
@@ -282,11 +284,13 @@
                     <li><label for="releaseForm"><input type="checkbox" id="releaseForm" name="check_list[]" value="releaseForm">I have read and accept the release form (Required)</label></li>
                   </ul>
                   <input type="submit" id="submit" class="submit" value="Send">
+                </form>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="volunteer">
               {{get-involved-subheader}}
               <section class="page form">
+                <form action="">
                   <h1>Become a volunteer</h1>
                   <p>Apply to join our community as a volunteer or ambassador</p>
                   {{#link-to "volunteerGuidelines" classNames="secondaryLink"}}Volunteering Guidelines{{/link-to}}
@@ -306,11 +310,13 @@
                   <p>Please tell us a bit about yourself</p>
                   <textarea name="message" id="message" placeholder="What do you do?"></textarea>
                   <input type="submit" id="submit"  class="submit" value="Send">
+                </form>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="contact">
               {{get-involved-subheader}}
               <section class="page form">
+                <form action="">
                   <h1>Contact</h1>
                   <p>We're always eager to hear from you</p>
                   <ul>
@@ -318,7 +324,8 @@
                     <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
                   </ul>
                   <textarea name="message" id="message" placeholder="Message"></textarea>
-                  <input type="text" id="submit"  class="submit" value="Send">
+                  <input type="submit" id="submit"  class="submit" value="Send">
+                </form>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="legal">
