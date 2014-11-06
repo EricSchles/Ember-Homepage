@@ -166,7 +166,12 @@
                                     <p class="country">{{location}}</p>
                                 </li>
                             {{/each}}
-                            {{#link-to "volunteer" tagName="li"}}Become a volunteer today{{/link-to}}
+                            <li>
+                              {{#link-to "volunteer"}}
+                                <img src="#" alt="Become a volunteer today">
+                                <p>Become a volunteer today</p>
+                              {{/link-to}}
+                            </li>
                         </ul>
                     </div>
                 </section>
