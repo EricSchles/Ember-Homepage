@@ -125,6 +125,7 @@
                 &nbsp;
               </section>
         </script>
+
         <script  type="text/x-handlebars" data-template-name="components/about-subheader">
           <section class="subheader">
             <ul>
@@ -134,6 +135,7 @@
             </ul>
           </section>
         </script>
+
         <script type="text/x-handlebars" data-template-name="about">
             {{#each}}
                 <section class="banner">
@@ -149,9 +151,11 @@
                 {{#link-to "team" classNames="link" tagName="p"}}We are Wikitongues.{{/link-to}}
             </section>
         </script>
+
         <script type="text/x-handlebars" data-template-name="components/google-maps">
             <div class="map-canvas"></div>
         </script>
+
         <script type="text/x-handlebars" data-template-name="team">
                 <section class="banner team">
                     {{google-maps latitude="20" longitude="0" markers=markers}}
@@ -179,6 +183,7 @@
                     </div>
                 </section>
         </script>
+
         <script type="text/x-handlebars" data-template-name="mission">
               {{#each}}
                 <section class="banner">
@@ -248,6 +253,7 @@
         <script type="text/x-handlebars" data-template-name="submit">
               {{get-involved-subheader}}
               <section class="page form">
+                <form action="">
                   <h1>Submit a video</h1>
                   <p>Support the Wikitongues community by submiting a video of your own.</p>
                   {{#link-to "submitGuidelines" classNames="secondaryLink"}}Video Guidelines{{/link-to}}
@@ -278,11 +284,13 @@
                     <li><label for="releaseForm"><input type="checkbox" id="releaseForm" name="check_list[]" value="releaseForm">I have read and accept the release form (Required)</label></li>
                   </ul>
                   <input type="submit" id="submit" class="submit" value="Send">
+                </form>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="volunteer">
               {{get-involved-subheader}}
               <section class="page form">
+                <form action="">
                   <h1>Become a volunteer</h1>
                   <p>Apply to join our community as a volunteer or ambassador</p>
                   {{#link-to "volunteerGuidelines" classNames="secondaryLink"}}Volunteering Guidelines{{/link-to}}
@@ -302,11 +310,13 @@
                   <p>Please tell us a bit about yourself</p>
                   <textarea name="message" id="message" placeholder="What do you do?"></textarea>
                   <input type="submit" id="submit"  class="submit" value="Send">
+                </form>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="contact">
               {{get-involved-subheader}}
               <section class="page form">
+                <form action="">
                   <h1>Contact</h1>
                   <p>We're always eager to hear from you</p>
                   <ul>
@@ -314,7 +324,8 @@
                     <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
                   </ul>
                   <textarea name="message" id="message" placeholder="Message"></textarea>
-                  <input type="text" id="submit"  class="submit" value="Send">
+                  <input type="submit" id="submit"  class="submit" value="Send">
+                </form>
               </section>
         </script>
         <script type="text/x-handlebars" data-template-name="legal">
