@@ -12,6 +12,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-ember-templates');
     grunt.loadNpmTasks('grunt-nodemailer');
 
     grunt.initConfig({
@@ -40,6 +41,16 @@ module.exports = function (grunt) {
               ]
             }
         },
+        emberTemplates: {
+            compile: {
+                options: {
+                    templateBasePath: /templates\//
+                },
+                files: {
+                  "js/scripts/templates.js": "**/*.handlebars"
+                }
+            }
+        },
         stylus: {
             compile: {
                 options: {
@@ -56,6 +67,10 @@ module.exports = function (grunt) {
                 'index.html',
                 'js/**/*.js'
             ],
+            ember_templates: {
+                files: 'templates/**/*.handlebars',
+                tasks: ['emberTemplates']
+            },
             stylus: {
                 files: ['css/stylus/*.styl'],
                 tasks: ['stylus']
@@ -85,13 +100,14 @@ module.exports = function (grunt) {
 
     grunt.registerTask('server', function() {
         grunt.task.run([
-           'connect:livereload',
-           'watch'
+            'connect:livereload',
+            'watch'
         ]);
     });
 
     grunt.registerTask('default', [
         'stylus',
+        'emberTemplates',
         'server'
     ]);
 };
