@@ -1,0 +1,25 @@
+<section class="banner team">
+    {{google-maps latitude="20" longitude="0" markers=markers}}
+    {{!-- <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=zJwV6XUktfg0.kEV6pWd8WZbM&key=AIzaSyDKZeAjJRXIyUIwn0L062uINzGdBu9fFsU" width="1280" height="600" frameborder="0" style="border:0"></iframe> --}}
+</section>
+{{about-subheader}}
+<section class="page">
+    <div class="team">
+        <h1 class="drop">Our team is composed of volunteers from all over the world</h1>
+        <ul>
+            {{#each}}
+                <li>
+                    <img {{bind-attr src="photo" title="languages"}}>
+                    <p>{{name}}</p>
+                    <p class="country">{{location}}</p>
+                </li>
+            {{/each}}
+            <li class="volunteer">
+              {{#link-to "volunteer"}}
+                <img src="#" alt="Become a volunteer today">
+                <p>Become a volunteer today</p>
+              {{/link-to}}
+            </li>
+        </ul>
+    </div>
+</section>

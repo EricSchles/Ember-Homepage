@@ -1,0 +1,40 @@
+{{#each}}
+    <section class="banner">
+        <img {{bind-attr src="image"}} alt="Wikitongues" class="fallback">
+    </section>
+{{/each}}
+<section class="page index">
+    <div class="information">
+        <h1>Every language in the world</h1>
+        <a class="youTubeLink" href="https://www.youtube.com/user/WikiTongues" target="_blank">
+            <img src="img/youTubeLink.png" alt="">
+            <div class="triangle"></div>
+            <p>Join us on YouTube</p>
+        </a>
+        <br>
+        <p>We are a group of motely motherfuckers who go out of our way to listen (and party with) to those around us. Our mission is to record every language in the world.</p>
+        {{#link-to "about" classNames="link" tagName="p"}}Learn more here...{{/link-to}}
+        <ul class="activities">
+          <li>
+            {{#link-to "submit" classNames="subheaderLink"}}
+              <img src="#" alt="User submissions">
+              <p>User submissions</p>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to "volunteer" classNames="subheaderLink"}}
+              <img src="#" alt="Ambassadors">
+              <p>Ambassadors</p>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to "team" classNames="subheaderLink"}}
+              <img src="#" alt="Community">
+              <p>Community</p>
+            {{/link-to}}
+          </li>
+        </ul>
+        {{!-- <p>Join us in discovering every single language in the world!</p> --}}
+    </div>
+    &nbsp;
+  </section>
