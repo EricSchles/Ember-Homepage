@@ -1,0 +1,22 @@
+{
+  "name": "ember-homepage",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wikitongues/ember-homepage",
+  "authors": [
+    "Freddie Andrade <faandrade@gmail.com>"
+  ],
+  "description": "Every Language in the World",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember-data": "~0.0.14",
+    "ember": "~1.8.1"
+  }
+}
