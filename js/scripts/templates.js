@@ -216,12 +216,6 @@ function program3(depth0,data) {
   data.buffer.push("Team");
   }
 
-function program5(depth0,data) {
-  
-  
-  data.buffer.push("Projects");
-  }
-
   data.buffer.push("<section class=\"subheader\">\n  <ul>\n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'className': ("footerLink"),
@@ -234,13 +228,7 @@ function program5(depth0,data) {
     'tagName': ("li")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "team", options) : helperMissing.call(depth0, "link-to", "team", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'className': ("footerLink"),
-    'tagName': ("li")
-  },hashTypes:{'className': "STRING",'tagName': "STRING"},hashContexts:{'className': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "projects", options) : helperMissing.call(depth0, "link-to", "projects", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </ul>\n</section>");
+  data.buffer.push("\n    \n  </ul>\n</section>");
   return buffer;
   
 });

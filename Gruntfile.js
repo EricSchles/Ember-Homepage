@@ -8,24 +8,25 @@ var
     };
 
 module.exports = function (grunt) {
-    // Load tasks
-    grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-ember-templates');
-    grunt.loadNpmTasks('grunt-nodemailer');
+    // load all grunt tasks
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
+        bower: {
+            target: {
+                rjsConfig: 'config.js'
+            }
+        },
         nodemailer: {
             options: {
-              transport: {
-                type: 'SMTP',
-                options: {
-                  service: 'Gmail',
-                  auth: {
-                    user: 'faandrade@gmail.com',
-                    pass: 'keikothewhale'
-                  }
+                transport: {
+                    type: 'SMTP',
+                    options: {
+                    service: 'Gmail',
+                    auth: {
+                        user: 'faandrade@gmail.com',
+                        pass: 'keikothewhale'
+                    }
                 }
               },
               message: {
@@ -106,8 +107,10 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', [
+        'bower',
         'stylus',
         'emberTemplates',
+        'nodemailer',
         'server'
     ]);
 };
