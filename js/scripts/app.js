@@ -99,6 +99,47 @@ App.SubmitRoute = Ember.Route.extend(App.ResetScroll)
 App.VolunteerRoute = Ember.Route.extend(App.ResetScroll)
 App.ContactRoute = Ember.Route.extend(App.ResetScroll)
 
+App.SubmitView = Ember.View.extend({
+  templateName: "submit",
+  name: "",
+  email: "",
+  link: "",
+  speaker: "",
+  language: "",
+  videoLocation: "",
+  transcription: "",
+  translation: "",
+  message: "",
+
+  actions: {
+    submit: function(event) {
+      console.log(this.get("name"), this.get("email"), this.get("link"))
+      $.ajax({
+        type: "POST",
+        url: "https://mandrillapp.com/api/1.0/messages/send.json",
+        data: {
+          'key': 'ZMiPM6bTRAzqjOaIqzn-tA',
+          'message': {
+            'from_email': this.get("email"),
+            'to': [
+                {
+                  'email': 'faandrade@gmail.com',
+                  'name': 'Dick',
+                  'type': 'to'
+                }
+              ],
+            'autotext': 'true',
+            'subject': 'Hello!',
+            'html': this.get("name")+" "+this.get("email")+" "+this.get("link")
+          }
+        }
+       }).done(function(response) {
+       console.log(response);
+     });
+    }
+  }
+})
+
 App.ApplicationAdapter = DS.FixtureAdapter.extend({
 
 });
