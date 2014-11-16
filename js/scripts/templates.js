@@ -292,13 +292,35 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES["contact"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1;
+  var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
   data.buffer.push("\n");
   stack1 = helpers._triageMustache.call(depth0, "get-involved-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page form\">\n  <form action=\"\">\n    <h1>Contact</h1>\n    <p>We're always eager to hear from you</p>\n    <ul>\n      <li><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Name (Required)\"></li>\n      <li><input type=\"text\" id=\"email\" name=\"email\" placeholder=\"Email (Required)\"></li>\n    </ul>\n    <textarea name=\"message\" id=\"message\" placeholder=\"Message\"></textarea>\n    <input type=\"submit\" id=\"submit\"  class=\"submit\" value=\"Send\">\n  </form>\n</section>");
+  data.buffer.push("\n<section class=\"page form\">\n  <form action=\"\">\n    <h1>Contact</h1>\n    <p>We're always eager to hear from you</p>\n    <ul>\n      \n      \n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("name"),
+    'name': ("name"),
+    'placeholder': ("Name (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("email"),
+    'name': ("email"),
+    'placeholder': ("Email (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    \n    ");
+  data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
+    'name': ("message"),
+    'id': ("message"),
+    'placeholder': ("Message")
+  },hashTypes:{'name': "STRING",'id': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("\n    <input type=\"submit\" id=\"submit\"  class=\"submit\" value=\"Send\">\n  </form>\n</section>");
   return buffer;
   
 });
@@ -398,7 +420,7 @@ function program9(depth0,data) {
 
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page index\">\n    <div class=\"information\">\n        <h1>Every language in the world</h1>\n        <a class=\"youTubeLink\" href=\"https://www.youtube.com/user/WikiTongues\" target=\"_blank\">\n            <img src=\"img/youTubeLink.png\" alt=\"\">\n            <div class=\"triangle\"></div>\n            <p>Join us on YouTube</p>\n        </a>\n        <br>\n        <p>We are a group of motely motherfuckers who go out of our way to listen (and party with) to those around us. Our mission is to record every language in the world.</p>\n        ");
+  data.buffer.push("\n<section class=\"page index\">\n    <div class=\"information\">\n        <h1>Every language in the world</h1>\n        <a class=\"youTubeLink\" href=\"https://www.youtube.com/user/WikiTongues\" target=\"_blank\">\n            <img src=\"img/youTubeLink.png\" alt=\"\">\n            <div class=\"triangle\"></div>\n            <p>Join us on YouTube</p>\n        </a>\n        <br>\n        <p>Wikitongues is a global community effort to record, <b>archive</b>, and provide access to every language in the world. We’re a growing network of volunteers on every continent who work to bring you new language videos weekly, driven by a belief in the value and beauty of human diversity.</p>\n        ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("link"),
     'tagName': ("p")
@@ -510,7 +532,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES["submit"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
   
@@ -526,17 +548,93 @@ function program3(depth0,data) {
 
   stack1 = helpers._triageMustache.call(depth0, "get-involved-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page form\">\n  <form action=\"\">\n    <h1>Submit a video</h1>\n    <p>Support the Wikitongues community by submiting a video of your own.</p>\n    ");
+  data.buffer.push("\n<section class=\"page form\">\n  <form>\n    <h1>Submit a video</h1>\n    <p>Support the Wikitongues community by submiting a video of your own.</p>\n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("secondaryLink")
   },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submitGuidelines", options) : helperMissing.call(depth0, "link-to", "submitGuidelines", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      <li><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Name (Required)\"></li>\n      <li><input type=\"text\" id=\"email\" name=\"email\" placeholder=\"Email (Required)\"></li>\n      <li><input type=\"text\" id=\"link\" name=\"link\" placeholder=\"Link to Video File (Dropbox, Google Drive, Mediafire) (Required)\"></li>\n    </ul>\n    <ul>\n      <li><p>About the speaker</p></li>\n      <li><input type=\"text\" id=\"speaker\" name=\"speaker\" placeholder=\"What is the speaker's name? (Required)\"></li>\n      <li><input type=\"text\" id=\"language\" name=\"language\" placeholder=\"What languages are used in this video? (Required)\"></li>\n    </ul>\n    <ul>\n      <li><p>About the video</p></li>\n      <li><input type=\"text\" id=\"videoLocation\" name=\"videoLocation\" placeholder=\"Where was this video made? (Required)\"></li>\n      <li><textarea name=\"transcription\" id=\"transcription\" class=\"optional\" placeholder=\"Transcribe the video (optional)\"></textarea></li>\n      <li><textarea name=\"translation\" id=\"translation\" class=\"optional\" placeholder=\"Translate the video (optional)\"></textarea></li>\n    </ul>\n    <p>Leave us a message</p>\n    <textarea name=\"message\" id=\"message\" class=\"optional\" placeholder=\"Message (optional)\"></textarea>\n    <ul>\n      <li><p>Release form</p></li>\n      <li>\n        ");
+  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      \n      \n      \n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("name"),
+    'name': ("name"),
+    'placeholder': ("Name (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("email"),
+    'name': ("email"),
+    'placeholder': ("Email (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("link"),
+    'name': ("link"),
+    'placeholder': ("Link to Video File (Dropbox, Google Drive, Mediafire) (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>About the speaker</p></li>\n      \n      \n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("speaker"),
+    'name': ("speaker"),
+    'placeholder': ("What is the speaker's name? (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("language"),
+    'name': ("language"),
+    'placeholder': ("What languages are used in this video? (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>About the video</p></li>\n      \n      \n      \n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'name': ("videoLocation"),
+    'id': ("videoLocation"),
+    'placeholder': ("Where was this video made? (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'name': "STRING",'id': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'name': depth0,'id': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
+    'name': ("transcription"),
+    'id': ("transcription"),
+    'classNames': ("optional"),
+    'placeholder': ("Transcribe the video (Optional)")
+  },hashTypes:{'name': "STRING",'id': "STRING",'classNames': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'classNames': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
+    'name': ("translation"),
+    'id': ("translation"),
+    'class': ("optional"),
+    'placeholder': ("Translate the video (Optional)")
+  },hashTypes:{'name': "STRING",'id': "STRING",'class': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'class': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("</li>\n    </ul>\n    <p>Leave us a message</p>\n    \n    ");
+  data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
+    'name': ("message"),
+    'id': ("message"),
+    'class': ("optional"),
+    'placeholder': ("Message (Optional")
+  },hashTypes:{'name': "STRING",'id': "STRING",'class': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'class': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("\n    <ul>\n      <li><p>Release form</p></li>\n      <li>\n        ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("secondaryLink")
   },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "legal", options) : helperMissing.call(depth0, "link-to", "legal", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      </li>\n      <li><label for=\"releaseForm\"><input type=\"checkbox\" id=\"releaseForm\" name=\"check_list[]\" value=\"releaseForm\">I have read and accept the release form (Required)</label></li>\n    </ul>\n    <input type=\"submit\" id=\"submit\" class=\"submit\" value=\"Send\">\n  </form>\n</section>");
+  data.buffer.push("\n      </li>\n      <li><label for=\"releaseForm\">\n        \n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("checkbox"),
+    'id': ("releaseForm"),
+    'name': ("check_list[]"),
+    'value': ("releaseForm")
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("I have read and accept the release form (Required)\n      </label></li>\n    </ul>\n    <input type=\"submit\" id=\"submit\" class=\"submit\" value=\"Send\">\n  </form>\n</section>");
   return buffer;
   
 });
@@ -603,7 +701,7 @@ function program3(depth0,data) {
 Ember.TEMPLATES["volunteer"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
+  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
   
@@ -618,7 +716,65 @@ function program1(depth0,data) {
     'classNames': ("secondaryLink")
   },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteerGuidelines", options) : helperMissing.call(depth0, "link-to", "volunteerGuidelines", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      <li><input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Name (Required)\"></li>\n      <li><input type=\"text\" id=\"email\" name=\"email\" placeholder=\"Email (Required)\"></li>\n      <li><input type=\"text\" id=\"location\" name=\"location\" placeholder=\"Location (Required)\"></li>\n    </ul>\n    <ul>\n      <li><p>How would you like to contribute?</p></li>\n      <li><label for=\"ambassador\"><input type=\"checkbox\" id=\"ambassador\" name=\"check_list[]\" value=\"Ambassador\">Language Recording</label></li>\n      <li><label for=\"socialMedia\"><input type=\"checkbox\" id=\"socialMedia\" name=\"check_list[]\" value=\"Social Media\">Social Media</label></li>\n      <li><label for=\"webDev\"><input type=\"checkbox\" id=\"webDev\" name=\"check_list[]\" value=\"Web Development\">Web Development</label></li>\n      <li><input type=\"text\" id=\"otherVolunteer\" name=\"\" placeholder=\"Other (Please specify)\"></li>\n    </ul>\n    <p>Please tell us a bit about yourself</p>\n    <textarea name=\"message\" id=\"message\" placeholder=\"What do you do?\"></textarea>\n    <input type=\"submit\" id=\"submit\"  class=\"submit\" value=\"Send\">\n  </form>\n</section>");
+  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      \n      \n      \n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("name"),
+    'name': ("name"),
+    'placeholder': ("Name (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("email"),
+    'name': ("email"),
+    'placeholder': ("Email (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("location"),
+    'name': ("location"),
+    'placeholder': ("Location (Required)"),
+    'required': (1)
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>How would you like to contribute?</p></li>\n      <li><label for=\"ambassador\">\n        \n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("checkbox"),
+    'id': ("ambassador"),
+    'name': ("check_list[]"),
+    'value': ("Ambassador")
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("Language Recording\n      </label></li>\n      <li><label for=\"socialMedia\">\n        \n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("checkbox"),
+    'id': ("socialMedia"),
+    'name': ("check_list[]"),
+    'value': ("Social Media")
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("Social Media\n      </label></li>\n      <li><label for=\"webDev\">\n        \n        ");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("checkbox"),
+    'id': ("webDev"),
+    'name': ("check_list[]"),
+    'value': ("Web Development")
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("Web Development\n      </label></li>\n      \n      <li>");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("text"),
+    'id': ("otherVolunteer"),
+    'name': ("otherVolunteer"),
+    'placeholder': ("Other (Please specify)")
+  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <p>Please tell us a bit about yourself</p>\n    \n    ");
+  data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
+    'name': ("message"),
+    'id': ("message"),
+    'placeholder': ("What do you do?")
+  },hashTypes:{'name': "STRING",'id': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("\n    <input type=\"submit\" id=\"submit\"  class=\"submit\" value=\"Send\">\n  </form>\n</section>");
   return buffer;
   
 });

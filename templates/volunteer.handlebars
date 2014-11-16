@@ -6,19 +6,33 @@
     {{#link-to "volunteerGuidelines" classNames="secondaryLink"}}Volunteering Guidelines{{/link-to}}
     <ul>
       <li><p>About you</p></li>
-      <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li>
-      <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
-      <li><input type="text" id="location" name="location" placeholder="Location (Required)"></li>
+      {{!-- <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li> --}}
+      {{!-- <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li> --}}
+      {{!-- <li><input type="text" id="location" name="location" placeholder="Location (Required)"></li> --}}
+      <li>{{input type="text" id="name" name="name" placeholder="Name (Required)" required=1}}</li>
+      <li>{{input type="text" id="email" name="email" placeholder="Email (Required)" required=1}}</li>
+      <li>{{input type="text" id="location" name="location" placeholder="Location (Required)" required=1}}</li>
     </ul>
     <ul>
       <li><p>How would you like to contribute?</p></li>
-      <li><label for="ambassador"><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label></li>
-      <li><label for="socialMedia"><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label></li>
-      <li><label for="webDev"><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label></li>
-      <li><input type="text" id="otherVolunteer" name="" placeholder="Other (Please specify)"></li>
+      <li><label for="ambassador">
+        {{!-- <input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording --}}
+        {{input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador"}}Language Recording
+      </label></li>
+      <li><label for="socialMedia">
+        {{!-- <input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media --}}
+        {{input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media"}}Social Media
+      </label></li>
+      <li><label for="webDev">
+        {{!-- <input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development --}}
+        {{input type="checkbox" id="webDev" name="check_list[]" value="Web Development"}}Web Development
+      </label></li>
+      {{!-- <li><input type="text" id="otherVolunteer" name="" placeholder="Other (Please specify)"></li> --}}
+      <li>{{input type="text" id="otherVolunteer" name="otherVolunteer" placeholder="Other (Please specify)"}}</li>
     </ul>
     <p>Please tell us a bit about yourself</p>
-    <textarea name="message" id="message" placeholder="What do you do?"></textarea>
+    {{!-- <textarea name="message" id="message" placeholder="What do you do?"></textarea> --}}
+    {{textarea name="message" id="message" placeholder="What do you do?"}}
     <input type="submit" id="submit"  class="submit" value="Send">
   </form>
 </section>

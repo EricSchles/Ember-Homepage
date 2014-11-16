@@ -223,18 +223,3 @@ App.Volunteer.FIXTURES = [
   },
 ];
 
-
-// Nodemailer
-// var nodemailer = require('nodemailer');
-
-var nodemailer = require(['nodemailer'], function (nodemailer) {
-
-});
-
-var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-      user: 'faandrade',
-      pass: 'keikothewhale'
-    }
-  });

@@ -5,10 +5,13 @@
     <h1>Contact</h1>
     <p>We're always eager to hear from you</p>
     <ul>
-      <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li>
-      <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li>
+      {{!-- <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li> --}}
+      {{!-- <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li> --}}
+      <li>{{input type="text" id="name" name="name" placeholder="Name (Required)" required=1}}</li>
+      <li>{{input type="text" id="email" name="email" placeholder="Email (Required)" required=1}}</li>
     </ul>
-    <textarea name="message" id="message" placeholder="Message"></textarea>
+    {{!-- <textarea name="message" id="message" placeholder="Message"></textarea> --}}
+    {{textarea name="message" id="message" placeholder="Message"}}
     <input type="submit" id="submit"  class="submit" value="Send">
   </form>
 </section>
