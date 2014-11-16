@@ -10,10 +10,8 @@ App.ResetScroll = Ember.Mixin.create({
   }
 });
 
-// ROUTER
-
+// Router
 App.Router.map(function() {
-  // this.route("index");
   this.route("about");
   this.route("team");
   this.route("mission");
@@ -224,3 +222,4 @@ App.Volunteer.FIXTURES = [
     photo: "img/faces/tatenda.jpg"
   },
 ];
+
