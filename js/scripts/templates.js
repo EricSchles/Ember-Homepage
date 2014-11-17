@@ -703,7 +703,22 @@ function program1(depth0,data) {
     'placeholder': ("Location (Required)"),
     'required': (1)
   },hashTypes:{'value': "ID",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'value': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>How would you like to contribute?</p></li>\n      <li><label for=\"ambassador\"><input type=\"checkbox\" id=\"ambassador\" name=\"check_list[]\" value=\"Ambassador\">Language Recording</label></li>\n      <li><label for=\"socialMedia\"><input type=\"checkbox\" id=\"socialMedia\" name=\"check_list[]\" value=\"Social Media\">Social Media</label></li>\n      <li><label for=\"webDev\"><input type=\"checkbox\" id=\"webDev\" name=\"check_list[]\" value=\"Web Development\">Web Development</label></li>\n      <li>");
+  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>How would you like to contribute?</p></li>\n      <li><label for=\"ambassador\">");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("checkbox"),
+    'checked': ("view.ambassador")
+  },hashTypes:{'type': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("Language Recording</label></li>\n      <li><label for=\"socialMedia\">");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("checkbox"),
+    'checked': ("view.socialMedia")
+  },hashTypes:{'type': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("Social Media</label></li>\n      <li><label for=\"webDev\">");
+  data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
+    'type': ("checkbox"),
+    'checked': ("view.webDev")
+  },hashTypes:{'type': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("Web Development</label></li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'value': ("view.otherVolunteer"),
     'placeholder': ("Other (Please specify)"),
@@ -714,7 +729,7 @@ function program1(depth0,data) {
     'value': ("view.message"),
     'placeholder': ("What do you do?")
   },hashTypes:{'value': "ID",'placeholder': "STRING"},hashContexts:{'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n    \n    \n    <button class=\"submit\" type=\"submit\" ");
+  data.buffer.push("\n    <button class=\"submit\" type=\"submit\" ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
     'target': ("view")
   },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));

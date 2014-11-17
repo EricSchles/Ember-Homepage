@@ -129,7 +129,7 @@ App.SubmitView = Ember.View.extend({
                 }
               ],
             'autotext': 'true',
-            'subject': 'New video:'+this.get("language"),
+            'subject': '! Video:'+this.get("language"),
             'html': "Name of submitter: "+this.get("name")+
               "<br/>Email: "+this.get("email")+
               "<br/>Link to the video: "+this.get("link")+
@@ -175,7 +175,7 @@ App.VolunteerView = Ember.View.extend({
                 }
               ],
             'autotext': 'true',
-            'subject': 'New video:'+this.get("language"),
+            'subject': '! Volunteer:'+this.get("language"),
             'html': "Name of submitter: "+this.get("name")+
               "<br/>Email: "+this.get("email")+
               "<br/>location to the video: "+this.get("location")+

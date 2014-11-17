@@ -12,15 +12,13 @@
     </ul>
     <ul>
       <li><p>How would you like to contribute?</p></li>
-      <li><label for="ambassador"><input type="checkbox" id="ambassador" name="check_list[]" value="Ambassador">Language Recording</label></li>
-      <li><label for="socialMedia"><input type="checkbox" id="socialMedia" name="check_list[]" value="Social Media">Social Media</label></li>
-      <li><label for="webDev"><input type="checkbox" id="webDev" name="check_list[]" value="Web Development">Web Development</label></li>
+      <li><label for="ambassador">{{input type="checkbox" checked=view.ambassador}}Language Recording</label></li>
+      <li><label for="socialMedia">{{input type="checkbox" checked=view.socialMedia}}Social Media</label></li>
+      <li><label for="webDev">{{input type="checkbox" checked=view.webDev}}Web Development</label></li>
       <li>{{input value=view.otherVolunteer placeholder="Other (Please specify)" required=1}}</li>
     </ul>
     <p>Please tell us a bit about yourself</p>
     {{textarea value=view.message placeholder="What do you do?"}}
-    {{!-- <textarea name="message" id="message" placeholder="What do you do?"></textarea> --}}
-    {{!-- <input type="submit" id="submit"  class="submit" value="Send"> --}}
     <button class="submit" type="submit" {{action "submit" target=view}}>Send</button>
   </form>
 </section>
