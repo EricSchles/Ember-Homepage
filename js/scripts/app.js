@@ -113,7 +113,7 @@ App.SubmitView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
-      console.log(this.get("name"), this.get("email"), this.get("link"))
+      console.log(this.get("name"), this.get("email"), this.get("link"), this.get("speaker"), this.get("language"), this.get("videoLocation"), this.get("transcription"), this.get("translation"), this.get("message"))
       $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -123,19 +123,70 @@ App.SubmitView = Ember.View.extend({
             'from_email': this.get("email"),
             'to': [
                 {
-                  'email': 'faandrade@gmail.com',
-                  'name': 'Dick',
+                  'email': 'hello@wikitongues.org',
+                  'name': 'Wikitongues',
                   'type': 'to'
                 }
               ],
             'autotext': 'true',
-            'subject': 'Hello!',
-            'html': this.get("name")+" "+this.get("email")+" "+this.get("link")
+            'subject': 'New video:'+this.get("language"),
+            'html': "Name of submitter: "+this.get("name")+
+              "<br/>Email: "+this.get("email")+
+              "<br/>Link to the video: "+this.get("link")+
+              "<br/>Name of speaker: "+this.get("speaker")+
+              "<br/>Languages spoken: "+this.get("language")+
+              "<br/>Location of video: "+this.get("videoLocation")+
+              "<br/>Transcription: "+this.get("transcription")+
+              "<br/>Translation: "+this.get("translation")+
+              "<br/>Message: "+this.get("message")
           }
         }
-       }).done(function(response) {
-       console.log(response);
-     });
+       })
+    }
+  }
+})
+
+App.VolunteerView = Ember.View.extend({
+  templateName: "volunteer",
+  name: "",
+  email: "",
+  location: "",
+  ambassador: "",
+  socialMedia: "",
+  webDev: "",
+  other: "",
+  message: "",
+
+  actions: {
+    submit: function(event) {
+      console.log(this.get("name"), this.get("email"), this.get("location"), this.get("ambassador"), this.get("socialMedia"), this.get("webDev"), this.get("other"), this.get("message"))
+      $.ajax({
+        type: "POST",
+        url: "https://mandrillapp.com/api/1.0/messages/send.json",
+        data: {
+          'key': 'ZMiPM6bTRAzqjOaIqzn-tA',
+          'message': {
+            'from_email': this.get("email"),
+            'to': [
+                {
+                  'email': 'hello@wikitongues.org',
+                  'name': 'Wikitongues',
+                  'type': 'to'
+                }
+              ],
+            'autotext': 'true',
+            'subject': 'New video:'+this.get("language"),
+            'html': "Name of submitter: "+this.get("name")+
+              "<br/>Email: "+this.get("email")+
+              "<br/>location to the video: "+this.get("location")+
+              "<br/>Name of ambassador: "+this.get("ambassador")+
+              "<br/>Languages spoken: "+this.get("language")+
+              "<br/>Location of video: "+this.get("webDev")+
+              "<br/>other: "+this.get("other")+
+              "<br/>Message: "+this.get("message")
+          }
+        }
+       })
     }
   }
 })
