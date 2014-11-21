@@ -3,45 +3,37 @@
   <form>
     <h1>Submit a video</h1>
     <p>Support the Wikitongues community by submiting a video of your own.</p>
-    {{#link-to "submitGuidelines" classNames="secondaryLink"}}Video Guidelines{{/link-to}}
+    <a class="secondaryLink" {{action "openGuidelines"}}>Video Guidelines</a>
+    {{!-- {{#link-to "submitGuidelines" classNames="secondaryLink"}}Video Guidelines{{/link-to}} --}}
+    {{submit-guidelines}}
     <ul>
       <li><p>About you</p></li>
-      {{!-- <li><input type="text" id="name" name="name" placeholder="Name (Required)"></li> --}}
-      {{!-- <li><input type="text" id="email" name="email" placeholder="Email (Required)"></li> --}}
-      {{!-- <li><input type="text" id="link" name="link" placeholder="Link to Video File (Dropbox, Google Drive, Mediafire) (Required)"></li> --}}
-      <li>{{input type="text" id="name" name="name" placeholder="Name (Required)" required=1}}</li>
-      <li>{{input type="text" id="email" name="email" placeholder="Email (Required)" required=1}}</li>
-      <li>{{input type="text" id="link" name="link" placeholder="Link to Video File (Dropbox, Google Drive, Mediafire) (Required)" required=1}}</li>
+      <li>{{input value=view.name placeholder="Name (Required)" required=1}}</li>
+      <li>{{input value=view.email placeholder="Email (Required)" required=1}}</li>
+      <li>{{input value=view.link placeholder="Link to Video File (Dropbox, Google Drive, Mediafire) (Required)" required=1}}</li>
     </ul>
     <ul>
       <li><p>About the speaker</p></li>
-      {{!-- <li><input type="text" id="speaker" name="speaker" placeholder="What is the speaker's name? (Required)"></li> --}}
-      {{!-- <li><input type="text" id="language" name="language" placeholder="What languages are used in this video? (Required)"></li> --}}
-      <li>{{input type="text" id="speaker" name="speaker" placeholder="What is the speaker's name? (Required)" required=1}}</li>
-      <li>{{input type="text" id="language" name="language" placeholder="What languages are used in this video? (Required)" required=1}}</li>
+      <li>{{input value=view.speaker placeholder="What is the speaker's name? (Required)" required=1}}</li>
+      <li>{{input value=view.language placeholder="What languages are used in this video? (Required)" required=1}}</li>
     </ul>
     <ul>
       <li><p>About the video</p></li>
-      {{!-- <li><input type="text" id="videoLocation" name="videoLocation" placeholder="Where was this video made? (Required)"></li> --}}
-      {{!-- <li><textarea name="transcription" id="transcription" class="optional" placeholder="Transcribe the video (Optional)"></textarea></li> --}}
-      {{!-- <li><textarea name="translation" id="translation" class="optional" placeholder="Translate the video (Optional)"></textarea></li> --}}
-      <li>{{input type="text" name="videoLocation" id="videoLocation" placeholder="Where was this video made? (Required)" required=1}}</li>
-      <li>{{textarea name="transcription" id="transcription" classNames="optional" placeholder="Transcribe the video (Optional)"}}</li>
-      <li>{{textarea name="translation" id="translation" class="optional" placeholder="Translate the video (Optional)"}}</li>
+      <li>{{input value=view.videoLocation placeholder="Where was this video made? (Required)" required=1}}</li>
+      <li>{{textarea value=view.transcription placeholder="Transcribe the video (optional)"}}</li>
+      <li>{{textarea value=view.translation placeholder="Translate the video (optional)"}}</li>
     </ul>
     <p>Leave us a message</p>
-    {{!-- <textarea name="message" id="message" class="optional" placeholder="Message (Optional)"></textarea> --}}
-    {{textarea name="message" id="message" class="optional" placeholder="Message (Optional"}}
+    {{textarea value=view.message placeholder="Message (optional)"}}
     <ul>
       <li><p>Release form</p></li>
       <li>
-        {{#link-to "legal" classNames="secondaryLink"}}Read Release Form{{/link-to}}
+        {{!-- {{#link-to "legal" classNames="secondaryLink"}}Read Release Form{{/link-to}} --}}
+        <a class="secondaryLink" {{action "openTOS"}}>Read Release Form</a>
+        {{release-forms}}
       </li>
-      <li><label for="releaseForm">
-        {{!-- <input type="checkbox" id="releaseForm" name="check_list[]" value="releaseForm">I have read and accept the release form (Required) --}}
-        {{input type="checkbox" id="releaseForm" name="check_list[]" value="releaseForm"}}I have read and accept the release form (Required)
-      </label></li>
+      <li class="checkbox">{{input type="checkbox" id="releaseForm" checked=view.releaseForm}}<label for="releaseForm">I have read and accept the release form (Required)</label></li>
     </ul>
-    <input type="submit" id="submit" class="submit" value="Send">
+    <button class="submit" type="submit" {{action "submit" target=view}}>Send</button>
   </form>
 </section>

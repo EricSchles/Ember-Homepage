@@ -90,34 +90,22 @@ function program9(depth0,data) {
 function program11(depth0,data) {
   
   
-  data.buffer.push("Projects");
+  data.buffer.push("Legal");
   }
 
 function program13(depth0,data) {
   
   
-  data.buffer.push("Press");
+  data.buffer.push("Submit a video");
   }
 
 function program15(depth0,data) {
   
   
-  data.buffer.push("Legal");
-  }
-
-function program17(depth0,data) {
-  
-  
-  data.buffer.push("Submit a video");
-  }
-
-function program19(depth0,data) {
-  
-  
   data.buffer.push("Volunteer");
   }
 
-function program21(depth0,data) {
+function program17(depth0,data) {
   
   
   data.buffer.push("Contact");
@@ -158,41 +146,29 @@ function program21(depth0,data) {
     'tagName': ("li")
   },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "team", options) : helperMissing.call(depth0, "link-to", "team", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              \n              \n              ");
+  data.buffer.push("\n              \n              \n              \n              \n              ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "projects", options) : helperMissing.call(depth0, "link-to", "projects", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("footerLink"),
-    'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "press", options) : helperMissing.call(depth0, "link-to", "press", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n              ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("footerLink"),
-    'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "legal", options) : helperMissing.call(depth0, "link-to", "legal", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "legal", options) : helperMissing.call(depth0, "link-to", "legal", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n          </ul>\n          <ul>\n              <li class=\"header\">Get involved</li>\n              ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n              ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(19, program19, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n              ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(21, program21, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n              \n          </ul>\n          <ul>\n              <li class=\"header\">Follow us</li>\n              <li class=\"footerLink\"><a target=\"_blank\" href=\"https://youtube.com/user/WikiTongues\">Youtube</a></li>\n              <li class=\"footerLink\"><a target=\"_blank\" href=\"https://www.facebook.com/wikitongues\">Facebook</a></li>\n              <li class=\"footerLink\"><a target=\"_blank\" href=\"https://twitter.com/wikitongues\">Twitter</a></li>\n              <li class=\"footerLink\"><a target=\"_blank\" href=\"http://wikitongues.tumblr.com/\">Tumblr</a></li>\n              <li class=\"footerLink\"><a target=\"_blank\" href=\"http://instagram.com/wikitongues\">Instragram</a></li>\n          </ul>\n      </div>\n  </div>\n</footer>");
   return buffer;
@@ -289,6 +265,45 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 });
 
+Ember.TEMPLATES["components/release-forms"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<div class=\"termsOfService\">\n  <div class=\"page\">\n    <h1>Release Form</h1>\n    <button ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "hideTOS", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Close</button>\n    <p>For good and valuable consideration I acknowledge as received, and by checking this release I grant as follows:</p>\n    <ol>\n      <li>I irrevocably grant to Wikitongues and its licensees, successors, and assigns the right to license and use the digital video taken of me on ___________________________ in ____________________________________, including my voice, picture, portrait or likeness as captured in a still image (the “footage”) in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If I should receive a copy of the footage, I shall only use it for my own personal use and I shall not authorize anyone else to use it. I agree and acknowledge I have no commercial monetary rights to the footage and that Wikitonguesl owns all rights to the footage, including the right to copyright the footage.</li>\n      <li>I agree that no use of this footage need be submitted to me for any further approval and that Wikitongues shall be without liability to me for any distortion or illusionary effect or adverse result to me on account of the publication, distribution or broadcast of the footage. I agree that the footage may be combined with other material and may be cropped, altered or modified. I consent to the use of my name or a fictitious name in association with this footage.</li>\n      <li>I understand that my personal information will not be made publicly available but may be used as required or necessary directly in relation to the licensing of the footage and may be retained as long as necessary to fulfill this purpose, including being transferred to countries with differing data protection and privacy laws where it may be stored, accessed and used.</li>\n      <li>I release, discharge and agree to hold harmless Wikitongues and its licensees, successors, and assigns from any liability arising out of or in connection with the use of the content, including any and all claims for defamation, libel or slander and or invasion of privacy or publicity</li>\n      <li>I hereby warrant that I am of full age and have every right to contract in my own name in the above regard.  I state further that I have read the above authorization, release and agreement, prior to its execution, and that I am fully familiar with the contents thereof. This agreement shall be binding upon me, my heirs, successors, and assigns.</li>\n      <li>I agree that this release is irrevocable, worldwide and perpetual and will be governed by the laws of the State of New York and the United States of America.</li>\n    </ol>\n  </div>\n</div>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["components/submit-guidelines"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<div class=\"guidelines\">\n  <section class=\"page\">\n    <h1>Video Guidelines</h1>\n    <button ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "hideGuidelines", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Close</button>\n    <p>Wikitongues accepts videos from people all over the world. In order to provide content that is consistent, please read below for a description of what we look for.</p>\n    <ul>\n        <li>\n            <h4>Subject</h4>\n            <p>You. Talk about yourself — your language, country, or culture; your family, passions or home. Be yourself! Speak formally or informally, in the accent you’re most comfortable. Be comfortable! Keep in mind that first and foremost, you’re speaking for yourself.</p>\n        </li>\n        <li>\n            <h4>Style</h4>\n            <p>Look directly at the camera while you speak and frame your portrait intimately, from the shoulders up, or closer. Viewers should feel like you’re talking to them directly.</p>\n        </li>\n        <li>\n            <h4>Format</h4>\n            <p>Wikitongues accepts videos of any level of technical quality. If you have access to a webcam or a smartphone, great! If you have access to professional audiovisual equipment, even better. For comparative production quality guidelines, see the table below.</p>\n        </li>\n    </ul>\n  </section>\n</div>");
+  return buffer;
+  
+});
+
+Ember.TEMPLATES["components/volunteer-guidelines"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', escapeExpression=this.escapeExpression;
+
+
+  data.buffer.push("<div class=\"guidelines\">\n  <section class=\"page\">\n      <h1>Volunteering Guidelines</h1>\n      <button ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "hideGuidelines", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Close</button>\n      <p>As a volunteer for wikitongues, there are many ways  </p>\n      <ol>\n        <li>\n          Becoming an ambassador\n          <p>Ambassadors are members of our community who act as cultural representatives to their home and wherever else they may travel. They have authority to pursue partnerships with like-minded organizations and bring in new volunteers, and they have the responsibility to record as many languages videos as they can.</p>\n        </li>\n        <li>\n          Joining the social media team\n          <p>The social media team works to give our videos maximum visibility across our social networks. They also produce original, long-form articles for our blog and share any and all inspiring linguistic and cultural content from across the web.</p>\n        </li>\n        <li>\n          Joining our web dev team\n          <p>Though Wikitongues exists primarily on social networks, we are working on various new ways </p>\n        </li>\n      </ol>\n  </section>\n</div>");
+  return buffer;
+  
+});
+
 Ember.TEMPLATES["contact"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -298,29 +313,32 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push("\n");
   stack1 = helpers._triageMustache.call(depth0, "get-involved-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page form\">\n  <form action=\"\">\n    <h1>Contact</h1>\n    <p>We're always eager to hear from you</p>\n    <ul>\n      \n      \n      <li>");
+  data.buffer.push("\n<section class=\"page form\">\n  <form action=\"\">\n    <h1>Contact</h1>\n    <p>We're always eager to hear from you</p>\n    <ul>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("name"),
-    'name': ("name"),
-    'placeholder': ("Name (Required)"),
-    'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    'title': ("Name"),
+    'required': ("true"),
+    'value': ("view.name"),
+    'placeholder': ("Name (Required)")
+  },hashTypes:{'title': "STRING",'required': "STRING",'value': "ID",'placeholder': "STRING"},hashContexts:{'title': depth0,'required': depth0,'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("email"),
-    'name': ("email"),
-    'placeholder': ("Email (Required)"),
-    'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("</li>\n    </ul>\n    \n    ");
+    'title': ("Email"),
+    'required': ("true"),
+    'type': ("email"),
+    'value': ("view.email"),
+    'placeholder': ("Email (Required)")
+  },hashTypes:{'title': "STRING",'required': "STRING",'type': "STRING",'value': "ID",'placeholder': "STRING"},hashContexts:{'title': depth0,'required': depth0,'type': depth0,'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
-    'name': ("message"),
-    'id': ("message"),
-    'placeholder': ("Message")
-  },hashTypes:{'name': "STRING",'id': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n    <input type=\"submit\" id=\"submit\"  class=\"submit\" value=\"Send\">\n  </form>\n</section>");
+    'title': ("Message"),
+    'value': ("view.message"),
+    'placeholder': ("Message (optional)")
+  },hashTypes:{'title': "STRING",'value': "ID",'placeholder': "STRING"},hashContexts:{'title': depth0,'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("\n    <button class=\"submit\" type=\"submit\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
+    'target': ("view")
+  },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Send</button>\n  </form>\n</section>");
   return buffer;
   
 });
@@ -342,20 +360,23 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  
-  data.buffer.push("\n          <img src=\"#\" alt=\"Submit a video\">\n          <p>Submit a video</p>\n        ");
+  var buffer = '';
+  data.buffer.push("\n          \n          <p>Submit a video</p>\n        ");
+  return buffer;
   }
 
 function program3(depth0,data) {
   
-  
-  data.buffer.push("\n          <img src=\"#\" alt=\"Volunteer\">\n          <p>Volunteer</p>\n        ");
+  var buffer = '';
+  data.buffer.push("\n          \n          <p>Volunteer</p>\n        ");
+  return buffer;
   }
 
 function program5(depth0,data) {
   
-  
-  data.buffer.push("\n          <img src=\"#\" alt=\"Contact\">\n          <p>Contact</p>\n        ");
+  var buffer = '';
+  data.buffer.push("\n          \n          <p>Contact</p>\n        ");
+  return buffer;
   }
 
   data.buffer.push("<section class=\"page form\">\n    <h1>Get involved</h1>\n    <p>Wikitongues wouldn't be anywhere without our community. There are so many ways you can help out, or send us a message if you'd just like to reach out!</p>\n    <ul class=\"activities\">\n      <li>\n        ");
@@ -396,50 +417,41 @@ function program1(depth0,data) {
 
 function program3(depth0,data) {
   
-  
-  data.buffer.push("Learn more here...");
+  var buffer = '';
+  data.buffer.push("\n              \n              <p>Submit a video</p>\n            ");
+  return buffer;
   }
 
 function program5(depth0,data) {
   
-  
-  data.buffer.push("\n              <img src=\"#\" alt=\"User submissions\">\n              <p>User submissions</p>\n            ");
+  var buffer = '';
+  data.buffer.push("\n              \n              <p>Become an ambassador</p>\n            ");
+  return buffer;
   }
 
 function program7(depth0,data) {
   
-  
-  data.buffer.push("\n              <img src=\"#\" alt=\"Ambassadors\">\n              <p>Ambassadors</p>\n            ");
-  }
-
-function program9(depth0,data) {
-  
-  
-  data.buffer.push("\n              <img src=\"#\" alt=\"Community\">\n              <p>Community</p>\n            ");
+  var buffer = '';
+  data.buffer.push("\n              \n              <p>Join our community</p>\n            ");
+  return buffer;
   }
 
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page index\">\n    <div class=\"information\">\n        <h1>Every language in the world</h1>\n        <a class=\"youTubeLink\" href=\"https://www.youtube.com/user/WikiTongues\" target=\"_blank\">\n            <img src=\"img/youTubeLink.png\" alt=\"\">\n            <div class=\"triangle\"></div>\n            <p>Join us on YouTube</p>\n        </a>\n        <br>\n        <p>Wikitongues is a global community effort to record, <b>archive</b>, and provide access to every language in the world. We’re a growing network of volunteers on every continent who work to bring you new language videos weekly, driven by a belief in the value and beauty of human diversity.</p>\n        ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("link"),
-    'tagName': ("p")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "about", options) : helperMissing.call(depth0, "link-to", "about", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n        <ul class=\"activities\">\n          <li>\n            ");
+  data.buffer.push("\n<section class=\"page index\">\n    <div class=\"information\">\n        <h1>Every language in the world</h1>\n        <a class=\"youTubeLink\" href=\"https://www.youtube.com/user/WikiTongues\" target=\"_blank\">\n            <img src=\"img/youTubeLink.png\" alt=\"\">\n            <div class=\"triangle\"></div>\n            <p>Join us on YouTube</p>\n        </a>\n        <br>\n        <p>Wikitongues is a global effort to record and provide access to every language in the world. We’re a network of volunteers on every continent who work to bring you new language videos every week, driven by a commitment to the value of diversity. Be a part of our movement.</p>\n        <ul class=\"activities\">\n          <li>\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("subheaderLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
+  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n          </li>\n          <li>\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("subheaderLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
+  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n          </li>\n          <li>\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("subheaderLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "team", options) : helperMissing.call(depth0, "link-to", "team", options));
+  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "team", options) : helperMissing.call(depth0, "link-to", "team", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n          </li>\n        </ul>\n        \n    </div>\n    &nbsp;\n  </section>");
   return buffer;
@@ -491,7 +503,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<section class=\"page\">\n    <h1>press</h1>\n</section>");
+  data.buffer.push("<section class=\"page\">\n    <h1>Press</h1>\n</section>");
   
 });
 
@@ -532,120 +544,84 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 Ember.TEMPLATES["submit"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
-function program1(depth0,data) {
-  
-  
-  data.buffer.push("Video Guidelines");
-  }
-
-function program3(depth0,data) {
-  
-  
-  data.buffer.push("Read Release Form");
-  }
 
   stack1 = helpers._triageMustache.call(depth0, "get-involved-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page form\">\n  <form>\n    <h1>Submit a video</h1>\n    <p>Support the Wikitongues community by submiting a video of your own.</p>\n    ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("secondaryLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submitGuidelines", options) : helperMissing.call(depth0, "link-to", "submitGuidelines", options));
+  data.buffer.push("\n<section class=\"page form\">\n  <form>\n    <h1>Submit a video</h1>\n    <p>Support the Wikitongues community by submiting a video of your own.</p>\n    <a class=\"secondaryLink\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "openGuidelines", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Video Guidelines</a>\n    \n    ");
+  stack1 = helpers._triageMustache.call(depth0, "submit-guidelines", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      \n      \n      \n      <li>");
+  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("name"),
-    'name': ("name"),
+    'value': ("view.name"),
     'placeholder': ("Name (Required)"),
     'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  },hashTypes:{'value': "ID",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'value': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("email"),
-    'name': ("email"),
+    'value': ("view.email"),
     'placeholder': ("Email (Required)"),
     'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  },hashTypes:{'value': "ID",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'value': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("link"),
-    'name': ("link"),
+    'value': ("view.link"),
     'placeholder': ("Link to Video File (Dropbox, Google Drive, Mediafire) (Required)"),
     'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>About the speaker</p></li>\n      \n      \n      <li>");
+  },hashTypes:{'value': "ID",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'value': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>About the speaker</p></li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("speaker"),
-    'name': ("speaker"),
+    'value': ("view.speaker"),
     'placeholder': ("What is the speaker's name? (Required)"),
     'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  },hashTypes:{'value': "ID",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'value': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("language"),
-    'name': ("language"),
+    'value': ("view.language"),
     'placeholder': ("What languages are used in this video? (Required)"),
     'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>About the video</p></li>\n      \n      \n      \n      <li>");
+  },hashTypes:{'value': "ID",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'value': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>About the video</p></li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'name': ("videoLocation"),
-    'id': ("videoLocation"),
+    'value': ("view.videoLocation"),
     'placeholder': ("Where was this video made? (Required)"),
     'required': (1)
-  },hashTypes:{'type': "STRING",'name': "STRING",'id': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'name': depth0,'id': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  },hashTypes:{'value': "ID",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'value': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
-    'name': ("transcription"),
-    'id': ("transcription"),
-    'classNames': ("optional"),
-    'placeholder': ("Transcribe the video (Optional)")
-  },hashTypes:{'name': "STRING",'id': "STRING",'classNames': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'classNames': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+    'value': ("view.transcription"),
+    'placeholder': ("Transcribe the video (optional)")
+  },hashTypes:{'value': "ID",'placeholder': "STRING"},hashContexts:{'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
-    'name': ("translation"),
-    'id': ("translation"),
-    'class': ("optional"),
-    'placeholder': ("Translate the video (Optional)")
-  },hashTypes:{'name': "STRING",'id': "STRING",'class': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'class': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("</li>\n    </ul>\n    <p>Leave us a message</p>\n    \n    ");
+    'value': ("view.translation"),
+    'placeholder': ("Translate the video (optional)")
+  },hashTypes:{'value': "ID",'placeholder': "STRING"},hashContexts:{'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("</li>\n    </ul>\n    <p>Leave us a message</p>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
-    'name': ("message"),
-    'id': ("message"),
-    'class': ("optional"),
-    'placeholder': ("Message (Optional")
-  },hashTypes:{'name': "STRING",'id': "STRING",'class': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'class': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n    <ul>\n      <li><p>Release form</p></li>\n      <li>\n        ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("secondaryLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "legal", options) : helperMissing.call(depth0, "link-to", "legal", options));
+    'value': ("view.message"),
+    'placeholder': ("Message (optional)")
+  },hashTypes:{'value': "ID",'placeholder': "STRING"},hashContexts:{'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("\n    <ul>\n      <li><p>Release form</p></li>\n      <li>\n        \n        <a class=\"secondaryLink\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "openTOS", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Read Release Form</a>\n        ");
+  stack1 = helpers._triageMustache.call(depth0, "release-forms", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n      </li>\n      <li><label for=\"releaseForm\">\n        \n        ");
+  data.buffer.push("\n      </li>\n      <li class=\"checkbox\">");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("checkbox"),
     'id': ("releaseForm"),
-    'name': ("check_list[]"),
-    'value': ("releaseForm")
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("I have read and accept the release form (Required)\n      </label></li>\n    </ul>\n    <input type=\"submit\" id=\"submit\" class=\"submit\" value=\"Send\">\n  </form>\n</section>");
+    'checked': ("view.releaseForm")
+  },hashTypes:{'type': "STRING",'id': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'id': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("<label for=\"releaseForm\">I have read and accept the release form (Required)</label></li>\n    </ul>\n    <button class=\"submit\" type=\"submit\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
+    'target': ("view")
+  },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Send</button>\n  </form>\n</section>");
   return buffer;
-  
-});
-
-Ember.TEMPLATES["submitGuidelines"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
-
-
-  data.buffer.push("<section class=\"page\">\n    <h1>Video Guidelines</h1>\n    <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>\n</section>");
   
 });
 
@@ -675,7 +651,7 @@ function program1(depth0,data) {
 function program3(depth0,data) {
   
   
-  data.buffer.push("\n                <img src=\"#\" alt=\"Become a volunteer today\">\n                <p>Become a volunteer today</p>\n              ");
+  data.buffer.push("\n                <img src=\"img/2.png\" alt=\"Become a volunteer today\">\n                <p>Become a volunteer today</p>\n              ");
   }
 
   data.buffer.push("<section class=\"banner team\">\n    ");
@@ -687,7 +663,7 @@ function program3(depth0,data) {
   data.buffer.push("\n    \n</section>\n");
   stack1 = helpers._triageMustache.call(depth0, "about-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page\">\n    <div class=\"team\">\n        <h1 class=\"drop\">Our team is composed of volunteers from all over the world</h1>\n        <ul>\n            ");
+  data.buffer.push("\n<section class=\"page\">\n    <div class=\"team\">\n        <h1 class=\"drop\">We're a team of volunteers from all over the world</h1>\n        <ul>\n            ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n            <li class=\"volunteer\">\n              ");
@@ -701,90 +677,68 @@ function program3(depth0,data) {
 Ember.TEMPLATES["volunteer"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
+  var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing;
 
-function program1(depth0,data) {
-  
-  
-  data.buffer.push("Volunteering Guidelines");
-  }
 
   stack1 = helpers._triageMustache.call(depth0, "get-involved-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page form\">\n  <form action=\"\">\n    <h1>Become a volunteer</h1>\n    <p>Apply to join our community as a volunteer or ambassador</p>\n    ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("secondaryLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteerGuidelines", options) : helperMissing.call(depth0, "link-to", "volunteerGuidelines", options));
+  data.buffer.push("\n<section class=\"page form\">\n  <form>\n    <h1>Become a volunteer</h1>\n    <p>Apply to join our community as a volunteer or ambassador</p>\n    <a class=\"secondaryLink\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "openGuidelines", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Volunteer Guidelines</a>\n    \n    ");
+  stack1 = helpers._triageMustache.call(depth0, "volunteer-guidelines", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      \n      \n      \n      <li>");
+  data.buffer.push("\n    <ul>\n      <li><p>About you</p></li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("name"),
-    'name': ("name"),
-    'placeholder': ("Name (Required)"),
-    'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    'required': ("true"),
+    'value': ("view.name"),
+    'placeholder': ("Name (Required)")
+  },hashTypes:{'required': "STRING",'value': "ID",'placeholder': "STRING"},hashContexts:{'required': depth0,'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("email"),
-    'name': ("email"),
-    'placeholder': ("Email (Required)"),
-    'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+    'required': ("true"),
+    'type': ("email"),
+    'value': ("view.email"),
+    'placeholder': ("Email (Required)")
+  },hashTypes:{'required': "STRING",'type': "STRING",'value': "ID",'placeholder': "STRING"},hashContexts:{'required': depth0,'type': depth0,'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
   data.buffer.push("</li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("location"),
-    'name': ("location"),
-    'placeholder': ("Location (Required)"),
-    'required': (1)
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING",'required': "INTEGER"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0,'required': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>How would you like to contribute?</p></li>\n      <li><label for=\"ambassador\">\n        \n        ");
+    'required': ("true"),
+    'value': ("view.location"),
+    'placeholder': ("Location (Required)")
+  },hashTypes:{'required': "STRING",'value': "ID",'placeholder': "STRING"},hashContexts:{'required': depth0,'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <ul>\n      <li><p>How would you like to contribute?</p></li>\n      <li class=\"checkbox\">");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("checkbox"),
     'id': ("ambassador"),
-    'name': ("check_list[]"),
-    'value': ("Ambassador")
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("Language Recording\n      </label></li>\n      <li><label for=\"socialMedia\">\n        \n        ");
+    'checked': ("view.ambassador")
+  },hashTypes:{'type': "STRING",'id': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'id': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("<label for=\"ambassador\">Language Recording</label></li>\n      <li class=\"checkbox\">");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("checkbox"),
     'id': ("socialMedia"),
-    'name': ("check_list[]"),
-    'value': ("Social Media")
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("Social Media\n      </label></li>\n      <li><label for=\"webDev\">\n        \n        ");
+    'checked': ("view.socialMedia")
+  },hashTypes:{'type': "STRING",'id': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'id': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("<label for=\"socialMedia\">Social Media</label></li>\n      <li class=\"checkbox\">");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
     'type': ("checkbox"),
     'id': ("webDev"),
-    'name': ("check_list[]"),
-    'value': ("Web Development")
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'value': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'value': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("Web Development\n      </label></li>\n      \n      <li>");
+    'checked': ("view.webDev")
+  },hashTypes:{'type': "STRING",'id': "STRING",'checked': "ID"},hashContexts:{'type': depth0,'id': depth0,'checked': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("<label for=\"webDev\">Web Development</label></li>\n      <li>");
   data.buffer.push(escapeExpression((helper = helpers.input || (depth0 && depth0.input),options={hash:{
-    'type': ("text"),
-    'id': ("otherVolunteer"),
-    'name': ("otherVolunteer"),
+    'value': ("view.otherVolunteer"),
     'placeholder': ("Other (Please specify)")
-  },hashTypes:{'type': "STRING",'id': "STRING",'name': "STRING",'placeholder': "STRING"},hashContexts:{'type': depth0,'id': depth0,'name': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
-  data.buffer.push("</li>\n    </ul>\n    <p>Please tell us a bit about yourself</p>\n    \n    ");
+  },hashTypes:{'value': "ID",'placeholder': "STRING"},hashContexts:{'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "input", options))));
+  data.buffer.push("</li>\n    </ul>\n    <p>Please tell us a bit about yourself</p>\n    ");
   data.buffer.push(escapeExpression((helper = helpers.textarea || (depth0 && depth0.textarea),options={hash:{
-    'name': ("message"),
-    'id': ("message"),
+    'value': ("view.message"),
     'placeholder': ("What do you do?")
-  },hashTypes:{'name': "STRING",'id': "STRING",'placeholder': "STRING"},hashContexts:{'name': depth0,'id': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
-  data.buffer.push("\n    <input type=\"submit\" id=\"submit\"  class=\"submit\" value=\"Send\">\n  </form>\n</section>");
+  },hashTypes:{'value': "ID",'placeholder': "STRING"},hashContexts:{'value': depth0,'placeholder': depth0},contexts:[],types:[],data:data},helper ? helper.call(depth0, options) : helperMissing.call(depth0, "textarea", options))));
+  data.buffer.push("\n    <button class=\"submit\" type=\"submit\" ");
+  data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
+    'target': ("view")
+  },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
+  data.buffer.push(">Send</button>\n  </form>\n</section>");
   return buffer;
-  
-});
-
-Ember.TEMPLATES["volunteerGuidelines"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  
-
-
-  data.buffer.push("<section class=\"page\">\n    <h1>Volunteering Guidelines</h1>\n    <p>By submitting a video to Wikitongues, you hereby agree: (1) to have secured the consent of the individual or individuals who appear in that video to record them, (2) that you either possess or have obtained the legal rights to share this video online, and (3) that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity. If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it. You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>\n</section>");
   
 });
