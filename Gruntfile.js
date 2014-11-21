@@ -8,39 +8,10 @@ var
     };
 
 module.exports = function (grunt) {
-    // Load tasks
-    grunt.loadNpmTasks('grunt-contrib-stylus');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-ember-templates');
-    grunt.loadNpmTasks('grunt-nodemailer');
+    // load all grunt tasks
+    require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
-        nodemailer: {
-            options: {
-              transport: {
-                type: 'SMTP',
-                options: {
-                  service: 'Gmail',
-                  auth: {
-                    user: 'faandrade@gmail.com',
-                    pass: 'keikothewhale'
-                  }
-                }
-              },
-              message: {
-                subject: 'A test e-mail',
-                text: 'Plain text message',
-                html: '<body><h1>HTML custom message</h1></body>',
-              },
-              recipients: [
-                {
-                  email: 'faandrade@gmail.com',
-                  name: 'Freddie Andrade'
-                }
-              ]
-            }
-        },
         emberTemplates: {
             compile: {
                 options: {
