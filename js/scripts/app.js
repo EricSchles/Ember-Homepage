@@ -13,7 +13,6 @@ App.ResetScroll = Ember.Mixin.create({
 // ROUTER
 
 App.Router.map(function() {
-  // this.route("index");
   this.route("about");
   this.route("team");
   this.route("mission");
@@ -25,8 +24,6 @@ App.Router.map(function() {
   this.route("volunteer");
   this.route("contact");
   this.route("legal");
-  this.route("submitGuidelines");
-  this.route("volunteerGuidelines");
   this.route("releaseForm");
 });
 
@@ -71,6 +68,9 @@ App.TeamRoute = Ember.Route.extend(App.ResetScroll, {
 });
 
 App.GoogleMapsComponent = Ember.Component.extend({
+  latitude: "",
+  longitude: "",
+
   insertMap: function() {
     var container = this.$(".map-canvas");
 
@@ -85,19 +85,64 @@ App.GoogleMapsComponent = Ember.Component.extend({
 
     new google.maps.Map(container[0], options);
 
+
   }.on("didInsertElement")
 });
 
 App.Volunteer = DS.Model.extend({
   name: DS.attr("string"),
   location: DS.attr("string"),
-  coordinates: DS.attr("number"),
+  latitude: DS.attr("number"),
+  longitude: DS.attr("number"),
   photo: DS.attr("string")
 });
 
 App.SubmitRoute = Ember.Route.extend(App.ResetScroll)
 App.VolunteerRoute = Ember.Route.extend(App.ResetScroll)
 App.ContactRoute = Ember.Route.extend(App.ResetScroll)
+
+App.SubmitController = Ember.Controller.extend({
+  actions: {
+    openGuidelines: function () {
+      $(".guidelines").toggle()
+    },
+    openTOS: function () {
+      $(".termsOfService").toggle()
+    }
+  }
+})
+
+App.SubmitGuidelinesComponent = Ember.Component.extend({
+  actions: {
+    hideGuidelines: function () {
+      $(".guidelines").hide()
+    }
+  }
+})
+
+App.ReleaseFormsComponent = Ember.Component.extend({
+  actions: {
+    hideTOS: function () {
+      $(".termsOfService").hide()
+    }
+  }
+})
+
+App.VolunteerController = Ember.Controller.extend({
+  actions: {
+    openGuidelines: function () {
+      $(".guidelines").toggle()
+    }
+  }
+})
+
+App.VolunteerGuidelinesComponent = Ember.Component.extend({
+  actions: {
+    hideGuidelines: function () {
+      $(".guidelines").hide()
+    }
+  }
+})
 
 App.SubmitView = Ember.View.extend({
   templateName: "submit",
@@ -113,6 +158,9 @@ App.SubmitView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
+      if ( $("input#releaseForm:checked") )
+        { console.log("checked") }
+      else { console.log("not checked")}
       console.log(this.get("name"), this.get("email"), this.get("link"), this.get("speaker"), this.get("language"), this.get("videoLocation"), this.get("transcription"), this.get("translation"), this.get("message"))
       $.ajax({
         type: "POST",
@@ -129,7 +177,7 @@ App.SubmitView = Ember.View.extend({
                 }
               ],
             'autotext': 'true',
-            'subject': '! Video:'+this.get("language"),
+            'subject': 'New Video:'+this.get("language"),
             'html': "Name of submitter: "+this.get("name")+
               "<br/>Email: "+this.get("email")+
               "<br/>Link to the video: "+this.get("link")+
@@ -138,10 +186,13 @@ App.SubmitView = Ember.View.extend({
               "<br/>Location of video: "+this.get("videoLocation")+
               "<br/>Transcription: "+this.get("transcription")+
               "<br/>Translation: "+this.get("translation")+
-              "<br/>Message: "+this.get("message")
+              "<br/>Message: "+this.get("message")+
+              "<br/>Release Form: "+this.get("releaseForm")
           }
         }
-       })
+       }).done(function(response) {
+         console.log(response); // if you're into that sorta thing
+       });
     }
   }
 })
@@ -151,9 +202,6 @@ App.VolunteerView = Ember.View.extend({
   name: "",
   email: "",
   location: "",
-  ambassador: "",
-  socialMedia: "",
-  webDev: "",
   other: "",
   message: "",
 
@@ -175,18 +223,57 @@ App.VolunteerView = Ember.View.extend({
                 }
               ],
             'autotext': 'true',
-            'subject': '! Volunteer:'+this.get("language"),
+            'subject': 'New Volunteer:'+this.get("location"),
             'html': "Name of submitter: "+this.get("name")+
               "<br/>Email: "+this.get("email")+
-              "<br/>location to the video: "+this.get("location")+
-              "<br/>Name of ambassador: "+this.get("ambassador")+
-              "<br/>Languages spoken: "+this.get("language")+
-              "<br/>Location of video: "+this.get("webDev")+
-              "<br/>other: "+this.get("other")+
+              "<br/>Location of volunteer: "+this.get("location")+
+              "<br/>Ambassador: "+this.get("ambassador")+
+              "<br/>Social Media: "+this.get("socialMedia")+
+              "<br/>Developer: "+this.get("webDev")+
+              "<br/>Other: "+this.get("other")+
               "<br/>Message: "+this.get("message")
           }
         }
-       })
+       }).done(function(response) {
+         console.log(response); // if you're into that sorta thing
+       });
+    }
+  }
+})
+
+App.ContactView = Ember.View.extend({
+  templateName: "contact",
+  name: "",
+  email: "",
+  message: "",
+
+  actions: {
+    submit: function(event) {
+      console.log(this.get("name"), this.get("email"), this.get("message"))
+      $.ajax({
+        type: "POST",
+        url: "https://mandrillapp.com/api/1.0/messages/send.json",
+        data: {
+          'key': 'ZMiPM6bTRAzqjOaIqzn-tA',
+          'message': {
+            'from_email': this.get("email"),
+            'to': [
+                {
+                  'email': 'hello@wikitongues.org',
+                  'name': 'Wikitongues',
+                  'type': 'to'
+                }
+              ],
+            'autotext': 'true',
+            'subject': 'New Message: '+this.get("message"),
+            'html': "Name of submitter: "+this.get("name")+
+              "<br/>Email: "+this.get("email")+
+              "<br/>Message: "+this.get("message")
+          }
+        }
+       }).done(function(response) {
+         console.log(response); // if you're into that sorta thing
+       });
     }
   }
 })
@@ -200,119 +287,136 @@ App.Volunteer.FIXTURES = [
     id:1,
     name: "Daniel Bogre Udell",
     location: "New York, USA",
-    coordinates: (-73.95328556215065,40.649647902099495),
+    latitude:(-73.95328556215065),
+    longitude: (40.649647902099495),
     photo: "img/faces/daniel.jpg"
   },
   {
     id:2,
     name: "Freddie Andrade",
     location: "New York, USA",
-    coordinates: (-73.95328556215065,40.649647902099495),
+    latitude:(-73.95328556215065),
+    longitude: (40.649647902099495),
     photo: "img/faces/freddie.jpg"
   },
   {
     id:3,
     name: "Lindie Botes",
     location: "Prætoria, South Africa",
-    coordinates: (28.188055599999988,-25.7461111),
+    latitude:(28.188055599999988),
+    longitude: (-25.7461111),
     photo: "img/faces/lindie.jpg"
   },
   {
     id:4,
     name: "Cathy Zhang",
     location: "New York, USA",
-    coordinates: (28.188055599999988,-25.7461111),
+    latitude:(28.188055599999988),
+    longitude: (-25.7461111),
     photo: "img/faces/cathy.jpg"
   },
   {
     id:5,
     name: "Pau Mateo",
     location: "Kaunas, Lithuania",
-    coordinates: (23.90359650000005,54.8985207),
+    latitude:(23.90359650000005),
+    longitude: (54.8985207),
     photo: "img/faces/pau.jpg"
   },
   {
     id:6,
     name: "Manjusha Raveendran",
     location: "Buffalo, USA",
-    coordinates: (-73.9780035,40.7056308),
+    latitude:(-73.9780035),
+    longitude: (40.7056308),
     photo: "img/faces/manjusha.jpg"
   },
   {
     id:7,
     name: "Madeleine Koerner",
     location: "Moscow, Russia",
-    coordinates: (37.6173,55.755826),
+    latitude:(37.6173),
+    longitude: (55.755826),
     photo: "img/faces/madeleine.jpg"
   },
   {
     id:8,
     name: "Sarah Doyle",
     location: "Port Vila, Vanuatu",
-    coordinates: (168.32732450000003,-17.7332512),
+    latitude:(168.32732450000003),
+    longitude: (-17.7332512),
     photo: "img/faces/sarah.jpg"
   },
   {
     id:9,
     name: "Plator Gashi",
     location: "Prishtina, Kosovo",
-    coordinates:(21.1431885,42.6582018),
+    latitude:(1.1431885),
+    longitude:(242.6582018),
     photo: "img/faces/plator.jpg"
   },
   {
     id:10,
     name: "Teddy Nee",
     location: "Guishan, Taiwan",
-    coordinates:(120.22687580000002,22.9998999),
+    latitude:(20.22687580000002),
+    longitude:(122.9998999),
     photo: "img/faces/teddy.jpg"
   },
   {
     id:11,
     name: "Maxi Salomone",
     location: "Bahia Blanca, Argentina",
-    coordinates: (-62.26807780000002,-38.71167760000001),
+    latitude:(-62.26807780000002),
+    longitude: (-38.71167760000001),
     photo: "img/faces/maxi.jpg"
   },
   {
     id:12,
     name: "Hugo Campbell Sills",
     location: "Bordeaux, France",
-    coordinates: (-0.5791799999999512,44.837789),
+    latitude:(-0.5791799999999512),
+    longitude: (44.837789),
     photo: "img/faces/hugo.jpg"
   },
   {
     id:13,
     name: "Yasmeen Abdullahi",
     location: "Doha, Qatar",
-    coordinates: (36.82194619999996,-1.2920659),
+    latitude:(36.82194619999996),
+    longitude: (-1.2920659),
     photo: "img/faces/yasmeen.jpg"
   },
   {
     id:14,
     name: "Luis Miguel Bercia",
     location: "Brussles, Belgium",
-    coordinates: (4.351710300000036,50.8503396),
-    photo: "img/faces/luis.jpg"
+    latitude:(4.351710300000036),
+    longitude: (50.8503396),
+    photo: "img/faces/luis3.jpg"
   },
   {
     id:15,
     name: "Andersson Causayá",
     location: "Popoyan, Colombia",
-    coordinates: (-76.60916700000001,2.454167),
+    latitude:(-76.60916700000001),
+    longitude: (2.454167),
     photo: "img/faces/andersson.jpg"
   },
   {
     id:16,
     name: "Liam Neeve",
     location: "Edinburgh, Scotland",
-    coordinates: (-3.188266999999996,55.953252),
+    latitude:(-3.188266999999996),
+    longitude: (55.953252),
     photo: "img/faces/liam.jpg"
   },
   {
     id:17,
     name: "Tatenda Chingono",
     location: "Harare, Zimbabue",
-    coordinates: (31.029722200000037,-17.8638889),
+    latitude:(31.029722200000037),
+    longitude: (-17.8638889),
     photo: "img/faces/tatenda.jpg"
   },
 ];
