@@ -338,7 +338,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
     'target': ("view")
   },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">Send</button>\n    <h6>Alternatively, you can always reach us at hello@wikitongues.org</h6>\n  </form>\n</section>");
+  data.buffer.push(">Send</button>\n    <p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>\n  </form>\n</section>");
   return buffer;
   
 });
@@ -620,7 +620,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
     'target': ("view")
   },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">Send</button>\n  </form>\n</section>");
+  data.buffer.push(">Send</button>\n    <p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>\n  </form>\n</section>");
   return buffer;
   
 });
@@ -732,7 +732,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
     'target': ("view")
   },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">Send</button>\n  </form>\n</section>");
+  data.buffer.push(">Send</button>\n    <p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>\n  </form>\n</section>");
   return buffer;
   
 });
