@@ -299,7 +299,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
   data.buffer.push("<div class=\"guidelines\">\n  <section class=\"page\">\n      <h1>Volunteering Guidelines</h1>\n      <button ");
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "hideGuidelines", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">Close</button>\n      <p>As a volunteer for wikitongues, there are many ways  </p>\n      <ol>\n        <li>\n          Becoming an ambassador\n          <p>Ambassadors are members of our community who act as cultural representatives to their home and wherever else they may travel. They have authority to pursue partnerships with like-minded organizations and bring in new volunteers, and they have the responsibility to record as many languages videos as they can.</p>\n        </li>\n        <li>\n          Joining the social media team\n          <p>The social media team works to give our videos maximum visibility across our social networks. They also produce original, long-form articles for our blog and share any and all inspiring linguistic and cultural content from across the web.</p>\n        </li>\n        <li>\n          Joining our web dev team\n          <p>Though Wikitongues exists primarily on social networks, we are working on various new ways </p>\n        </li>\n      </ol>\n  </section>\n</div>");
+  data.buffer.push(">Close</button>\n      <p>As a volunteer for wikitongues, there are many ways  </p>\n      <ol>\n        <li>\n          Becoming an ambassador\n          <p>Ambassadors are members of our community who act as cultural representatives to their home and wherever else they may travel. They have authority to pursue partnerships with like-minded organizations and bring in new volunteers, and they have the responsibility to record as many languages videos as they can.</p>\n        </li>\n        <li>\n          Joining the social media team\n          <p>The social media team works to give our videos maximum visibility across our social networks. They also produce original, long-form articles for our blog and share any and all inspiring linguistic and cultural content from across the web.</p>\n        </li>\n        <li>\n          Joining our web dev team\n          <p>Though our outlet is currently social media, we are working on new and better ways to show you every language in the world, and make it easier for anyone to contribute. If you have experience in UX/UI or development, we could use your help in the completion of a web and mobile app, slated for release in 2015.</p>\n        </li>\n      </ol>\n  </section>\n</div>");
   return buffer;
   
 });
@@ -379,7 +379,7 @@ function program5(depth0,data) {
   return buffer;
   }
 
-  data.buffer.push("<section class=\"page form\">\n    <h1>Get involved</h1>\n    <p>Wikitongues wouldn't be anywhere without our community. There are so many ways you can help out, or send us a message if you'd just like to reach out!</p>\n    <ul class=\"activities\">\n      <li>\n        ");
+  data.buffer.push("<section class=\"page form\">\n    <h1>Get involved</h1>\n    <p>Wikitongues wouldn't be anywhere without our community of volunteers. If you believe in what we're doing, there's plenty of ways to get involved.</p>\n    <ul class=\"activities\">\n      <li>\n        ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("subheaderLink")
   },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
@@ -425,14 +425,7 @@ function program3(depth0,data) {
 function program5(depth0,data) {
   
   var buffer = '';
-  data.buffer.push("\n              \n              <p>Become an ambassador</p>\n            ");
-  return buffer;
-  }
-
-function program7(depth0,data) {
-  
-  var buffer = '';
-  data.buffer.push("\n              \n              <p>Join our community</p>\n            ");
+  data.buffer.push("\n              \n              <p>Become a volunteer</p>\n            ");
   return buffer;
   }
 
@@ -448,12 +441,7 @@ function program7(depth0,data) {
     'classNames': ("subheaderLink")
   },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n          </li>\n          <li>\n            ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
-    'classNames': ("subheaderLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "team", options) : helperMissing.call(depth0, "link-to", "team", options));
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n          </li>\n        </ul>\n        \n    </div>\n    &nbsp;\n  </section>");
+  data.buffer.push("\n          </li>\n          <li>\n            <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" classNames=\"subheaderLink\" target=\"_blank\">\n              \n              <p>Donate</p>\n            </a>\n          </a>\n        </ul>\n        \n    </div>\n    &nbsp;\n  </section>");
   return buffer;
   
 });
