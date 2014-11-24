@@ -49,10 +49,16 @@ nav
       
       &.donate
         background $hover
+        padding 0
 
         a
+          display inline-block
           color white
           font-weight 100
+          padding 16px 16px 17px 16px
+          
+          &:hover
+            background lighten($hover, 20%)
 
 .subheader
   font-family 'Open Sans', sans-serif
@@ -71,6 +77,8 @@ nav
       display inline-block
       padding 2em 16px
       color $secondary-blue !important
+      text-transform: uppercase;
+      letter-spacing: .05em;
 
       &.active
         color $blue !important
