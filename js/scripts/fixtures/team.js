@@ -16,7 +16,7 @@ App.Volunteer.FIXTURES = [
   {
     id:3,
     name: "Lindie Botes",
-    location: "Prætoria, South Africa",
+    location: "Pretoria, South Africa",
     coordinates: (28.188055599999988,-25.7461111),
     photo: "img/faces/lindie.jpg"
   },
