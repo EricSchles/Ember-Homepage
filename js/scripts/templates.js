@@ -441,7 +441,7 @@ function program5(depth0,data) {
     'classNames': ("subheaderLink")
   },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n          </li>\n          <li>\n            <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" classNames=\"subheaderLink\" target=\"_blank\">\n              \n              <p>Donate</p>\n            </a>\n          </a>\n        </ul>\n        \n    </div>\n    &nbsp;\n  </section>");
+  data.buffer.push("\n          </li>\n          <li>\n            <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" classNames=\"subheaderLink\" target=\"_blank\">\n              \n              <p>Support us</p>\n            </a>\n          </a>\n        </ul>\n        \n    </div>\n    &nbsp;\n  </section>");
   return buffer;
   
 });
@@ -452,42 +452,26 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<section class=\"page\">\n  <h1>Legal</h1>\n  <div class=\"legal\">\n    <h2>Terms of Service</h2>\n    <p>By submitting a video to Wikitongues, you hereby agree:</p>\n    <ol>\n      <li><p>to have secured the consent of the individual or individuals who appear in that video to record them,<b>very poorly phrased</b> </p></li>\n      <li><p>that you either possess or have obtained the legal rights to share this video online, and </p></li>\n      <li><p>that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you <b>what if the video is not of the person submitting?</b>, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity.</p></li>\n    </ol>\n    <p>If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it.</p>\n    <p><b>By submitting a video to Wikitongues</b>You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>\n    </div>\n    <div class=\"legal\">\n      <h2>Privacy Policy</h2>\n      <p>Wikitongues will never give or sell your personal information to any third-party organization or individual without your explicit consent.</p>\n    </div>\n</section>");
+  data.buffer.push("<section class=\"page\">\n  <h1>Legal</h1>\n  <div class=\"legal\">\n    <h2>Terms of Service</h2>\n    <p>By submitting a video to Wikitongues, you hereby agree:</p>\n    <ol>\n      <li><p>to have secured the consent of the individual or individuals who appear in that video to record them,</p></li>\n      <li><p>that you either possess or have obtained the legal rights to share this video online, and </p></li>\n      <li><p>that you irrevocably grant Wikitongues and its licensees, successors and assigns the right to license and distribute and use the video of you, including your voice, picture, portrait or likeness as captured in a still image from the footage, in any and all media and for any use whatsoever (except illegal or pornographic), including without limitation, Wikitongues, art, stock, advertising, trade and promotion, in perpetuity.</p></li>\n    </ol>\n    <p>If you should receive a copy of the footage, you shall only use it for your own personal use and you shall not authorize anyone else to use it.</p>\n    <p>You agree and acknowledge that you have no commercial monetary rights to the footage and that Wikitongues owns all rights to the footage, including the right to copyright the footage.</p>\n    </div>\n    <div class=\"legal\">\n      <h2>Privacy Policy</h2>\n      <p>Wikitongues will never give or sell your personal information to any third-party organization or individual without your explicit consent.</p>\n    </div>\n</section>");
   
 });
 
 Ember.TEMPLATES["mission"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, helper, options, escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+  var buffer = '', stack1, helper, options, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
-  
-  var buffer = '', stack1;
-  data.buffer.push("\n  <section class=\"banner\">\n      <img ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'src': ("image")
-  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" alt=\"Wikitongues\" id=\"mission\" class=\"fallback\">\n      <h1>");
-  stack1 = helpers._triageMustache.call(depth0, "text", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</h1>\n  </section>\n");
-  return buffer;
-  }
-
-function program3(depth0,data) {
   
   
   data.buffer.push("get involved");
   }
 
-  stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n");
+  data.buffer.push("<section class=\"banner mission\"></section>\n");
   stack1 = helpers._triageMustache.call(depth0, "about-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n<section class=\"page\">\n  <section class=\"excerpt\">\n    <p>We stand for the values of diversity and respect between all the peoples of Earth.</p>\n    <p>We stand for the rights of individuals and their communities to live where they live and to be who they are, thinking, speaking and acting freely.</p>\n    <p>We pledge to forge connections across cultural boundaries, build bridges of understanding between cultures and countries, and ensure that every person has access to the breadth and the beauty of human experience.</p>\n    <p>We are Wikitongues.</p>\n  </section>\n\n  <p>When the Internet first went public in 1995, more than seven thousand languages were spoken around the world. Today, that reality is in rapid decline, as the side-effects of globalization provoke the death of a different language every two weeks. Unless something changes, this rate is likely to spell the extinction of more than 3,000 languages before the turn of the next century. This would be a catastrophic tragedy on an intimate, human scale, for the death of thousands of languages means not just the disappearance of grammar systems and vocabularies, but the human communities who use them as well.</p>\n\n  <p>Apologists for this reality may be inclined to argue that culture is dynamic, and that languages have always gone extinct to make room for new ones. After all, there would be no French without the death of Latin, and no English had Old Saxon not faded away. While this is without a doubt, the twenty-first century’s rate of language death is unprecedented. It stems not from the natural ebb and flow of human diversity, but the marginalizing forces of the nineteenth and twentieth centuries, when world governments began pressuring minorities to abandon their cultures and adopt arbitrarily-defined ‘national languages’.</p>\n\n  <p>This reality is changing, however slowly. Documents like the European Union’s <a href=\"http://www.coe.int/t/dg4/education/minlang/\" target=\"_blank\">Charter for Regional and Minority Languages</a> and Mexico’s <a href=\"http://www.diputados.gob.mx/LeyesBiblio/pdf/257.pdf\" target=\"_blank\">General Law of Linguistic Rights</a> indicate that world leaders are beginning to prioritize the importance of sustainable diversity. Moreover, the Internet has created a safe space for speakers of any language speakers to meet, communicate, and share in their commonality of expression. Though it is but a minor example, by the end of 2014, Wikipedia <a href=\"http://en.wikipedia.org/wiki/List_of_Wikipedias\" target=\"_blank\">has been translated</a> into nearly 300 languages, a number that is likely to continue growing as the web reaches millions of new users every year.</p>\n\n  <p>Wikitongues is an affirmative response to this welcome change. We are a community of volunteers who believe that globalization can be a force for unity through diversity. As the world gets smaller, our cultural heritage need not suffer from mass extinction.</p>\n\n  <p>Based in over fourteen countries, Wikitongues volunteers travel when they can and are always listening, working hard to record new languages so that everyone can continue learning from others, and revel in all the depth and nuance of identity. If you like what we’re doing, stay up to date! Subscribe to us <a href=\"http://www.youtube.com/subscription_center?add_user=wikitongues\" target=\"_blank\">on YouTube</a> for new videos every week. If you believe in what we’re doing, ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "get_involved", options) : helperMissing.call(depth0, "link-to", "get_involved", options));
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "get_involved", options) : helperMissing.call(depth0, "link-to", "get_involved", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("! Our community is open to everyone.</p>\n\n  <p>You can also make a <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" target=\"_blank\">tax-deductible donation</a>: we’re a non-profit organization, and rely on contributions to see our mission through.</p>\n</section>");
   return buffer;
@@ -647,11 +631,12 @@ function program1(depth0,data) {
 
 function program3(depth0,data) {
   
-  
-  data.buffer.push("\n                <img src=\"img/2.png\" alt=\"Become a volunteer today\">\n                <p>Become a volunteer today</p>\n              ");
+  var buffer = '';
+  data.buffer.push("\n                \n                <p>Become a volunteer today</p>\n              ");
+  return buffer;
   }
 
-  data.buffer.push("<section class=\"banner team\">\n    \n    <div class=\"map\"></div>\n    \n    \n</section>\n");
+  data.buffer.push("<section class=\"banner team\">\n    \n</section>\n");
   stack1 = helpers._triageMustache.call(depth0, "about-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n<section class=\"page\">\n    <div class=\"team\">\n        <h1>We're from around the world</h1>\n        <ul>\n            ");

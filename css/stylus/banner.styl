@@ -6,20 +6,23 @@
     max-height 550px
     overflow hidden
 
+    &.team, &.mission
+        height 550px
+        background-size cover
+
+
     &.team
-        .map
-            height 600px// img
-            width 100%
-            background-image url("../img/map.jpg")
-            background-size cover
-            background-position-x 50%
-            // height 200%
-            // width 200%
+        background-image url("../img/map.jpg")
+        background-position-x 50%
+
+    &.mission
+        background-image url("../img/banner-vanuatu.jpg")
+        background-position-y 50%
 
     img
         width 100%
         float left
-        
+
         &#mission
             margin-top -230px
 
