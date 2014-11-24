@@ -59,6 +59,9 @@ nav
           color white
           display block
           font-weight 100
+          
+          &:hover
+            background lighten($hover, 20%)
 
 .subheader
   ul
@@ -73,6 +76,8 @@ nav
       display inline-block
       padding 2em 16px
       color $secondary-blue !important
+      text-transform: uppercase;
+      letter-spacing: .05em;
 
       &.active
         color $blue !important
