@@ -12,7 +12,6 @@ App.ResetScroll = Ember.Mixin.create({
 
 // Router
 App.Router.map(function() {
-  this.route("about");
   this.route("team");
   this.route("mission");
   this.route("expeditions");
@@ -32,29 +31,6 @@ App.IndexRoute = Ember.Route.extend({
       {
         id: 0,
         image: "img/banner.jpg",
-      }
-    ];
-  }
-});
-
-App.AboutRoute = Ember.Route.extend({
-  model: function() {
-    return [
-      {
-        id: 0,
-        image: "img/earth-01.jpg",
-        text: "Our World"
-      }
-    ];
-  }
-});
-
-App.MissionRoute = Ember.Route.extend({
-  model: function() {
-    return [
-      {
-        id: 0,
-        image: "img/banner-vanuatu.jpg",
       }
     ];
   }
