@@ -463,12 +463,8 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  var buffer = '', stack1;
-  data.buffer.push("\n  <section class=\"banner mission\">\n      \n      <h1>");
-  stack1 = helpers._triageMustache.call(depth0, "text", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</h1>\n  </section>\n");
-  return buffer;
+  
+  data.buffer.push("\n  <section class=\"banner mission\">\n  </section>\n");
   }
 
 function program3(depth0,data) {
@@ -647,7 +643,7 @@ function program3(depth0,data) {
   data.buffer.push("\n                <img src=\"img/2.png\" alt=\"Become a volunteer today\">\n                <p>Become a volunteer today</p>\n              ");
   }
 
-  data.buffer.push("<section class=\"banner team\">\n    \n    \n    \n    \n</section>\n");
+  data.buffer.push("<section class=\"banner team\">\n    \n</section>\n");
   stack1 = helpers._triageMustache.call(depth0, "about-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n<section class=\"page\">\n    <div class=\"team\">\n        <h1>We're from around the world</h1>\n        <ul>\n            ");
