@@ -1,11 +1,15 @@
+nav, .subheader
+  font-family 'Open Sans', sans-serif
+  display inline-block
+  width 100%
+  text-transform uppercase
+  font-size 14px
+
 nav
   top 0
   position fixed
   z-index 20
-  font-family 'Open Sans', sans-serif
   float left
-  display inline-block
-  width 100%
   background-color #fff
   color $blue
   border-bottom 1px solid #f5f5f5
@@ -33,12 +37,11 @@ nav
       list-style-type none
       float left
       display inline-block
-      padding 16px 16px 17px 16px
+      padding 18px 18px 19px 18px
       color inherit
       text-decoration none
       cursor pointer
       color $secondary-blue !important
-      text-transform uppercase
       letter-spacing .05em
 
       &:hover
@@ -46,19 +49,18 @@ nav
 
       &.active
         color $blue !important
-      
+
       &.donate
         background $hover
+        padding 0
 
         a
+          padding 18px 18px 19px 18px
           color white
+          display block
           font-weight 100
 
 .subheader
-  font-family 'Open Sans', sans-serif
-  display inline-block
-  width 100%
-
   ul
     width 100%
     float left
