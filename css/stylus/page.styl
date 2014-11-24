@@ -11,6 +11,7 @@ b
 a
   text-decoration none
   color $blue
+  font-weight 700
 
   &:hover
     color $hover
@@ -78,6 +79,13 @@ body
       &:hover
         color $hover
 
+  .excerpt
+    margin 9px 0 100px 0
+    
+    p
+      padding 0 100px
+      font-style italic
+
   .drop
     &:first-letter
       float left
@@ -103,25 +111,30 @@ body
     display inline-block
     list-style-type none
     padding 0
-    margin 0
+    margin 45px 0 0
 
     li
         display inline-block
         box-sizing border-box
-        width 33%
-        padding .5em
+        width 32%
+        margin 0 .5%
         float left
+        background #EFF5F9
+        border 1px solid #E5EFF6
+        
+        &:first-child
+          margin-left 0
+
+        &:hover
+          background lighten($blue, 90%)
+          border 1px solid lighten($blue, 89%)
 
         a
           display inline-block
           width 100%
           p
             text-align center
-            color $secondary-blue
-
-          &:hover
-            p
-              color $hover
+            color $blue
 
         img
             height 100%

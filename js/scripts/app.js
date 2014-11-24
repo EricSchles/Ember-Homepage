@@ -54,7 +54,7 @@ App.MissionRoute = Ember.Route.extend({
     return [
       {
         id: 0,
-        image: "img/mission.jpg",
+        image: "img/banner-vanuatu.jpg",
       }
     ];
   }
@@ -301,7 +301,7 @@ App.Volunteer.FIXTURES = [
   {
     id:3,
     name: "Lindie Botes",
-    location: "Prætoria, South Africa",
+    location: "Pretoria, South Africa",
     latitude:(28.188055599999988),
     longitude: (-25.7461111),
     photo: "img/faces/lindie.jpg"
