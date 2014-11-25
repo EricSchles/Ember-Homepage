@@ -215,7 +215,7 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   
 
 
-  data.buffer.push("<p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>");
+  data.buffer.push("<p class=\"alt-email\">Alternatively, you can always reach us at <a href=\"mailto:hello@wikitongues.org\">hello@wikitongues.org</a></p>");
   
 });
 
