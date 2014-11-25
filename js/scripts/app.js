@@ -1,5 +1,5 @@
 var App = Ember.Application.create({
-  LOG_TRANSITIONS: true
+  // LOG_TRANSITIONS: true
 });
 
 // Resets scroll
@@ -134,9 +134,9 @@ App.SubmitView = Ember.View.extend({
   actions: {
     submit: function(event) {
       if ( $("input#releaseForm:checked") )
-        { console.log("checked") }
+        // { console.log("checked") }
       else { console.log("not checked")}
-      console.log(this.get("name"), this.get("email"), this.get("link"), this.get("speaker"), this.get("language"), this.get("videoLocation"), this.get("transcription"), this.get("translation"), this.get("message"))
+      // console.log(this.get("name"), this.get("email"), this.get("link"), this.get("speaker"), this.get("language"), this.get("videoLocation"), this.get("transcription"), this.get("translation"), this.get("message"))
       $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -166,7 +166,7 @@ App.SubmitView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         console.log(response); // if you're into that sorta thing
+         // console.log(response);
        });
     }
   }
