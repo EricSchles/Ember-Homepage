@@ -133,9 +133,9 @@ App.SubmitView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
-      if ( $("input#releaseForm:checked") )
+      // if ( $("input#releaseForm:checked") )
         // { console.log("checked") }
-      else { console.log("not checked")}
+      // else { console.log("not checked")}
       // console.log(this.get("name"), this.get("email"), this.get("link"), this.get("speaker"), this.get("language"), this.get("videoLocation"), this.get("transcription"), this.get("translation"), this.get("message"))
       $.ajax({
         type: "POST",
@@ -166,7 +166,7 @@ App.SubmitView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         // console.log(response);
+         location.reload();// console.log(response);
        });
     }
   }
