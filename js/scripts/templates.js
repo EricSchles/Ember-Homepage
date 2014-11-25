@@ -209,6 +209,16 @@ function program3(depth0,data) {
   
 });
 
+Ember.TEMPLATES["components/get-involved-email"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>");
+  
+});
+
 Ember.TEMPLATES["components/get-involved-subheader"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -310,7 +320,6 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   var buffer = '', stack1, helper, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 
-  data.buffer.push("\n");
   stack1 = helpers._triageMustache.call(depth0, "get-involved-subheader", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n<section class=\"page form\">\n  <form action=\"\" class=\"contact-form\">\n    <h1>Contact</h1>\n    <p>We're always eager to hear from you</p>\n    <ul>\n      <li>");
@@ -338,7 +347,10 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
     'target': ("view")
   },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">Send</button>\n    <p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>\n  </form>\n</section>");
+  data.buffer.push(">Send</button>\n    ");
+  stack1 = helpers._triageMustache.call(depth0, "get-involved-email", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n  </form>\n</section>");
   return buffer;
   
 });
@@ -601,7 +613,10 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
     'target': ("view")
   },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">Send</button>\n    <p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>\n  </form>\n</section>");
+  data.buffer.push(">Send</button>\n    ");
+  stack1 = helpers._triageMustache.call(depth0, "get-involved-email", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n  </form>\n</section>");
   return buffer;
   
 });
@@ -714,7 +729,10 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "submit", {hash:{
     'target': ("view")
   },hashTypes:{'target': "ID"},hashContexts:{'target': depth0},contexts:[depth0],types:["STRING"],data:data})));
-  data.buffer.push(">Send</button>\n    <p class=\"alt-email\">Alternatively, you can always reach us at hello@wikitongues.org</p>\n  </form>\n</section>");
+  data.buffer.push(">Send</button>\n    ");
+  stack1 = helpers._triageMustache.call(depth0, "get-involved-email", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n  </form>\n</section>");
   return buffer;
   
 });

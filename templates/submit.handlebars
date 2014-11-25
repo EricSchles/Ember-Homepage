@@ -35,6 +35,6 @@
       <li class="checkbox">{{input type="checkbox" id="releaseForm" checked=view.releaseForm}}<label for="releaseForm">I have read and accept the release form (Required)</label></li>
     </ul>
     <button class="submit" type="submit" {{action "submit" target=view}}>Send</button>
-    <p class="alt-email">Alternatively, you can always reach us at hello@wikitongues.org</p>
+    {{get-involved-email}}
   </form>
 </section>

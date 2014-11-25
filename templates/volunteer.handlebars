@@ -22,6 +22,6 @@
     <p>Please tell us a bit about yourself</p>
     {{textarea value=view.message placeholder="What do you do?"}}
     <button class="submit" type="submit" {{action "submit" target=view}}>Send</button>
-    <p class="alt-email">Alternatively, you can always reach us at hello@wikitongues.org</p>
+    {{get-involved-email}}
   </form>
 </section>
