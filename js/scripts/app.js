@@ -166,7 +166,14 @@ App.SubmitView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         location.reload();// console.log(response);
+         // var response = JSON.parse(jqXHR.responseText);
+        //You should see this log in your browser console. Please check it out.
+        // console.log("response = ");
+        // console.log(response);
+        var status = response[0].status;
+        console.log("status = " + status);
+        if(status == 'sent')
+            alert ('Email Sent');
        });
     }
   }
@@ -182,7 +189,7 @@ App.VolunteerView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
-      console.log(this.get("name"), this.get("email"), this.get("location"), this.get("ambassador"), this.get("socialMedia"), this.get("webDev"), this.get("other"), this.get("message"))
+      // console.log(this.get("name"), this.get("email"), this.get("location"), this.get("ambassador"), this.get("socialMedia"), this.get("webDev"), this.get("other"), this.get("message"))
       $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -210,7 +217,7 @@ App.VolunteerView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         console.log(response); // if you're into that sorta thing
+         // console.log(response);
        });
     }
   }
@@ -224,7 +231,7 @@ App.ContactView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
-      console.log(this.get("name"), this.get("email"), this.get("message"))
+      // console.log(this.get("name"), this.get("email"), this.get("message"))
       $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -247,7 +254,7 @@ App.ContactView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         console.log(response); // if you're into that sorta thing
+         // console.log(response);
        });
     }
   }

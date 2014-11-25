@@ -134,7 +134,7 @@ function program17(depth0,data) {
   data.buffer.push("\n    <li class=\"donate\">\n      <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" target=\"_blank\">Support Us</a>\n    </li>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n</div>\n\n<footer>\n  <div class=\"content-wrapper\">\n      <a href=\"index.html\" class=\"copyright\">\n          <p>© 2014 <img src=\"img/logos/horizontalLockupWhite.svg\" class=\"icon\" alt=\"\"></p>\n          <p class=\"footerLink\">Every language in the world\n          <br>All Rights Reserved</p>\n      </a>\n      <div class=\"links\">\n          <ul>\n              <li class=\"header\">Organization</li>\n              ");
+  data.buffer.push("\n</div>\n\n<footer>\n  <div class=\"content-wrapper\">\n      <a href=\"index.html\" class=\"copyright\">\n          <p><img src=\"img/logos/horizontalLockupWhite.svg\" class=\"icon\" alt=\"\"></p>\n          <p class=\"footerLink\">© 2014 Wikitongues, Inc., All Rights Reserved</p>\n      </a>\n      <a href=\"https://www.fracturedatlas.org\" class=\"copyright\"><p class=\"footerLink\">Fiscal Sponsorship by Fractured Atlas</p></a>\n      <div class=\"links\">\n          <ul>\n              <li class=\"header\">Organization</li>\n              ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
