@@ -7,33 +7,28 @@ footer
   padding 20px
   float left
 
-  .copyright
+  ul.copyright
     float left
-    margin-left 20px
+    margin 0 0 0 20px
+    padding 0
+
+    li
+      float left
+      display inline-block
+      clear both
+
+    img.icon
+      height 30px
+      margin 0 0 -8px -5px
+
+  .footerLink
+    font-size .8em
+    font-weight 100
+    color darken($secondary-blue, 30%)
+    cursor pointer
 
     &:hover
-      .footerLink
         color $hover
-
-    p
-      display inline-block
-      color white
-      clear left
-      margin 1px
-      float left
-
-      &.footerLink
-        font-size .8em
-        font-weight 100
-        color darken($secondary-blue, 30%)
-        cursor pointer
-
-        a
-          color inherit
-
-      img.icon
-        height 30px
-        margin-bottom -9px
 
   .links
     float right
@@ -45,18 +40,10 @@ footer
       margin 0 20px
 
     li
-      color white
-      font-size
+      &:not(.footerLink)
+        color white
 
       &.footerLink
-        font-size .8em
-        font-weight 100
-        color darken($secondary-blue, 30%)
-        cursor pointer
-
         a
           color inherit
           font-weight 100 !important
-
-        &:hover
-          color $hover

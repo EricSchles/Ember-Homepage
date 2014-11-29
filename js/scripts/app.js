@@ -72,9 +72,35 @@ App.Volunteer = DS.Model.extend({
   photo: DS.attr("string")
 });
 
-App.SubmitRoute = Ember.Route.extend(App.ResetScroll)
-App.VolunteerRoute = Ember.Route.extend(App.ResetScroll)
-App.ContactRoute = Ember.Route.extend(App.ResetScroll)
+App.SubmitRoute = Ember.Route.extend(App.ResetScroll, {
+  model: function() {
+    return {
+      title: "Thank you for submitting a video!",
+      text: "We'll be sure to notify you when it goes live."
+    };
+  },
+  actions: {
+    closeModal: function() {
+      $("section.success").hide()
+    }
+  }
+})
+
+App.VolunteerRoute = Ember.Route.extend(App.ResetScroll, {
+  actions: {
+    closeModal: function() {
+      $("section.success").hide()
+    }
+  }
+})
+
+App.ContactRoute = Ember.Route.extend(App.ResetScroll, {
+  actions: {
+    closeModal: function() {
+      $("section.success").hide()
+    }
+  }
+})
 
 App.SubmitController = Ember.Controller.extend({
   actions: {
@@ -119,6 +145,14 @@ App.VolunteerGuidelinesComponent = Ember.Component.extend({
   }
 })
 
+App.FormModalComponent = Ember.Component.extend({
+  actions: {
+    closeModal: function() {
+      $("section.success").hide()
+    }
+  }
+})
+
 App.SubmitView = Ember.View.extend({
   templateName: "submit",
   name: "",
@@ -133,10 +167,6 @@ App.SubmitView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
-      // if ( $("input#releaseForm:checked") )
-        // { console.log("checked") }
-      // else { console.log("not checked")}
-      // console.log(this.get("name"), this.get("email"), this.get("link"), this.get("speaker"), this.get("language"), this.get("videoLocation"), this.get("transcription"), this.get("translation"), this.get("message"))
       $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -166,14 +196,10 @@ App.SubmitView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         // var response = JSON.parse(jqXHR.responseText);
-        //You should see this log in your browser console. Please check it out.
-        // console.log("response = ");
-        // console.log(response);
         var status = response[0].status;
-        console.log("status = " + status);
+        // console.log("status = " + status);
         if(status == 'sent')
-            alert ('Email Sent');
+            $("section.success").show();
        });
     }
   }
@@ -363,7 +389,7 @@ App.Volunteer.FIXTURES = [
   },
   {
     id:13,
-    name: "Yasmeen Abdullahi",
+    name: "Fatuma A Abdullahi",
     location: "Doha, Qatar",
     latitude:(36.82194619999996),
     longitude: (-1.2920659),
@@ -400,6 +426,14 @@ App.Volunteer.FIXTURES = [
     latitude:(31.029722200000037),
     longitude: (-17.8638889),
     photo: "img/faces/tatenda.jpg"
+  },
+  {
+    id:18,
+    name: "Chris Voxland",
+    location: "New York, USA",
+    latitude:(-73.95328556215065),
+    longitude: (40.649647902099495),
+    photo: "img/faces/chrisVoxland.jpg"
   },
 ];
 
