@@ -243,7 +243,10 @@ App.VolunteerView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         // console.log(response);
+        var status = response[0].status;
+        // console.log("status = " + status);
+        if(status == 'sent')
+            $("section.success").show();
        });
     }
   }
@@ -280,7 +283,10 @@ App.ContactView = Ember.View.extend({
           }
         }
        }).done(function(response) {
-         // console.log(response);
+        var status = response[0].status;
+        // console.log("status = " + status);
+        if(status == 'sent')
+            $("section.success").show();
        });
     }
   }
@@ -401,7 +407,7 @@ App.Volunteer.FIXTURES = [
     location: "Nijmegen, Netherlands",
     latitude:(4.351710300000036),
     longitude: (50.8503396),
-    photo: "img/faces/luis3.jpg"
+    photo: "img/faces/luis.jpg"
   },
   {
     id:15,
