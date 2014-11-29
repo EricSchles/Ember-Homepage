@@ -1,5 +1,4 @@
 var App = Ember.Application.create({
-  // LOG_TRANSITIONS: true
 });
 
 // Resets scroll
@@ -82,6 +81,7 @@ App.SubmitRoute = Ember.Route.extend(App.ResetScroll, {
   actions: {
     closeModal: function() {
       $("section.success").hide()
+      $("body").removeClass("modalFreeze")
     }
   }
 })
@@ -90,6 +90,7 @@ App.VolunteerRoute = Ember.Route.extend(App.ResetScroll, {
   actions: {
     closeModal: function() {
       $("section.success").hide()
+      $("body").removeClass("modalFreeze")
     }
   }
 })
@@ -98,6 +99,7 @@ App.ContactRoute = Ember.Route.extend(App.ResetScroll, {
   actions: {
     closeModal: function() {
       $("section.success").hide()
+      $("body").removeClass("modalFreeze")
     }
   }
 })
@@ -197,9 +199,9 @@ App.SubmitView = Ember.View.extend({
         }
        }).done(function(response) {
         var status = response[0].status;
-        // console.log("status = " + status);
         if(status == 'sent')
-            $("section.success").show();
+          $("section.success").show();
+          $("body").addClass("modalFreeze");
        });
     }
   }
@@ -215,7 +217,6 @@ App.VolunteerView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
-      // console.log(this.get("name"), this.get("email"), this.get("location"), this.get("ambassador"), this.get("socialMedia"), this.get("webDev"), this.get("other"), this.get("message"))
       $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -244,9 +245,9 @@ App.VolunteerView = Ember.View.extend({
         }
        }).done(function(response) {
         var status = response[0].status;
-        // console.log("status = " + status);
         if(status == 'sent')
-            $("section.success").show();
+          $("section.success").show();
+          $("body").addClass("modalFreeze");
        });
     }
   }
@@ -260,7 +261,6 @@ App.ContactView = Ember.View.extend({
 
   actions: {
     submit: function(event) {
-      // console.log(this.get("name"), this.get("email"), this.get("message"))
       $.ajax({
         type: "POST",
         url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -284,9 +284,9 @@ App.ContactView = Ember.View.extend({
         }
        }).done(function(response) {
         var status = response[0].status;
-        // console.log("status = " + status);
         if(status == 'sent')
-            $("section.success").show();
+          $("section.success").show();
+          $("body").addClass("modalFreeze");
        });
     }
   }
