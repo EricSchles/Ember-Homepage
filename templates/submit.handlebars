@@ -35,6 +35,14 @@
       <li class="checkbox">{{input type="checkbox" id="releaseForm" checked=view.releaseForm}}<label for="releaseForm">I have read and accept the release form (Required)</label></li>
     </ul>
     <button class="submit" type="submit" {{action "submit" target=view}}>Send</button>
-    <p class="alt-email">Alternatively, you can always reach us at hello@wikitongues.org</p>
+    {{get-involved-email}}
   </form>
+</section>
+{{!-- {{form-modal title=title text=text}} --}}
+<section class="success">
+    <div class="modal">
+      <h1>Thank you for submitting a video!</h1>
+      <p>We'll be sure to notify you when it goes live.</p>
+      <button {{action "closeModal"}}>Okay!</button>
+    </div>
 </section>

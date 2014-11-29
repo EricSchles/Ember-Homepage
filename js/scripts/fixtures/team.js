@@ -85,7 +85,7 @@ App.Volunteer.FIXTURES = [
   },
   {
     id:13,
-    name: "Yasmeen Abdullahi",
+    name: "Fatuma A Abdullahi",
     location: "Doha, Qatar",
     coordinates: (36.82194619999996,-1.2920659),
     photo: "img/faces/yasmeen.jpg"

@@ -11,10 +11,13 @@
   p
     float left
 
+  a
+    font-weight 100
+
   .secondaryLink
     cursor pointer
 
-  input, textarea, label, button
+  input, textarea, label
     font-size 0.8em
     font-family 'Lora', serif
     display inline-block
@@ -23,7 +26,7 @@
     width 100%
     resize none
     padding 1em 1em
-    border-radius 2px
+    border-radius $radius
     outline none
     border 1px solid transparent
 
@@ -68,18 +71,9 @@
     float left
 
   .submit
-    background #fff
-    margin 2em initial 0
+    button()
+    width 100%
     font-size 1.3em
-    padding 1em
-    cursor pointer
-    text-align center
-    background lighten($blue, 95%)
-    border 1px solid lighten($blue, 92%)
-
-    &:hover
-      background lighten($blue, 90%)
-      border 1px solid lighten($blue, 89%)
 
   .alt-email
     font-size .8em
@@ -87,3 +81,55 @@
     text-align center
     margin 3em 0
     max-width 100%
+
+.success
+  display none
+  position fixed
+  z-index 50
+  top 0
+  bottom 0
+  left 0
+  right 0
+  background rgba(255,255,255,0.8)
+
+  .modal
+    background $hover
+    padding 0
+    border none
+    width 600px
+    position fixed
+    top 50%
+    left 50%
+    margin-left -300px
+    margin-top -124px
+    font-family 'Open Sans', sans-serif
+    box-shadow 0 0 10px 4px rgba(0,0,0,.1)
+
+    &:hover
+      background $hover
+      border none
+
+    h1, p
+      text-align center
+      margin 20px
+
+    h1
+      margin-top 30px
+      font-size 2em
+
+    p
+      margin-bottom 40px
+      font-size 1.5em
+
+    button
+      margin 0
+      border-radius 0 0 $radius $radius
+      width 100%
+      background white
+      border 1px solid lighten($secondary-blue, 90%)
+      border-top none
+      padding 1em
+      display block
+      font-size 1.5em
+      font-family 'Open Sans', sans-serif
+      font-weight 700
