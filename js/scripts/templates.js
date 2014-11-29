@@ -678,9 +678,8 @@ function program1(depth0,data) {
 
 function program3(depth0,data) {
   
-  var buffer = '';
-  data.buffer.push("\n                \n                <p>Become a volunteer today</p>\n              ");
-  return buffer;
+  
+  data.buffer.push("Become a volunteer today");
   }
 
   data.buffer.push("<section class=\"banner team\">\n    \n</section>\n");
@@ -689,10 +688,12 @@ function program3(depth0,data) {
   data.buffer.push("\n<section class=\"page\">\n    <div class=\"team\">\n        <h1>We're from around the world</h1>\n        <ul>\n            ");
   stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n            <li class=\"volunteer\">\n              ");
-  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
+  data.buffer.push("\n        </ul>\n        ");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
+    'tagName': ("button")
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n            </li>\n        </ul>\n    </div>\n</section>");
+  data.buffer.push("\n    </div>\n</section>");
   return buffer;
   
 });

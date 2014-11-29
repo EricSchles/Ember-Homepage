@@ -397,8 +397,8 @@ App.Volunteer.FIXTURES = [
   },
   {
     id:14,
-    name: "Luis Miguel Bercia",
-    location: "Brussles, Belgium",
+    name: "Luis Miguel Rojas-Berscia",
+    location: "Nijmegen, Netherlands",
     latitude:(4.351710300000036),
     longitude: (50.8503396),
     photo: "img/faces/luis3.jpg"
