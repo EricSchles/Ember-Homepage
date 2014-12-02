@@ -11,7 +11,6 @@ b
 a
   text-decoration none
   color $blue
-  font-weight 700
 
   &:hover
     color $hover
@@ -45,8 +44,11 @@ body
   clear both
 
   h1
+    font-family 'Open Sans', helvetica, sans-serif
+    font-weight 100
+    text-transform uppercase
+    text-align center
     font-size 2em
-    margin-top 0
 
   img
     border-radius $radius
@@ -131,6 +133,9 @@ body
         margin 0 .5%
         width 100%
         button()
+
+        &:hover
+          color initial
 
       a
         p
