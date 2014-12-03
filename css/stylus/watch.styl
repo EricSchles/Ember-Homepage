@@ -1,0 +1,72 @@
+.watch
+  display inline-block
+
+  input
+    outline none
+    font-family "Open Sans"
+    border-radius $radius
+    font-size 1em
+    width 100%
+    padding 1em
+    border none
+    background lighten($secondary-blue, 80%)
+
+  .videoName
+    text-align left
+    font-size 1.5em
+
+  a
+    background lighten($hover, 40%)
+    padding 0.2em
+
+    &:hover
+      background $hover
+      color initial
+
+  .attribution
+    float right
+    margin 1em 0 1em 1em
+    clear both
+    width inherit
+
+  .toggleTranslationButton
+    float left
+    background lighten($hover, 80%)
+    margin 1em 0
+
+    &.active
+      color $blue
+      background lighten($hover, 40%)
+
+    &:hover
+      background $hover
+
+    &:last-of-type
+      margin-left 0
+
+  .info
+    display inline-block
+    width 600px
+    float right
+
+    a
+      &.active
+        background lighten($hover, 40%)
+        padding 0.2em
+
+    div.toggleTranslation
+      display none
+
+      &.active
+        display block
+
+  .academic
+    float left
+    width 300px
+
+    h3
+      padding-left .5em
+
+    p
+      margin 10px 0
+      padding-left 1em

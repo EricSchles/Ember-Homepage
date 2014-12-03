@@ -78,40 +78,46 @@ function program5(depth0,data) {
 function program7(depth0,data) {
   
   
-  data.buffer.push("Get Involved");
+  data.buffer.push("Watch");
   }
 
 function program9(depth0,data) {
   
   
-  data.buffer.push("© 2014 Wikitongues, Inc., All Rights Reserved");
+  data.buffer.push("Get Involved");
   }
 
 function program11(depth0,data) {
   
   
-  data.buffer.push("Team");
+  data.buffer.push("© 2014 Wikitongues, Inc., All Rights Reserved");
   }
 
 function program13(depth0,data) {
   
   
-  data.buffer.push("Legal");
+  data.buffer.push("Team");
   }
 
 function program15(depth0,data) {
   
   
-  data.buffer.push("Submit a video");
+  data.buffer.push("Legal");
   }
 
 function program17(depth0,data) {
   
   
-  data.buffer.push("Volunteer");
+  data.buffer.push("Submit a video");
   }
 
 function program19(depth0,data) {
+  
+  
+  data.buffer.push("Volunteer");
+  }
+
+function program21(depth0,data) {
   
   
   data.buffer.push("Contact");
@@ -135,7 +141,12 @@ function program19(depth0,data) {
   data.buffer.push("\n    \n    \n    ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("li")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "get_involved", options) : helperMissing.call(depth0, "link-to", "get_involved", options));
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "watch", options) : helperMissing.call(depth0, "link-to", "watch", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n    ");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
+    'tagName': ("li")
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "get_involved", options) : helperMissing.call(depth0, "link-to", "get_involved", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n    <li class=\"donate\">\n      <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" target=\"_blank\">Support Us</a>\n    </li>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
@@ -143,7 +154,7 @@ function program19(depth0,data) {
   data.buffer.push("\n</div>\n\n<footer>\n  <div class=\"content-wrapper\">\n    <ul class=\"copyright\">\n      <li>\n        <img src=\"img/logos/horizontalLockupWhite.svg\" class=\"icon\" alt=\"\">\n      </li>\n      <li>\n        ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink")
-  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(9, program9, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
+  },hashTypes:{'classNames': "STRING"},hashContexts:{'classNames': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "index", options) : helperMissing.call(depth0, "link-to", "index", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n      </li>\n      <li>\n        <a href=\"https://www.fracturedatlas.org\" class=\"footerLink\" target=\"_blank\">Fiscal Sponsorship by Fractured Atlas</a>\n      </li>\n    </ul>\n\n    <div class=\"links\">\n        <ul>\n            <li class=\"header\">Organization</li>\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
@@ -155,31 +166,31 @@ function program19(depth0,data) {
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(11, program11, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "team", options) : helperMissing.call(depth0, "link-to", "team", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "team", options) : helperMissing.call(depth0, "link-to", "team", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n            \n            \n            \n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(13, program13, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "legal", options) : helperMissing.call(depth0, "link-to", "legal", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "legal", options) : helperMissing.call(depth0, "link-to", "legal", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n        </ul>\n        <ul>\n            <li class=\"header\">Get involved</li>\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(15, program15, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(17, program17, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(19, program19, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("footerLink"),
     'tagName': ("li")
-  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(19, program19, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
+  },hashTypes:{'classNames': "STRING",'tagName': "STRING"},hashContexts:{'classNames': depth0,'tagName': depth0},inverse:self.noop,fn:self.program(21, program21, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n        </ul>\n        <ul>\n            <li class=\"header\">Follow us</li>\n            <li class=\"footerLink\"><a target=\"_blank\" href=\"https://youtube.com/user/WikiTongues\">Youtube</a></li>\n            <li class=\"footerLink\"><a target=\"_blank\" href=\"https://www.facebook.com/wikitongues\">Facebook</a></li>\n            <li class=\"footerLink\"><a target=\"_blank\" href=\"https://twitter.com/wikitongues\">Twitter</a></li>\n            <li class=\"footerLink\"><a target=\"_blank\" href=\"http://wikitongues.tumblr.com/\">Tumblr</a></li>\n            <li class=\"footerLink\"><a target=\"_blank\" href=\"http://instagram.com/wikitongues\">Instragram</a></li>\n        </ul>\n    </div>\n  </div>\n</footer>");
   return buffer;
@@ -769,5 +780,15 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
   data.buffer.push(escapeExpression(helpers.action.call(depth0, "closeModal", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
   data.buffer.push(">Okay!</button>\n    </div>\n</section>");
   return buffer;
+  
+});
+
+Ember.TEMPLATES["watch"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<section class=\"page watch\">\n  <input type=\"text\" placeholder=\"Search for languages\">\n  <h1 class=\"videoName\">Ladonna speaking <a href=\"#\">Bislama</a> and <a href=\"#\">Neverver</a></h1>\n  <iframe width=\"900\" height=\"506\" src=\"//www.youtube.com/embed/RHJOlCbQbbU\" frameborder=\"0\" allowfullscreen></iframe>\n  <p class=\"attribution\">Recorded by <a href=\"#\">Sarah Doyle</a></p>\n  <div class=\"info\">\n    <div class=\"toggleTranslation transcription active\">\n      <a href=\"\" class=\"toggleTranslationButton active\">Transcription</a>\n      <a href=\"\" class=\"toggleTranslationButton\">Translation</a>\n      <br>\n      <br>\n      <br>\n      <h3>Bislama</h3>\n      <p>Ok, nem blo mi Ladonna, mi kamaot lo aelan blo Malakula, lo sentrel. Mi haf Malakula Paama, mami blo mi hemi kamaot lo Paama, dadi blo mi hemi kam lo Malakula be mifala beis nomo lo Malakula. Lo ples blo mifala lo malakula, ol man oli, olsem, olgeta nao oli powaful bitim ol woman lo Malakula lo ples blo mi, ol woman olgeta blo mekem kakae ol man olgeta blo ko lo garen mo lukaotem kakae mo ko lo solwota from mit.</p>\n      <p>Lo ples blo mi, men kakae blo mifala we aelan kakae hemi banana. Olsem evri ples yu ko yu luk banana nao hemi men kakae blo mifala lo Malakula lo ples blo mi. </p>\n      <p>Mi mi toktok langwis blo mi hemi kolled 'Neverver' mo mi toktok langwis langwis blo abu woman blo mi we hemi kamaot lo Uripif be menli nao mi toktok langwis blo dadi blo mi we jes abu woman we hemi kamaot lo Malakula be lo Lingara.</p>\n      <p>Ok, naoia bae mi talem wan samting lo wan smol stori lo langwis blo mi.</p>\n\n      <h3>Neverver</h3>\n      <p>Lo... mamatnai eve jif vavetnai eve tikonan an jyoj nimpotnai e leleme, bumbutnai eve pasta eve fes pasta lo vilij nam lo presbeterien busman bei. Tatanai eve jif nindetnai eve me haosgel lo nakmaltnam</p>\n      <p>Tenkiu.</p>\n    </div>\n    <div class=\"toggleTranslation translation\">\n      <h2>Translation</h2>\n      <h3>English</h3>\n      <p>Ok, my name is Ladonna and I'm from Central Malakula island. I'm Malakulan-Paamese -- my mum is from Paama and my dad is from Malakula but we're based in Malakula.  In our village in Malakula, men are more powerful than women.  Women work to make food and men go to the garden to look for food, and also the sea to catch fish.</p>\n      <p>In my village, our main island food that we eat is banana. Everywhere that you go you'll see banana as it's the main food in our village in Malakula. </p>\n      <p>I speak my language that is called 'Neverver' and I also speak my grandmother's language -- she's from Uripiv -- but mainly I just speak my dad's language, from my grandmother that comes from Lingara in Malakula.</p>\n      <p>Ok, now I'm going to say something... a story in my language. </p>\n      <p>My dad is a chief, my aunt is a church leader and my grandma is short, and my grandpa is a pastor and the first pastor at the Presbyterian Church in Bushman Bay.  So my dad is a chief and my mum is a housewife.</p>\n    </div>\n  </div>\n  <div class=\"academic\">\n    <h2>Details</h2>\n    <p>Recorded in: <a href=\"#\">Vanuatu</a></p>\n    <p>Uploaded in: <a href=\"#\">Vanuatu</a></p>\n    <h3>Bislama</h3>\n    <p>Family: <a href=\"#\">Indo-European</a></p>\n    <p>Writing: <a href=\"#\">Latin</a></p>\n    <br>\n    <h3>Neverver</h3>\n    <p>Family: <a href=\"#\">Indo-European</a></p>\n    <p>Writing: <a href=\"#\">Latin</a></p>\n  </div>\n</section>");
   
 });
