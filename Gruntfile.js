@@ -43,7 +43,7 @@ module.exports = function (grunt) {
                 tasks: ['emberTemplates']
             },
             stylus: {
-                files: ['css/stylus/*.styl'],
+                files: ['css/**/*.styl'],
                 tasks: ['stylus']
             },
             livereload: {
