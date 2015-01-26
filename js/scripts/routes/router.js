@@ -1,6 +1,6 @@
 App.Router.map(function() {
   // this.route("index");
-  this.route("about");
+  // this.route("about");
   this.route("team");
   this.route("mission");
   this.route("expeditions");
