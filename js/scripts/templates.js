@@ -379,7 +379,7 @@ function program5(depth0,data) {
   data.buffer.push("Contact");
   }
 
-  data.buffer.push("<section class=\"banner getInvolved\"></section>\n<section class=\"page form\">\n    <h1>Get involved</h1>\n    <p>Wikitongues wouldn't be anywhere without our community of volunteers. If you believe in what we're doing, there's plenty of ways to get involved.</p>\n    <ul class=\"activities\">\n      <li>\n        ");
+  data.buffer.push("<section class=\"banner getInvolved\"></section>\n<section class=\"page form\">\n    <h1>Get involved</h1>\n    <p>Wikitongues wouldn't be anywhere without our community of volunteers. If you believe in what we're doing, there are plenty of ways to get involved.</p>\n    <ul class=\"activities\">\n      <li>\n        ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'classNames': ("subheaderLink"),
     'tagName': ("button")
