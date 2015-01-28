@@ -11,28 +11,30 @@ App.ResetScroll = Ember.Mixin.create({
 
 // Router
 App.Router.map(function() {
-  this.route("team");
-  this.route("mission");
-  this.route("expeditions");
-  this.route("projects");
+  this.resource("team");
+  this.resource("mission");
+  this.resource("expeditions");
+  this.resource("projects");
   this.route("get_involved");
-  this.route("press");
+  this.resource("press");
   this.route("submit");
   this.route("volunteer");
   this.route("contact");
-  this.route("legal");
-  this.route("releaseForm");
-  this.route("poly");
+  this.resource("legal");
+  this.resource("releaseForm");
+  this.resource("poly", function(){
+    this.route("book");
+  });
 });
 
-App.IndexRoute = Ember.Route.extend({
+App.IndexController = Ember.Controller.extend({
+  image: "img/banner.jpg",
+  youTubeLink: "img/youTubeLink.png"
+})
+
+App.TeamRoute = Ember.Route.extend(App.ResetScroll, {
   model: function() {
-    return [
-      {
-        id: 0,
-        image: "img/banner.jpg"
-      }
-    ];
+    return this.store.findAll("volunteer")
   }
 });
 
@@ -44,12 +46,6 @@ App.PolyRoute = Ember.Route.extend({
       }
     ],
     this.store.findAll("Poly");
-  }
-});
-
-App.TeamRoute = Ember.Route.extend(App.ResetScroll, {
-  model: function() {
-    return this.store.findAll("volunteer")
   }
 });
 

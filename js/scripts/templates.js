@@ -450,38 +450,33 @@ helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  var buffer = '';
-  data.buffer.push("\n    <section class=\"banner\">\n        <img ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'src': ("image")
-  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" alt=\"Wikitongues\" class=\"fallback\">\n    </section>\n");
-  return buffer;
+  
+  data.buffer.push("Submit a video");
   }
 
 function program3(depth0,data) {
   
   
-  data.buffer.push("Submit a video");
-  }
-
-function program5(depth0,data) {
-  
-  
   data.buffer.push("Become a volunteer");
   }
 
-  stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n<section class=\"page index\">\n    <div class=\"information\">\n        <h1>Every language in the world</h1>\n        <a class=\"youTubeLink\" href=\"https://www.youtube.com/user/WikiTongues\" target=\"_blank\">\n            <img src=\"img/youTubeLink.png\" alt=\"\">\n            <div class=\"triangle\"></div>\n            <p>Join us on YouTube</p>\n        </a>\n        <br>\n        <p>Wikitongues is a global effort to record and provide access to every language in the world. We’re a network of volunteers on every continent who work to bring you new language videos every week, driven by a commitment to the value of diversity. Be a part of our movement.</p>\n        <ul class=\"activities\">\n          <li>\n            ");
+  data.buffer.push("<section class=\"banner\">\n    <img ");
+  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+    'src': ("image")
+  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
+  data.buffer.push(" alt=\"Wikitongues\" class=\"fallback\">\n</section>\n<section class=\"page index\">\n    <div class=\"information\">\n        <h1>Every language in the world</h1>\n        <a class=\"youTubeLink\" href=\"https://www.youtube.com/user/WikiTongues\" target=\"_blank\">\n            <img ");
+  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+    'src': ("youTubeLink")
+  },hashTypes:{'src': "STRING"},hashContexts:{'src': depth0},contexts:[],types:[],data:data})));
+  data.buffer.push(">\n            <div class=\"triangle\"></div>\n            <p>Join us on YouTube</p>\n        </a>\n        <br>\n        <p>Wikitongues is a global effort to record and provide access to every language in the world. We’re a network of volunteers on every continent who work to bring you new language videos every week, driven by a commitment to the value of diversity. Be a part of our movement.</p>\n        <ul class=\"activities\">\n          <li>\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("button")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n          </li>\n          <li>\n            ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{
     'tagName': ("button")
-  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(5, program5, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
+  },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(3, program3, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "volunteer", options) : helperMissing.call(depth0, "link-to", "volunteer", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n          </li>\n          <li>\n            <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" target=\"_blank\">Support us</a>\n          </li>\n        </ul>\n    </div>\n  </section>");
   return buffer;
@@ -539,7 +534,7 @@ function program1(depth0,data) {
   data.buffer.push("</a></h1>\n      <a href=\"#\" class=\"direction\">></a>\n      <h1 class=\"target\"><a href=\"#\">");
   stack1 = helpers._triageMustache.call(depth0, "targetName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</a></h1>\n    </nav>\n    <section class=\"phrases\">\n      \n      <p class=\"phrase-source\"><a href=\"#\">Mba’éichapa.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Hello</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Jajohecha peve.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Goodbye.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Mba’éichapa nderéra?</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">What is your name?</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Cheréra …</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">My name is …</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa inglyesñe’ẽme?</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Do you speak English?</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa karaiñe’ẽme?</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Do you speak Spanish?</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Héẽ.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Yes.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Nahániri.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">No.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Aguyje.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Thank you.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Aguyjevete ndéve.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Thank you very much.</a></p>\n      <button><a href=\"#\">+</a></button>\n    </section>\n    ");
+  data.buffer.push("</a></h1>\n    </nav>\n    <section class=\"phrases\">\n      \n      <ul>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Mba’éichapa.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Hello</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Jajohecha peve.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Goodbye.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Mba’éichapa nderéra?</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">What is your name?</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Cheréra …</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">My name is …</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa inglyesñe’ẽme?</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Do you speak English?</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa karaiñe’ẽme?</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Do you speak Spanish?</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Héẽ.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Yes.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Nahániri.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">No.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Aguyje.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Thank you.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Aguyjevete ndéve.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Thank you very much.</a></p>\n        </li>\n      </ul>\n      <button><a href=\"#\">+</a></button>\n    </section>\n    ");
   return buffer;
   }
 

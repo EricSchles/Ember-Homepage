@@ -103,35 +103,59 @@
       width 100%
       font-family 'Open Sans',helvetica,sans-serif
 
-      p
-        clear both
-        width 100%
-        margin 0
-
-        &.phrase-source
+      ul
+        li
+          display inline-block
+          width 100%
           float left
-          padding 0.2em 0.5em
-
-          a
-            background #BCDBFE
-            border-radius 51px 51px 51px 0
-
-        &.phrase-target
-          float right
-          text-align right
-          margin-bottom .6em
-          padding 0 0.5em
-
-          a
-            background lighten($secondary-blue, 25%)
-            border-radius 51px 51px 0 51px
-
-        a
-          padding .5em .8em
-          font-size .75em
+          padding .2em 0
+          border-bottom 0px solid lighten($blue, 89%)
 
           &:hover
-            color $blue !important
+            background lighten($blue, 92%)
+            box-shadow inset 0 3px 0 0 lighten($blue, 89%)
+            border-bottom 3px solid lighten($blue, 89%)
+
+          p
+            clear both
+            width 100%
+            margin 0
+
+            &.phrase-source
+              float left
+              padding 0 0.5em
+              margin-bottom .1em
+
+              a
+                background #BCDBFE
+                border-radius 51px 51px 51px 0
+                border 1px solid transparent
+
+                &:hover
+                  background lighten(#BCDBFE, 6%)
+                  border-color darken(#BCDBFE, 3%)
+
+            &.phrase-target
+              float right
+              text-align right
+              margin-bottom .4em
+              padding 0 0.5em
+
+              a
+                background lighten($secondary-blue, 25%)
+                border-radius 51px 51px 0 51px
+                border 1px solid transparent
+
+                &:hover
+                  background lighten($secondary-blue, 31%)
+                  border-color lighten($secondary-blue, 18%)
+
+            a
+              padding .5em .8em
+              font-size .75em
+
+              &:hover
+                color $blue !important
 
       button
         background none
