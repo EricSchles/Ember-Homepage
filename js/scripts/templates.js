@@ -520,6 +520,37 @@ function program1(depth0,data) {
   
 });
 
+Ember.TEMPLATES["poly"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = '', stack1;
+  data.buffer.push("\n    <nav class=\"top-navigation\">\n      <a href=\"#\" title=\"Save\">*</a>\n      <a href=\"#\" title=\"Share\">></a>\n      <a href=\"#\" title=\"Embed\">{ }</a>\n      <a href=\"#\" title=\"Location\">!</a>\n      <a href=\"#\" title=\"Settings\">#</a>\n    </nav>\n    <section class=\"banner\">\n      <img ");
+  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
+    'src': ("bannerUrl"),
+    'alt': ("User")
+  },hashTypes:{'src': "STRING",'alt': "STRING"},hashContexts:{'src': depth0,'alt': depth0},contexts:[],types:[],data:data})));
+  data.buffer.push(" class=\"fallback\">\n    </section>\n    <nav class=\"language-navigation\">\n      <h1 class=\"source\"><a href=\"#\">");
+  stack1 = helpers._triageMustache.call(depth0, "sourceName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</a></h1>\n      <a href=\"#\" class=\"direction\">></a>\n      <h1 class=\"target\"><a href=\"#\">");
+  stack1 = helpers._triageMustache.call(depth0, "targetName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</a></h1>\n    </nav>\n    <section class=\"phrases\">\n      \n      <p class=\"phrase-source\"><a href=\"#\">Mba’éichapa.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Hello</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Jajohecha peve.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Goodbye.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Mba’éichapa nderéra?</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">What is your name?</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Cheréra …</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">My name is …</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa inglyesñe’ẽme?</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Do you speak English?</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa karaiñe’ẽme?</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Do you speak Spanish?</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Héẽ.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Yes.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Nahániri.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">No.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Aguyje.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Thank you.</a></p>\n      <p class=\"phrase-source\"><a href=\"#\">Aguyjevete ndéve.</a></p>\n      <p class=\"phrase-target\"><a href=\"#\">Thank you very much.</a></p>\n      <button><a href=\"#\">+</a></button>\n    </section>\n    ");
+  return buffer;
+  }
+
+  data.buffer.push("<section class=\"page poly\">\n  <section class=\"app\">\n    ");
+  stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n  </section>\n</section>\n");
+  return buffer;
+  
+});
+
 Ember.TEMPLATES["press"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};

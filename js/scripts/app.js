@@ -22,6 +22,7 @@ App.Router.map(function() {
   this.route("contact");
   this.route("legal");
   this.route("releaseForm");
+  this.route("poly");
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -29,9 +30,20 @@ App.IndexRoute = Ember.Route.extend({
     return [
       {
         id: 0,
-        image: "img/banner.jpg",
+        image: "img/banner.jpg"
       }
     ];
+  }
+});
+
+App.PolyRoute = Ember.Route.extend({
+  model: function() {
+    return [
+      {
+        image: "img/polyProfile.jpg",
+      }
+    ],
+    this.store.findAll("Poly");
   }
 });
 
@@ -69,6 +81,34 @@ App.Volunteer = DS.Model.extend({
   latitude: DS.attr("number"),
   longitude: DS.attr("number"),
   photo: DS.attr("string")
+});
+
+App.Poly = DS.Model.extend({
+  version: DS.attr("string"),
+  url: DS.attr("string"),
+  dateCreated: DS.attr("string"),
+  lastEdited: DS.attr("string"),
+  createdBy: DS.attr("string"),
+  location: DS.attr("string"),
+  release: DS.attr("string"),
+  source: DS.attr("string"),
+  sourceName: DS.attr("string"),
+  sourcePhrases: DS.attr("array"),
+  target: DS.attr("string"),
+  targetName: DS.attr("string"),
+  targetPhrases: DS.attr("array"),
+  title: DS.attr("string"),
+  banner: DS.attr("number"),
+  bannerUrl: DS.attr("string"),
+  sounds: DS.attr("number"),
+  videos: DS.attr("number"),
+  editing: DS.attr("number"),
+  comments: DS.attr("number"),
+  phrases: DS.attr("number"),
+  views: DS.attr("number"),
+  saves: DS.attr("number"),
+  shares: DS.attr("number"),
+  embeds: DS.attr("number")
 });
 
 App.SubmitRoute = Ember.Route.extend(App.ResetScroll, {
@@ -443,3 +483,33 @@ App.Volunteer.FIXTURES = [
   },
 ];
 
+App.Poly.FIXTURES = [
+  {
+    id:1000,
+    version: "0.0.1",
+    url: "go.wikitongues.org/grn-eng/guarani-for-the-home",
+    dateCreated: "1/15/15",
+    lastEdited: "Today",
+    createdBy: "FredericoAndrade",
+    location: "New York, NY, USA",
+    release: "Public",
+    source: "GRN",
+    sourceName: "Guaraní",
+    sourcePhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
+    target: "ENG",
+    targetName: "English",
+    targetPhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
+    title: "Guaraní for the home",
+    banner: 1,
+    bannerUrl: "img/polyProfile.jpg",
+    sounds: 0,
+    videos: 0,
+    editing: 0,
+    comments: 0,
+    phrases: 9,
+    views: 0,
+    saves: 0,
+    shares: 0,
+    embeds: 0
+  }
+];
