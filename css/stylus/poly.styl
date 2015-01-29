@@ -19,13 +19,13 @@
       height 200px
       width 100%
 
-        &:hover
-          height 230px
-          transition height ease-in-out 2*$transition-time
+      &:hover
+        height 210px
+        transition height ease-in-out 2*$transition-time
 
-          img
-            margin-top -17%
-            transition margin-top ease-in-out 2*$transition-time
+        img
+          margin-top -30%
+          transition margin-top ease-in-out 2*$transition-time
 
         img
           margin-top -20%
@@ -104,16 +104,18 @@
       font-family 'Open Sans',helvetica,sans-serif
 
       ul
+        display inline-block
+        width 100%
+
         li
-          display inline-block
-          width 100%
+          width inherit
           float left
-          padding .2em 0
-          border-bottom 0px solid lighten($blue, 89%)
+          padding .6em 0
+          border-color lighten($blue, 89%)
 
           &:hover
             background lighten($blue, 92%)
-            box-shadow inset 0 3px 0 0 lighten($blue, 89%)
+            border-top 3px solid lighten($blue, 89%)
             border-bottom 3px solid lighten($blue, 89%)
 
           p
@@ -138,7 +140,6 @@
             &.phrase-target
               float right
               text-align right
-              margin-bottom .4em
               padding 0 0.5em
 
               a
