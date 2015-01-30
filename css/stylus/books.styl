@@ -5,7 +5,6 @@
   display inline-block
   font-family "Open sans", "helvetica", sans-serif
 
-
   .appContainer
     margin auto
     min-height 450px
@@ -31,12 +30,29 @@
       overflow hidden
       box-shadow 0 5px 4px 1px rgba(0,0,0,.1)
 
-      h2
+      section.presentation
         background white
-        margin 0
         padding 0.4em 0.8em
         height 50px
-        font-size 1em
+
+        h2
+          margin 0
+          font-size 1em
+          float left
+          max-width 280px
+          overflow hidden
+          display inline
+          white-space nowrap
+          text-overflow ellipsis
+          height 32px
+
+        p.number
+          font-family "Open sans", "helvetica", sans-serif
+          float right
+          display inline-block
+          width initial
+          margin 0
+          font-size 0.8em
 
       .banner
         border none

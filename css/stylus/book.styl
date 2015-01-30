@@ -8,6 +8,7 @@
 
   >a
     float left
+    position fixed
 
   .app
     border-radius $radius
@@ -61,6 +62,13 @@
           &:hover
             background lighten($hover, 40%)
 
+        p
+          float right
+          display block
+          width auto
+          margin 0
+          padding 0.5em 1em
+
       &.language-navigation
         border-bottom 3px solid darken(#F4F4F4, 4%)
 
@@ -110,6 +118,11 @@
       ul
         display inline-block
         width 100%
+
+        p.empty
+          text-align center
+          color $secondary-blue
+          margin-bottom 180px
 
         li
           width inherit

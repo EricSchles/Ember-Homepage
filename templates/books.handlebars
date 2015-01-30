@@ -2,11 +2,15 @@
   <div class="appContainer">
     <p>People you follow</p>
     {{#each}}
-      {{#link-to "book" this classNames="app" tagName="a"}}
-        <h2>{{title}}</h2>
-
+      <section class="app">
+        <section class="presentation">
+          <h2 {{bind-attr title="title"}}>{{title}}</h2>
+          <p class="number">{{phraseCount}}</p>
+        </section>
         <section class="banner">
-          <img {{bind-attr src="bannerUrl"}}/>
+          {{#link-to "book" this tagName="a"}}
+            <img {{bind-attr src="bannerUrl"}}/>
+            {{/link-to}}
         </section>
 
         <nav class="language-navigation">
@@ -14,7 +18,7 @@
           <a href="#" class="direction">></a>
           <h1 class="target"><a href="#">{{targetName}}</a></h1>
         </nav>
-      {{/link-to}}
+      </section>
     {{/each}}
   </div>
 </section>
