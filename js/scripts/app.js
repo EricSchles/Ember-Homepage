@@ -22,9 +22,8 @@ App.Router.map(function() {
   this.route("contact");
   this.resource("legal");
   this.resource("releaseForm");
-  this.resource("poly", function(){
-    this.route("book");
-  });
+  this.resource("books");
+  this.resource("book", {path:"/books/:book_id"})
 });
 
 App.IndexController = Ember.Controller.extend({
@@ -38,14 +37,15 @@ App.TeamRoute = Ember.Route.extend(App.ResetScroll, {
   }
 });
 
-App.PolyRoute = Ember.Route.extend({
+App.BooksRoute = Ember.Route.extend({
   model: function() {
-    return [
-      {
-        image: "img/polyProfile.jpg",
-      }
-    ],
-    this.store.findAll("Poly");
+    return this.store.findAll('book');
+  }
+});
+
+App.BookRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find("book", params.book_id)
   }
 });
 
@@ -67,7 +67,6 @@ App.GoogleMapsComponent = Ember.Component.extend({
 
     new google.maps.Map(container[0], options);
 
-
   }.on("didInsertElement")
 });
 
@@ -79,8 +78,7 @@ App.Volunteer = DS.Model.extend({
   photo: DS.attr("string")
 });
 
-App.Poly = DS.Model.extend({
-  version: DS.attr("string"),
+App.Book = DS.Model.extend({
   url: DS.attr("string"),
   dateCreated: DS.attr("string"),
   lastEdited: DS.attr("string"),
@@ -94,12 +92,12 @@ App.Poly = DS.Model.extend({
   targetName: DS.attr("string"),
   targetPhrases: DS.attr("array"),
   title: DS.attr("string"),
-  banner: DS.attr("number"),
+  banner: DS.attr("boolean"),
   bannerUrl: DS.attr("string"),
-  sounds: DS.attr("number"),
-  videos: DS.attr("number"),
-  editing: DS.attr("number"),
-  comments: DS.attr("number"),
+  sounds: DS.attr("boolean"),
+  videos: DS.attr("boolean"),
+  editing: DS.attr("boolean"),
+  comments: DS.attr("boolean"),
   phrases: DS.attr("number"),
   views: DS.attr("number"),
   saves: DS.attr("number"),
@@ -329,7 +327,6 @@ App.ContactView = Ember.View.extend({
 })
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend({
-
 });
 
 App.Volunteer.FIXTURES = [
@@ -479,33 +476,161 @@ App.Volunteer.FIXTURES = [
   },
 ];
 
-App.Poly.FIXTURES = [
+App.Book.FIXTURES = [
   {
-    id:1000,
-    version: "0.0.1",
-    url: "go.wikitongues.org/grn-eng/guarani-for-the-home",
+    id:10001,
     dateCreated: "1/15/15",
     lastEdited: "Today",
-    createdBy: "FredericoAndrade",
+    createdBy: "Sarah Doyle",
     location: "New York, NY, USA",
     release: "Public",
-    source: "GRN",
-    sourceName: "Guaraní",
-    sourcePhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
-    target: "ENG",
-    targetName: "English",
-    targetPhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
-    title: "Guaraní for the home",
-    banner: 1,
-    bannerUrl: "img/polyProfile.jpg",
-    sounds: 0,
-    videos: 0,
-    editing: 0,
-    comments: 0,
+    sourceISO: "ENG",
+    sourceName: "English",
+    sourcePhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
+    targetISO: "BIS",
+    targetName: "Bislama",
+    targetPhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
+    title: "Bislama for the Home",
+    banner: true,
+    bannerUrl: "img/faces/sarah.jpg",
+    sounds: false,
+    videos: false,
+    editing: false,
+    comments: false,
+    phrases: 9,
+    views: 0,
+    saves: 0,
+    shares: 0,
+    embeds: 0
+  },
+  {
+    id:10002,
+    dateCreated: "1/15/15",
+    lastEdited: "Today",
+    createdBy: "Daniel Bogre Udell",
+    location: "New York, NY, USA",
+    release: "Public",
+    sourceISO: "Cat",
+    sourceName: "Español",
+    sourcePhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
+    targetISO: "ESP",
+    targetName: "Catalá",
+    targetPhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
+    title: "Aprendiendo Catalán",
+    banner: true,
+    bannerUrl: "img/faces/daniel.jpg",
+    sounds: false,
+    videos: false,
+    editing: false,
+    comments: false,
+    phrases: 9,
+    views: 0,
+    saves: 0,
+    shares: 0,
+    embeds: 0
+  },
+  {
+    id:10003,
+    dateCreated: "1/15/15",
+    lastEdited: "Today",
+    createdBy: "Lindie Botes",
+    location: "New York, NY, USA",
+    release: "Public",
+    sourceISO: "AFR",
+    sourceName: "Afrikaans",
+    sourcePhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
+    targetISO: "ENG",
+    targetName: "Engels",
+    targetPhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
+    title: "Engels Vir Werk",
+    banner: true,
+    bannerUrl: "img/faces/lindie.jpg",
+    sounds: false,
+    videos: false,
+    editing: false,
+    comments: false,
+    phrases: 9,
+    views: 0,
+    saves: 0,
+    shares: 0,
+    embeds: 0
+  },
+  {
+    id:10004,
+    dateCreated: "1/15/15",
+    lastEdited: "Today",
+    createdBy: "Cathy Zhang",
+    location: "New York, NY, USA",
+    release: "Public",
+    sourceISO: "ENG",
+    sourceName: "English",
+    sourcePhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
+    targetISO: "BIS",
+    targetName: "Mandarin",
+    targetPhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
+    title: "Mandarin for the Ex-Pat",
+    banner: true,
+    bannerUrl: "img/faces/cathy.jpg",
+    sounds: false,
+    videos: false,
+    editing: false,
+    comments: false,
+    phrases: 9,
+    views: 0,
+    saves: 0,
+    shares: 0,
+    embeds: 0
+  },
+  {
+    id:10005,
+    dateCreated: "1/15/15",
+    lastEdited: "Today",
+    createdBy: "Pau Matteo",
+    location: "New York, NY, USA",
+    release: "Public",
+    sourceISO: "Cat",
+    sourceName: "Catalá",
+    sourcePhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
+    targetISO: "Lit",
+    targetName: "Lithuanian",
+    targetPhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
+    title: "Un Catalá en Lituania v1",
+    banner: true,
+    bannerUrl: "img/faces/pau.jpg",
+    sounds: false,
+    videos: false,
+    editing: false,
+    comments: false,
+    phrases: 9,
+    views: 0,
+    saves: 0,
+    shares: 0,
+    embeds: 0
+  },
+  {
+    id:10006,
+    dateCreated: "1/15/15",
+    lastEdited: "Today",
+    createdBy: "Plator Gashi",
+    location: "New York, NY, USA",
+    release: "Public",
+    sourceISO: "AFR",
+    sourceName: "Albanian",
+    sourcePhrases:["Hello","Goodbye.","What is your name?","My name is …","Do you speak English?","Do you speak Spanish?","Yes.","No.","Thank you.","Thank you very much."],
+    targetISO: "ENG",
+    targetName: "Gheg Albanian",
+    targetPhrases:["Mba’éichapa.","Jajohecha peve.","Mba’éichapa nderéra?","Cheréra …","Reñe’ẽkuaápa inglyesñe’ẽme?","Reñe’ẽkuaápa karaiñe’ẽme?","Héẽ.","Nahániri.","Aguyje.","Aguyjevete ndéve."],
+    title: "Kosovo Albanian",
+    banner: true,
+    bannerUrl: "img/faces/plator.jpg",
+    sounds: false,
+    videos: false,
+    editing: false,
+    comments: false,
     phrases: 9,
     views: 0,
     saves: 0,
     shares: 0,
     embeds: 0
   }
-];
+]

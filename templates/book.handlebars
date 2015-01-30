@@ -1,0 +1,65 @@
+<section class="page poly">
+  {{#link-to "books" tagName="a"}}Back{{/link-to}}
+  <section class="app">
+    <nav class="top-navigation">
+      <a href="#" title="Save">*</a>{{!--Save--}}
+      <a href="#" title="Share">></a>{{!--Share--}}
+      <a href="#" title="Embed">{ }</a>{{!--Embed--}}
+      <a href="#" title="Location">!</a>{{!--Location--}}
+      <a href="#" title="Settings">#</a>{{!--Settings--}}
+    </nav>
+    <section class="banner">
+      <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
+    </section>
+    <nav class="language-navigation">
+      <h1 class="source"><a href="#">{{sourceName}}</a></h1>
+      <a href="#" class="direction">></a>
+      <h1 class="target"><a href="#">{{targetName}}</a></h1>
+    </nav>
+    <section class="phrases">
+      <ul>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[0]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[0]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[1]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[1]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[2]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[2]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[3]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[3]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[4]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[4]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[5]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[5]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[6]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[6]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[7]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[7]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[8]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[8]}}</a></p>
+        </li>
+        <li>
+          <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrases.[9]}}</a></p>
+          <p class="phrase-target"><a class="phrase" href="#">{{targetPhrases.[9]}}</a></p>
+        </li>
+      </ul>
+      <button><a href="#">+</a></button>
+    </section>
+  </section>
+</section>

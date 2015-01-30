@@ -2,6 +2,12 @@
   background #fafafa
   width 100% !important
   max-width 100% !important
+  padding-top 0
+  padding-bottom 0
+  float left
+
+  >a
+    float left
 
   .app
     border-radius $radius
@@ -16,19 +22,19 @@
 
     section.banner
       border none
-      height 200px
+      height 220px
       width 100%
 
       &:hover
-        height 210px
+        height 250px
         transition height ease-in-out 2*$transition-time
 
         img
-          margin-top -30%
+          margin-top 0
           transition margin-top ease-in-out 2*$transition-time
 
-        img
-          margin-top -20%
+      img
+        margin-top -10px
 
     nav
       width 100%
@@ -70,8 +76,6 @@
             width 18px
 
         a.direction
-          // background $hover
-          // color #fff
           color $hover
           width 6%
           float left
@@ -99,7 +103,7 @@
 
     .phrases
       display inline-block
-      padding .5em 0 0 0
+      padding .1em 0 0 0
       width 100%
       font-family 'Open Sans',helvetica,sans-serif
 
@@ -111,7 +115,7 @@
           width inherit
           float left
           padding .6em 0
-          border-color lighten($blue, 89%)
+          border 0px solid lighten($blue, 89%)
 
           &:hover
             background lighten($blue, 92%)
