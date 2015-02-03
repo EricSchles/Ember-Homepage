@@ -42,6 +42,7 @@
       position initial
       top initial
       background #fff
+      border-bottom 3px solid #EAEAEA
 
       &.top-navigation
         margin-top -33px
@@ -58,9 +59,26 @@
           display block
           float left
           color $blue
+          background-image url("../img/poly-icons.svg") !important
+          background-size 200px
+          transition background-position-y
 
           &:hover
-            background lighten($hover, 40%)
+            // background-color lighten($hover, 40%)
+            background-position-y -40px
+            transition background-position-y 0s linear
+
+          &[title~="Share"]
+            background-position-x -40px
+
+          &[title~="Embed"]
+            background-position-x -80px
+
+          &[title~="Location"]
+            background-position-x -120px
+
+          &[title~="Settings"]
+            background-position-x -160px
 
         p
           float right

@@ -221,7 +221,7 @@ function program5(depth0,data) {
     'tagName': ("a")
   },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "books", options) : helperMissing.call(depth0, "link-to", "books", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  <section class=\"app\">\n    <nav class=\"top-navigation\">\n      <a href=\"#\" title=\"Save\">*</a>\n      <a href=\"#\" title=\"Share\">></a>\n      <a href=\"#\" title=\"Embed\">{ }</a>\n      <a href=\"#\" title=\"Location\">!</a>\n      <a href=\"#\" title=\"Settings\">#</a>\n      <p>");
+  data.buffer.push("\n  <section class=\"app\">\n    <nav class=\"top-navigation\">\n      <a href=\"#\" title=\"Save\"></a>\n      <a href=\"#\" title=\"Share\"></a>\n      <a href=\"#\" title=\"Embed\"></a>\n      <a href=\"#\" title=\"Location\"></a>\n      <a href=\"#\" title=\"Settings\"></a>\n      <p>");
   stack1 = helpers._triageMustache.call(depth0, "phraseCount", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</p>\n    </nav>\n    <section class=\"banner\">\n      <img ");
@@ -239,37 +239,6 @@ function program5(depth0,data) {
   stack1 = helpers.each.call(depth0, "phrases", {hash:{},hashTypes:{},hashContexts:{},inverse:self.program(5, program5, data),fn:self.program(3, program3, data),contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n      </ul>\n      <button><a href=\"#\">+</a></button>\n    </section>\n  </section>\n</section>\n");
-  return buffer;
-  
-});
-
-Ember.TEMPLATES["book2"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compilerInfo = [4,'>= 1.0.0'];
-helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
-  var buffer = '', stack1, escapeExpression=this.escapeExpression, self=this;
-
-function program1(depth0,data) {
-  
-  var buffer = '', stack1;
-  data.buffer.push("\n    <nav class=\"top-navigation\">\n      <a href=\"#\" title=\"Save\">*</a>\n      <a href=\"#\" title=\"Share\">></a>\n      <a href=\"#\" title=\"Embed\">{ }</a>\n      <a href=\"#\" title=\"Location\">!</a>\n      <a href=\"#\" title=\"Settings\">#</a>\n    </nav>\n    <section class=\"banner\">\n      <img ");
-  data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-    'src': ("bannerUrl"),
-    'alt': ("User")
-  },hashTypes:{'src': "STRING",'alt': "STRING"},hashContexts:{'src': depth0,'alt': depth0},contexts:[],types:[],data:data})));
-  data.buffer.push(" class=\"fallback\">\n    </section>\n    <nav class=\"language-navigation\">\n      <h1 class=\"source\"><a href=\"#\">");
-  stack1 = helpers._triageMustache.call(depth0, "sourceName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</a></h1>\n      <a href=\"#\" class=\"direction\">></a>\n      <h1 class=\"target\"><a href=\"#\">");
-  stack1 = helpers._triageMustache.call(depth0, "targetName", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("</a></h1>\n    </nav>\n    <section class=\"phrases\">\n\n      <ul>\n        <li>\n          \n          <p class=\"phrase-source\"><a class=\"phrase\" href=\"#\">Mba’éichapa.</a></p>\n          <p class=\"phrase-target\"><a class=\"phrase\" href=\"#\">Hello</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Jajohecha peve.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Goodbye.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Mba’éichapa nderéra?</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">What is your name?</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Cheréra …</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">My name is …</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa inglyesñe’ẽme?</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Do you speak English?</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Reñe’ẽkuaápa karaiñe’ẽme?</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Do you speak Spanish?</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Héẽ.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Yes.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Nahániri.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">No.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Aguyje.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Thank you.</a></p>\n        </li>\n        <li>\n          <p class=\"phrase-source\"><a href=\"#\">Aguyjevete ndéve.</a></p>\n          <p class=\"phrase-target\"><a href=\"#\">Thank you very much.</a></p>\n        </li>\n      </ul>\n      <button><a href=\"#\">+</a></button>\n    </section>\n    ");
-  return buffer;
-  }
-
-  data.buffer.push("<section class=\"page poly\">\n  <section class=\"app\">\n    ");
-  stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
-  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n  </section>\n</section>\n");
   return buffer;
   
 });
