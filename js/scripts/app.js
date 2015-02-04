@@ -43,15 +43,15 @@ App.BooksRoute = Ember.Route.extend({
   }
 });
 
+App.BooksController = Ember.ArrayController.extend({
+  phrasesCount: Ember.computed.alias('length')
+})
+
 App.BookRoute = Ember.Route.extend({
   model: function(params) {
     return this.store.find("book", params.book_id)
   }
 });
-
-App.BooksController = Ember.ArrayController.extend({
-  phraseCount: Ember.computed.alias('length')
-})
 
 App.GoogleMapsComponent = Ember.Component.extend({
   latitude: "",
@@ -101,7 +101,7 @@ App.Book = DS.Model.extend({
   videos: DS.attr("boolean"),
   editing: DS.attr("boolean"),
   comments: DS.attr("boolean"),
-  phraseCount: DS.attr("number"),
+  // phraseCount: DS.attr("number"),
   views: DS.attr("number"),
   saves: DS.attr("number"),
   shares: DS.attr("number"),
@@ -1081,7 +1081,7 @@ App.Book.FIXTURES = [
     videos: false,
     editing: false,
     comments: false,
-    phraseCount: 10,
+    // phraseCount: 10,
     views: 0,
     saves: 0,
     shares: 0,
@@ -1107,7 +1107,7 @@ App.Book.FIXTURES = [
     videos: false,
     editing: false,
     comments: false,
-    phraseCount: 25,
+    // phraseCount: 25,
     views: 0,
     saves: 0,
     shares: 0,
@@ -1133,7 +1133,7 @@ App.Book.FIXTURES = [
     videos: false,
     editing: false,
     comments: false,
-    phraseCount: 28,
+    // phraseCount: 28,
     views: 0,
     saves: 0,
     shares: 0,
@@ -1159,7 +1159,7 @@ App.Book.FIXTURES = [
     videos: false,
     editing: false,
     comments: false,
-    phraseCount: 0,
+    // phraseCount: 0,
     views: 0,
     saves: 0,
     shares: 0,
@@ -1185,7 +1185,7 @@ App.Book.FIXTURES = [
     videos: false,
     editing: false,
     comments: false,
-    phraseCount: 0,
+    // phraseCount: 0,
     views: 0,
     saves: 0,
     shares: 0,
@@ -1211,7 +1211,7 @@ App.Book.FIXTURES = [
     videos: false,
     editing: false,
     comments: false,
-    phraseCount: 0,
+    // phraseCount: 0,
     views: 0,
     saves: 0,
     shares: 0,

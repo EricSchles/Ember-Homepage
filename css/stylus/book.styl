@@ -42,14 +42,36 @@
       position initial
       top initial
       background #fff
-      border-bottom 3px solid #EAEAEA
+      border-bottom 3px solid rgba(0,0,0,.3)
+      margin-bottom -3px
+      z-index 5
 
       &.top-navigation
-        margin-top -33px
         height 40px
+
+        p
+          float left
+          display block
+          width auto
+          margin 0
+          padding 0.5em 1em
 
         &:hover
           margin-top 0
+
+        .rightSubNav
+          float right
+
+          .moreNavItems
+            height 40px
+            width 120px
+            position absolute
+            margin-left -120px
+            display none
+
+            a
+              position static
+              float left
 
         a
           padding 11px
@@ -60,12 +82,12 @@
           float left
           color $blue
           background-image url("../img/poly-icons.svg") !important
-          background-size 200px
+          background-size 240px
           transition background-position-y
+          background-position-y -2px
 
           &:hover
-            // background-color lighten($hover, 40%)
-            background-position-y -40px
+            background-position-y -42px
             transition background-position-y 0s linear
 
           &[title~="Share"]
@@ -80,12 +102,12 @@
           &[title~="Settings"]
             background-position-x -160px
 
-        p
-          float right
-          display block
-          width auto
-          margin 0
-          padding 0.5em 1em
+          &[title~="More"]
+            background-position-x -200px
+
+            &:hover
+              transform rotate(-.25turn)
+              transition transform $transition-time ease-in-out
 
       &.language-navigation
         border-bottom 3px solid darken(#F4F4F4, 4%)

@@ -2,33 +2,38 @@
   {{#link-to "books" tagName="a"}}Back{{/link-to}}
   <section class="app">
     <nav class="top-navigation">
-      <a href="#" title="Save"></a>{{!--Save--}}
-      <a href="#" title="Share"></a>{{!--Share--}}
-      <a href="#" title="Embed"></a>{{!--Embed--}}
-      <a href="#" title="Location"></a>{{!--Location--}}
-      <a href="#" title="Settings"></a>{{!--Settings--}}
+      <a href="" title="Save"></a>
       <p>{{phraseCount}}</p>
+      <div class="rightSubNav">
+        <a href="" title="More"></a>
+        <a href="" title="Settings"></a>
+        <div class="moreNavItems">
+          <a href="" title="Share"></a>
+          <a href="" title="Embed"></a>
+          <a href="" title="Location"></a>
+        </div>
+      </div>
     </nav>
     <section class="banner">
       <img {{bind-attr src="bannerUrl" alt="User"}} class="fallback">
     </section>
     <nav class="language-navigation">
-      <h1 class="source"><a href="#">{{sourceName}}</a></h1>
-      <a href="#" class="direction">></a>
-      <h1 class="target"><a href="#">{{targetName}}</a></h1>
+      <h1 class="source"><a href="">{{sourceName}}</a></h1>
+      <a href="" class="direction">></a>
+      <h1 class="target"><a href="">{{targetName}}</a></h1>
     </nav>
     <section class="phrases">
       <ul>
         {{#each phrases}}
           <li>
-            <p class="phrase-source"><a class="phrase" href="#">{{sourcePhrase}}</a></p>
-            <p class="phrase-target"><a class="phrase" href="#">{{targetPhrase}}</a></p>
+            <p class="phrase-source"><a class="phrase" href="">{{sourcePhrase}}</a></p>
+            <p class="phrase-target"><a class="phrase" href="">{{targetPhrase}}</a></p>
           </li>
           {{else}}
           <p class="empty">Shoot! There is nothing here!</p>
         {{/each}}
       </ul>
-      <button><a href="#">+</a></button>
+      <button><a href="">+</a></button>
     </section>
   </section>
 </section>
