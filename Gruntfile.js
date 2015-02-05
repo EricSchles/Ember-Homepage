@@ -33,6 +33,13 @@ module.exports = function (grunt) {
                 }
             }
         },
+        uglify: {
+          my_target: {
+            files: {
+              "js/scripts/app.js":  ["js/scripts/application.js","js/scripts/router.js","js/scripts/routes/*","js/scripts/models/*","js/scripts/views/*","js/scripts/controllers/*","js/scripts/components/*","js/scripts/fixtures/*"]
+            }
+          }
+        },
         watch: {
             files: [
                 'index.html',
@@ -45,6 +52,10 @@ module.exports = function (grunt) {
             stylus: {
                 files: ['css/**/*.styl'],
                 tasks: ['stylus']
+            },
+            uglify: {
+                files: ["js/scripts/application.js","js/scripts/router.js","js/scripts/routes/*","js/scripts/models/*","js/scripts/views/*","js/scripts/controllers/*","js/scripts/components/*","js/scripts/fixtures/*"],
+                tasks: ['uglify']
             },
             livereload: {
                 options: { livereload: LIVERELOAD_PORT },
@@ -78,6 +89,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'stylus',
+        'uglify',
         'emberTemplates',
         'server'
     ]);
