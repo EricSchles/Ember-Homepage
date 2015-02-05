@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                     templateBasePath: /templates\//
                 },
                 files: {
-                  "js/scripts/templates.js": "**/*.handlebars"
+                  "js/dist/templates.js": "**/*.handlebars"
                 }
             }
         },
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
         uglify: {
           my_target: {
             files: {
-              "js/scripts/app.js":  ["js/scripts/application.js","js/scripts/router.js","js/scripts/routes/*","js/scripts/models/*","js/scripts/views/*","js/scripts/controllers/*","js/scripts/components/*","js/scripts/fixtures/*"]
+              "js/dist/app.js":  ["js/src/application.js","js/src/router.js","js/src/routes/*","js/src/models/*","js/src/views/*","js/src/controllers/*","js/src/components/*","js/src/fixtures/*"]
             }
           }
         },
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
                 tasks: ['stylus']
             },
             uglify: {
-                files: ["js/scripts/application.js","js/scripts/router.js","js/scripts/routes/*","js/scripts/models/*","js/scripts/views/*","js/scripts/controllers/*","js/scripts/components/*","js/scripts/fixtures/*"],
+                files: ["js/src/application.js","js/src/router.js","js/src/routes/*","js/src/models/*","js/src/views/*","js/src/controllers/*","js/src/components/*","js/src/fixtures/*"],
                 tasks: ['uglify']
             },
             livereload: {
