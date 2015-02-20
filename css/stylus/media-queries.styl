@@ -1,5 +1,153 @@
-@media all and (max-width:900px) {
+@media only screen and (max-device-width: 480px)
+  body
+    padding-top 0 !important
 
-	
+    nav
+      top initial
+      position initial
+      z-index initial
 
-}
+      div.logo
+        width 100%
+
+        li
+          width inherit
+
+          img
+            float none
+            display block
+            margin auto
+
+      ul.top-nav
+        width 100%
+
+        li
+          text-align center
+          font-weight 400
+          width 33%
+
+          a
+            font-weight 400 !important
+
+          &:first-of-type
+            display none
+
+    .container
+      overflow hidden
+      height 100%
+      width 100%
+
+      .banner
+        width 335%
+        max-height 125px
+
+        &.mission
+          max-height 300px
+          background-position-x -300px
+
+        &.team
+          max-height 240px
+          width 100%
+          background-position-x 52%
+
+        &.getInvolved
+          max-height 300px
+          width 100%
+          background-position-x 52%
+
+      .subheader
+        ul
+          li
+            font-weight 400
+
+      .page
+        padding 0
+
+        ul.activities
+              margin 0
+              li
+                float none
+                width 100%
+
+                button,a
+                  margin-top 1em
+
+        &.index
+          padding 1px 30px 2em 30px
+
+          .information
+            h1
+              font-size 1.7em
+
+            a.youTubeLink
+              .triangle
+                top -100px
+
+        &.mission
+          padding 0 30px 30px 30px
+          float left
+
+          .excerpt
+            margin-top 0
+            margin-bottom 30px
+            float inherit
+
+            p
+              padding 0 30px
+
+              &:first-of-type
+                margin-top 0
+
+        .team
+          padding 0 30px 30px 30px
+
+          h1
+            font-size 1.4em
+
+          ul
+            li
+              width 32.3%
+              margin 10px 0
+
+              img
+                padding 0
+
+              p
+                font-size 0.8em
+
+        &.form
+          padding 30px 30px 50px 30px !important
+
+          h1
+            display none
+
+          p
+            margin-bottom 0
+            float none
+            width 90%
+
+    footer
+      font-size 1.2em
+
+      .copyright
+        margin-bottom 20px
+
+        li
+          a
+            font-weight 400 !important
+
+      .links
+        text-align center
+        width 100%
+
+        ul
+          float none
+          margin-bottom 20px
+
+          li
+            font-size 1em
+            line-height 1.5em
+            font-weight 400
+
+            a
+              font-weight 400 !important

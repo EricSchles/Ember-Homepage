@@ -96,7 +96,7 @@ function program19(depth0,data) {
     'tagName': ("li")
   },hashTypes:{'tagName': "STRING"},hashContexts:{'tagName': depth0},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "get_involved", options) : helperMissing.call(depth0, "link-to", "get_involved", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push("\n    <li class=\"donate\">\n      <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" target=\"_blank\">Support Us</a>\n    </li>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  ");
+  data.buffer.push("\n    <li class=\"donate\">\n      <a href=\"https://www.fracturedatlas.org/site/fiscal/profile?id=11735\" target=\"_blank\">Donate</a>\n    </li>\n  </ul>\n</nav>\n\n<div class=\"container\">\n  ");
   stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\n</div>\n\n<footer>\n  <div class=\"content-wrapper\">\n    <ul class=\"copyright\">\n      <li>\n        <img src=\"img/logos/horizontalLockupWhite.svg\" class=\"icon\" alt=\"\">\n      </li>\n      <li>\n        ");
