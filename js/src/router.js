@@ -10,4 +10,5 @@ App.Router.map(function() {
   this.route("contact");
   this.route("legal");
   this.route("releaseForm");
+  this.route("grid_gen")
 })
