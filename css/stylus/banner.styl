@@ -11,9 +11,32 @@
         background-size cover
 
     &.index
-        max-height 380px
-        background-image url("../img/banner.jpg")
-        background-position-x 50%
+        height auto
+
+      #faceGrid
+        height 100%
+        margin auto
+
+        tbody
+          height 100%
+
+          tr
+            height 33.3%
+            overflow hidden
+
+            td
+              width 141px
+              height 141px
+              overflow hidden
+              padding 0
+
+              a
+                background-image url("../img/grid/dang-thai.png")
+                background-size cover
+                background-position-x 25%
+                display block
+                width inherit
+                height inherit
 
     &.team
         background-image url("../img/map.jpg")
