@@ -2,6 +2,19 @@ App.GridGenView = Ember.View.extend({
     didInsertElement: function() {
     // {  target  {  overflow  {  face  }}}
 
+    // Style target
+    $(".gridTarget").css({
+      "background":"#eee",
+      "border":"1px solid #ddd",
+      "margin":"0 1em 1em 1em",
+      "width":gridWidth,
+      "height":gridHeight,
+      "display":"inline-block",
+      "overflow":"hidden"
+    })
+
+    var facebookPageDimenstions = [748,250]
+    var facebookCommunityDimenstions = [851,315]
     var columnNumber = 9,
       rowNumber = 3,
       gridWidth = 748,
@@ -15,24 +28,11 @@ App.GridGenView = Ember.View.extend({
 
     // Define maximum dimension for grid
     if(horizontalFaceLength < verticalFaceLength) {
-      console.log("horizontalFaceLength: "+ horizontalFaceLength+" < verticalFaceLength: "+verticalFaceLength )
       var faceLength = horizontalFaceLength
     }
     else {
-      console.log("verticalFaceLength: "+ verticalFaceLength+" < horizontalFaceLength: "+horizontalFaceLength )
       var faceLength = verticalFaceLength
     }
-
-    // Style target
-    $(".gridTarget").css({
-      "background":"#eee",
-      "border":"1px solid #ddd",
-      "margin":"0 1em 1em 1em",
-      "width":gridWidth,
-      "height":gridHeight,
-      "display":"inline-block",
-      "overflow":"hidden"
-    })
 
     // Build controls
     $(".gridTarget").parent().prepend("
@@ -41,38 +41,60 @@ App.GridGenView = Ember.View.extend({
         <label for='gridHeight'>Grid Height</label><input type='number' min='0' id='gridHeight' value="+gridHeight+"></input>
         <label for='columnNumber'>Column number</label><input type='number' min='0' id='columnNumber' value="+columnNumber+"></input>
         <label for='rowNumber'>Row number</label><input type='number' min='0' id='rowNumber' value="+rowNumber+"></input>
-        <label for='faceLength'>Face length</label><input type='number' min='0' id='faceLength' value="+faceLength+"></input>
+        <label for='faceLength'>Face length</label><input type='number' min='0' id='faceLength' step='1' value="+faceLength+"></input>
         <button class='randomize'>Randomize faces</button>
       </div>
     ")
     $(".controls").css({
       "padding":"2em"
     })
-
-
+    $(".controls input").css({
+      "margin":"10px 0 20px 0",
+      "padding":"5px 3px",
+      "width":"70px"
+    })
 
     // Build grid overflow
     $(".gridTarget").append("
       <div class='gridOverflow'></div>
     ")
-    $(".gridOverflow").css({
-      "min-width":faceLength*columnNumber,
-      "min-height":faceLength*rowNumber,
-    })
 
     function draw() {
+      // Grid Overflow Resize
+      $(".gridOverflow").css({
+        "min-width":faceLength*columnNumber,
+        "min-height":faceLength*rowNumber,
+      })
+
       $(".gridOverflow").children().remove()
+
       for(row=0; row<rowNumber;row++) {
+
         for(column=0; column<columnNumber;column++) {
+
           var row = parseInt(row),
             colN = parseInt(row)*parseInt(columnNumber),
             column = parseInt(column),
             number = parseInt(column)+(colN)
 
+
           $(".gridOverflow").append("
             <div class='face "+number+"'>
             </div>
           ")
+
+          $(".face").css({
+            "border-bottom":"1px solid white",
+            "border-right":"1px solid white",
+            "float":"left",
+            "background-size":"auto "+ faceLength*1.1 +"px",
+            "background-position-x":"50%",
+            "background-position-y":"50%",
+            "height":faceLength,
+            "width":faceLength,
+            "overflow":"hidden"
+          })
+
           $(".face."+number).css({
             "background-image":"url('img/grid/"+faceImageSource[number]+"')"
           })
@@ -87,50 +109,44 @@ App.GridGenView = Ember.View.extend({
     }
     draw()
 
-    $(".face").css({
-      "border-bottom":"1px solid white",
-      "border-right":"1px solid white",
-      "float":"left",
-      "background-size":"auto "+ faceLength*1.1 +"px",
-      "background-position-x":"50%",
-      "background-position-y":"50%",
-      "height":faceLength,
-      "width":faceLength,
-      "overflow":"hidden"
-    })
-
     // Controls
     $("input").change(function() {
+      // Grid Width
       if ( $(this).is("#gridWidth") )
         {
           var newWidth = $("input#gridWidth").val()
-          console.log(newWidth)
           $(".gridTarget").css("width",newWidth)
         }
+
+      // Grid Height
       if ( $(this).is("#gridHeight") )
         {
           var newHeight = $("input#gridHeight").val()
-          console.log(newHeight)
           $(".gridTarget").css("height",newHeight)
         }
+
+      // Column Number
       if ( $(this).is("#columnNumber") )
         {
           var newColNumber = $("input#columnNumber").val()
-          console.log(newColNumber)
           columnNumber = newColNumber
           draw()
         }
+
+      // Row Number
       if ( $(this).is("#rowNumber") )
         {
-          var newWidth = $("input#gridWidth").val()
-          console.log($("input#gridWidth").val())
-          $(".gridTarget").css("width",newWidth)
+          var newRowNumber = $("input#rowNumber").val()
+          rowNumber = newRowNumber
+          draw()
         }
+
+      // Square Face Length
       if ( $(this).is("#faceLength") )
         {
-          var newWidth = $("input#gridWidth").val()
-          console.log($("input#gridWidth").val())
-          $(".gridTarget").css("width",newWidth)
+          var newFaceLength = $("input#faceLength").val()
+          faceLength = newFaceLength
+          $(".gridTarget .gridOverflow .face").css({"width":newFaceLength,"height":newFaceLength})
         }
     })
   }
