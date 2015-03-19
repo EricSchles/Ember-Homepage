@@ -396,7 +396,7 @@ function program7(depth0,data) {
   data.buffer.push("a message");
   }
 
-  data.buffer.push("<section class=\"banner faq\"></section>\n<section class=\"page\">\n    <h1>Frequently Asked Questions</h1>\n    <p></p>\n    <ul>\n      <li class=\"question\">Can anyone submit a video?</li>\n      <li class=\"answer\">Everyone can submit a video, just go over to our  ");
+  data.buffer.push("<section class=\"banner faq\"></section>\n<section class=\"page faq\">\n    <h1>Frequently Asked Questions</h1>\n    <p></p>\n    <ul>\n      <li class=\"question\">Can anyone submit a video?</li>\n      <li class=\"answer\">Everyone can submit a video, just go over to our  ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "submit", options) : helperMissing.call(depth0, "link-to", "submit", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("</li>\n      <li class=\"question\">Is there a minimum age to become involved?</li>\n      <li class=\"answer\">People under 18 years old are welcome to participate with proof of parental consent. People under 13 years old may become involved only under direct parental supervision.</li>\n      <li class=\"question\">Why do only some videos have translations?</li>\n      <li class=\"answer\">Though we do our best to provide transcriptions and translations to as many of our videos as possible, we don't always have means to provide them immediately upon launching new videos. As time goes by though, we do work on aquiring new translations and transcriptions and include them with the videos.</li>\n      <li class=\"question\">Can I send you a link to my Youtube channel?</li>\n      <li class=\"answer\">Though we'd love to watch your videos, only videos submitted to us as files can be used on our channel.</li>\n      <li class=\"question\">I'd like you to change the name of a video</li>\n      <li class=\"answer\">Videos are often named by their speakers. If you would like to challenge the name of a video, please  ");
@@ -408,7 +408,7 @@ function program7(depth0,data) {
   data.buffer.push(" of it, or at least ");
   stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(7, program7, data),contexts:[depth0],types:["STRING"],data:data},helper ? helper.call(depth0, "contact", options) : helperMissing.call(depth0, "link-to", "contact", options));
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
-  data.buffer.push(" letting us know.</li>\n    </ul>\n    \n</section>");
+  data.buffer.push(" letting us know.</li>\n    </ul>\n</section>");
   return buffer;
   
 });
