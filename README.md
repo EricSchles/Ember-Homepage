@@ -30,6 +30,8 @@ Now that we’ve validated interest in the exposure level of access by measuring
 
 Run `$Grunt` on `localhost:9000`
 
+[Phrasebooks](#phrasebooks)
+
 ### A Language Platform
 We are a community of constant learners, curious in our pursuits to know more about our world. It is no surprise therefore that ideas and projects are infinite. With that in mind, we have dedicated most of our efforts towards a persistent platform accessible both on web browsers and native mobile apps.
 
