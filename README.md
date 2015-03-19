@@ -14,23 +14,22 @@ Now that we’ve validated interest in the exposure level of access by measuring
 ### What’s in it for Wikitongues
 ### What do developers want to get from it
 ### What technologies (TechStack) are we using?
-  + Node 
-  + Express
-  + Mongo/Syncano
-  + Angular/Ember
-  + D3/Raphael?
+  + [Node](https://nodejs.org/) 
+  + [Express](http://expressjs.com/)
+  + [Mongo](https://www.mongodb.org/)/[Syncano](http://www.syncano.com/)
+  + [Angular](https://angularjs.org/)/[Ember](http://emberjs.com/)
+  + [D3](http://d3js.org/)/[Raphael](http://raphaeljs.com/)
   
 ### How do we do it?
 ### Setting up our communication channels
 ### Building our open source developer community
 ### Meetups
-## Development Projects
-[Homepage](www.wikitongues.org)
-
-Run `$Grunt`
-
 
-
+## Development Projects
+[Homepage](www.wikitongues.org) 
+
+Run `$Grunt` on `localhost:9000`
+
 ### A Language Platform
 We are a community of constant learners, curious in our pursuits to know more about our world. It is no surprise therefore that ideas and projects are infinite. With that in mind, we have dedicated most of our efforts towards a persistent platform accessible both on web browsers and native mobile apps.
 
