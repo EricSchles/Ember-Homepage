@@ -2,7 +2,7 @@
 ***
 
 ## What is Wikitongues?
-Wikitongues is an international non-profit organization working to provide access to every language in the world. 
+Wikitongues is an international non-profit organization working to provide access to every language in the world.
 
 We define access as a spectrum ranging from the first exposure to a language, all the way to fluency, through education. To validate our assumption that there is a thirst for new forms of language content, we designed a proof of concept to quickly prove the hypothesis that exposure to unique and remote languages is widely wanted. Through the tireless work of our dynamic network of volunteers, we’ve been able to make over 200 videos in currently 130 unique languages, both spoken and signed, healthy and endangered, available on our YouTube channel.
 
@@ -14,29 +14,34 @@ Now that we’ve validated interest in the exposure level of access by measuring
 ### What’s in it for Wikitongues
 ### What do developers want to get from it
 ### What technologies (TechStack) are we using?
-  + [Node](https://nodejs.org/) 
+  + [Node](https://nodejs.org/)
   + [Express](http://expressjs.com/)
   + [Mongo](https://www.mongodb.org/)/[Syncano](http://www.syncano.com/)
   + [Angular](https://angularjs.org/)/[Ember](http://emberjs.com/)
   + [D3](http://d3js.org/)/[Raphael](http://raphaeljs.com/)
-  
+
 ### How do we do it?
 ### Setting up our communication channels
 ### Building our open source developer community
 ### Meetups
 
 ## Development Projects
-[Homepage](www.wikitongues.org) 
+[Homepage](www.wikitongues.org)
 
 Run `$Grunt` on `localhost:9000`
+
+## Development Projects
+[Homepage](www.wikitongues.org)
+
+Run `$Grunt`
 
 ### A Language Platform
 We are a community of constant learners, curious in our pursuits to know more about our world. It is no surprise therefore that ideas and projects are infinite. With that in mind, we have dedicated most of our efforts towards a persistent platform accessible both on web browsers and native mobile apps.
 
-This platform will facilitate two main objectives: 
+This platform will facilitate two main objectives:
 
 1. The exploration of our video content in greater depth
-2. The creation and crowdsourcing of bilingual phrasebooks3. 
+2. The creation and crowdsourcing of bilingual phrasebooks3.
 
 
 These objectives describe our vision for a platform on which all languages may be used, and where speakers and signers may share their language with the world.
@@ -44,7 +49,7 @@ These objectives describe our vision for a platform on which all languages may b
 ### Elements
 
 #### User
-A user will be able to make an account on which all his/her activity will be tracked. This includes: 
+A user will be able to make an account on which all his/her activity will be tracked. This includes:
 
 + Videos uploaded
 + Videos watched
@@ -68,7 +73,7 @@ All text on Wikitongues should be translatable to any language._**
 
 
 #### Videos
-Video content is integral to Wikitongues and to any form of language content. The ability to fully immerse oneself into a language and the community around it is facilitated by the ability to: 
+Video content is integral to Wikitongues and to any form of language content. The ability to fully immerse oneself into a language and the community around it is facilitated by the ability to:
 
 + Watch
 + Comment
@@ -80,7 +85,7 @@ Video content is integral to Wikitongues and to any form of language content. Th
 The ability to explore them based on multiple relationships including:
 
 + Language
-+ Language country of origin 
++ Language country of origin
 + Writing system
 + Geneaology
 
@@ -128,7 +133,7 @@ Phrasebooks represent a new approach to language access. Through them, users are
     + Shares
     + Embeds
 3. Each phrase object
-    +  Must contain: 
+    +  Must contain:
         + Source string
         + Source writing system
         + Target string
@@ -146,7 +151,7 @@ Phrasebooks represent a new approach to language access. Through them, users are
 	+ Location created
 	+ Near me
 	+ Personal search terms
-The ideal scenario for this content would be a phrasebook that could be translated between Mandarin and American Sign Language, for example. 
+The ideal scenario for this content would be a phrasebook that could be translated between Mandarin and American Sign Language, for example.
 
 #### Embeddable content
 Phrasebooks should exist as embeddable widgets across the internet. Whether on blogs, websites or other platforms, our phrasebooks are able to be embedded and consumed.
@@ -157,8 +162,8 @@ The ability to contact available video and phrasebook authors and collaborators 
 #### Persistence
 Both the phrasebooks and the videos share a persistent database of ontological language data. All references to a language refer to a unique language object with its ID and metadata.
 #### Language keys
-Language is an incredibly diverse and fluid subject matter. Therefore, the study of language is ever evolving as the languages themselves change. To address this, we rely on external standards maintained jointly by the International Standards Organization (ISO) and the Summer Institute for Language (SIL). 
-As a first stage, we just use ISO 639-3 standards as the unique keys. 
+Language is an incredibly diverse and fluid subject matter. Therefore, the study of language is ever evolving as the languages themselves change. To address this, we rely on external standards maintained jointly by the International Standards Organization (ISO) and the Summer Institute for Language (SIL).
+As a first stage, we just use ISO 639-3 standards as the unique keys.
 At a second moment, we intend to develop composite unique ID keys for each language comprised of the language’s own ISO 639-3 ID and our own ID component. Additional research must yet be conducted to assess the stability and value of other ISO 639 codes as well as additional databases such as Glottolog. This allows for flexible IDing of languages that are not yet classified or identified under the ISO code.
 
 There is certainly room to improve language standards.
