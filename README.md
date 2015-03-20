@@ -21,7 +21,10 @@ Now that we’ve validated interest in the exposure level of access by measuring
   + [D3](http://d3js.org/)/[Raphael](http://raphaeljs.com/)
 
 ### How do we do it?
-### Setting up our communication channels
+### Communication channels
+  + [IRC](http://www.irchelp.org/)
+  + [Gitter](https://gitter.im/wikitongues)
+  
 ### Building our open source developer community
 ### Meetups
 
@@ -30,7 +33,9 @@ Now that we’ve validated interest in the exposure level of access by measuring
 
 Run `$Grunt` on `localhost:9000`
 
-[Phrasebooks](#phrasebooks)
+[Explore](#videos) - [Branch](../tree/watch-page)
+
+[Phrasebooks](#phrasebooks) - [Branch](../tree/poly-prototype)
 
 ### A Language Platform
 We are a community of constant learners, curious in our pursuits to know more about our world. It is no surprise therefore that ideas and projects are infinite. With that in mind, we have dedicated most of our efforts towards a persistent platform accessible both on web browsers and native mobile apps.
