@@ -22,6 +22,7 @@ Now that we’ve validated interest in the exposure level of access by measuring
 
 ### How do we do it?
 ### Communication channels
+  + [Slack](http://www.wikitongues.slack.com)
   + [IRC](http://www.irchelp.org/)
   + [Gitter](https://gitter.im/wikitongues)
   
