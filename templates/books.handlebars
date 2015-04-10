@@ -1,4 +1,4 @@
-<section class="page books">
+<section class="books">
   <div class="appContainer">
     <p>People you follow</p>
     {{#each}}
@@ -10,7 +10,7 @@
         <section class="banner">
           {{#link-to "book" this tagName="a"}}
             <img {{bind-attr src="bannerUrl"}}/>
-            {{/link-to}}
+          {{/link-to}}
         </section>
 
         <nav class="language-navigation">
